@@ -32,33 +32,30 @@ inherited frmAllowanceDetails: TfrmAllowanceDetails
       DesignSize = (
         305
         148)
-      object JvLabel9: TJvLabel [0]
-        Left = 28
-        Top = 29
-        Width = 30
-        Height = 14
-        Caption = 'Type'
-        Transparent = True
-      end
-      object JvLabel10: TJvLabel [1]
-        Left = 28
-        Top = 54
-        Width = 33
-        Height = 14
-        Caption = 'Salary'
-        Transparent = True
-      end
-      object JvLabel1: TJvLabel [2]
-        Left = 28
-        Top = 81
-        Width = 34
-        Height = 14
-        Caption = 'Expiry'
-        Transparent = True
-      end
-      inherited lblError: TJvLabel
+      inherited lblError: TLabel
         Top = 115
         ExplicitTop = 115
+      end
+      object Label1: TLabel
+        Left = 28
+        Top = 29
+        Width = 28
+        Height = 14
+        Caption = 'Type'
+      end
+      object Label2: TLabel
+        Left = 28
+        Top = 54
+        Width = 31
+        Height = 14
+        Caption = 'Salary'
+      end
+      object Label3: TLabel
+        Left = 29
+        Top = 81
+        Width = 32
+        Height = 14
+        Caption = 'Expiry'
       end
       object RzDBLookupComboBox5: TRzDBLookupComboBox
         Left = 90

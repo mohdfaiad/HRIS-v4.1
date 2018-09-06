@@ -223,7 +223,7 @@ inherited frmForApproval: TfrmForApproval
       Width = 243
       Height = 255
       Hint = ''
-      ActivePage = tsUndertime
+      ActivePage = tsLeave
       Anchors = [akLeft, akTop, akRight, akBottom]
       FlatColor = 8675134
       ShowCardFrame = False
@@ -236,46 +236,6 @@ inherited frmForApproval: TfrmForApproval
         Color = 14932430
         TabVisible = False
         Caption = 'Undertime'
-        object JvLabel1: TJvLabel
-          Tag = -1
-          Left = 92
-          Top = 89
-          Width = 66
-          Height = 14
-          Caption = 'Time until:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
-        object JvLabel10: TJvLabel
-          Tag = -1
-          Left = 3
-          Top = 1
-          Width = 35
-          Height = 14
-          Caption = 'Date:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel1: TRzDBLabel
           Left = 4
           Top = 21
@@ -285,26 +245,6 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'dt_f'
           DataSource = dmTimelog.dscForApproval
         end
-        object JvLabel40: TJvLabel
-          Tag = -1
-          Left = 3
-          Top = 45
-          Width = 64
-          Height = 14
-          Caption = 'Employee:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel21: TRzDBLabel
           Left = 3
           Top = 65
@@ -313,26 +253,6 @@ inherited frmForApproval: TfrmForApproval
           AutoSize = True
           DataField = 'employee_name'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel11: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 89
-          Width = 67
-          Height = 14
-          Caption = 'Time from:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel2: TRzDBLabel
           Left = 5
@@ -352,26 +272,6 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'time_until_f'
           DataSource = dmTimelog.dscForApproval
         end
-        object JvLabel2: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 134
-          Width = 51
-          Height = 14
-          Caption = 'Reason:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel16: TRzDBLabel
           Left = 5
           Top = 154
@@ -380,26 +280,6 @@ inherited frmForApproval: TfrmForApproval
           WordWrap = True
           DataField = 'reason'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel12: TJvLabel
-          Tag = -1
-          Left = 180
-          Top = 89
-          Width = 32
-          Height = 14
-          Caption = 'Paid:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel11: TRzDBLabel
           Left = 180
@@ -410,31 +290,89 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'is_paid_f'
           DataSource = dmTimelog.dscForApproval
         end
-      end
-      object tsLeave: TRzTabSheet
-        Color = 14932430
-        TabVisible = False
-        Caption = 'Leave'
-        object JvLabel3: TJvLabel
-          Tag = -1
-          Left = 4
+        object Label1: TLabel
+          Left = 3
           Top = 1
-          Width = 83
+          Width = 33
           Height = 14
-          Caption = 'Date applied:'
+          Caption = 'Date:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -12
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
+        object Label2: TLabel
+          Left = 3
+          Top = 45
+          Width = 62
+          Height = 14
+          Caption = 'Employee:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 4
+          Top = 89
+          Width = 65
+          Height = 14
+          Caption = 'Time from:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 92
+          Top = 89
+          Width = 64
+          Height = 14
+          Caption = 'Time until:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 180
+          Top = 89
+          Width = 30
+          Height = 14
+          Caption = 'Paid:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 4
+          Top = 134
+          Width = 49
+          Height = 14
+          Caption = 'Reason:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object tsLeave: TRzTabSheet
+        Color = 14932430
+        TabVisible = False
+        Caption = 'Leave'
         object RzDBLabel4: TRzDBLabel
           Left = 4
           Top = 21
@@ -443,26 +381,6 @@ inherited frmForApproval: TfrmForApproval
           AutoSize = True
           DataField = 'app_dt_f'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel4: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 89
-          Width = 73
-          Height = 14
-          Caption = 'Leave date:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel5: TRzDBLabel
           Left = 4
@@ -473,26 +391,6 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'dt_f'
           DataSource = dmTimelog.dscForApproval
         end
-        object JvLabel5: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 45
-          Width = 64
-          Height = 14
-          Caption = 'Employee:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel6: TRzDBLabel
           Left = 5
           Top = 65
@@ -501,26 +399,6 @@ inherited frmForApproval: TfrmForApproval
           AutoSize = True
           DataField = 'employee_name'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel6: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 132
-          Width = 51
-          Height = 14
-          Caption = 'Reason:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel7: TRzDBLabel
           Left = 5
@@ -531,26 +409,6 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'reason'
           DataSource = dmTimelog.dscForApproval
         end
-        object JvLabel7: TJvLabel
-          Tag = -1
-          Left = 4
-          Top = 175
-          Width = 58
-          Height = 14
-          Caption = 'Remarks:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel8: TRzDBLabel
           Left = 5
           Top = 195
@@ -559,26 +417,6 @@ inherited frmForApproval: TfrmForApproval
           WordWrap = True
           DataField = 'remarks'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel8: TJvLabel
-          Tag = -1
-          Left = 99
-          Top = 89
-          Width = 52
-          Height = 14
-          Caption = 'AM/PM:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel9: TRzDBLabel
           Left = 99
@@ -589,26 +427,6 @@ inherited frmForApproval: TfrmForApproval
           DataField = 'am_pm_f'
           DataSource = dmTimelog.dscForApproval
         end
-        object JvLabel9: TJvLabel
-          Tag = -1
-          Left = 195
-          Top = 89
-          Width = 32
-          Height = 14
-          Caption = 'Paid:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
-        end
         object RzDBLabel10: TRzDBLabel
           Left = 195
           Top = 109
@@ -617,26 +435,6 @@ inherited frmForApproval: TfrmForApproval
           AutoSize = True
           DataField = 'is_paid_f'
           DataSource = dmTimelog.dscForApproval
-        end
-        object JvLabel13: TJvLabel
-          Tag = -1
-          Left = 99
-          Top = 1
-          Width = 35
-          Height = 14
-          Caption = 'Type:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = True
-          HotTrackFont.Charset = DEFAULT_CHARSET
-          HotTrackFont.Color = clWindowText
-          HotTrackFont.Height = -12
-          HotTrackFont.Name = 'Tahoma'
-          HotTrackFont.Style = []
         end
         object RzDBLabel12: TRzDBLabel
           Left = 99
@@ -693,6 +491,110 @@ inherited frmForApproval: TfrmForApproval
             650041646F626520496D616765526561647971C9653C0000000049454E44AE42
             6082}
           ShowHint = True
+        end
+        object Label7: TLabel
+          Left = 4
+          Top = 1
+          Width = 81
+          Height = 14
+          Caption = 'Date applied:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 99
+          Top = 1
+          Width = 33
+          Height = 14
+          Caption = 'Type:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 4
+          Top = 45
+          Width = 62
+          Height = 14
+          Caption = 'Employee:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 4
+          Top = 89
+          Width = 71
+          Height = 14
+          Caption = 'Leave date:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 99
+          Top = 89
+          Width = 50
+          Height = 14
+          Caption = 'AM/PM:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 195
+          Top = 89
+          Width = 30
+          Height = 14
+          Caption = 'Paid:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label13: TLabel
+          Left = 4
+          Top = 132
+          Width = 49
+          Height = 14
+          Caption = 'Reason:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label14: TLabel
+          Left = 4
+          Top = 175
+          Width = 56
+          Height = 14
+          Caption = 'Remarks:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
       end
     end

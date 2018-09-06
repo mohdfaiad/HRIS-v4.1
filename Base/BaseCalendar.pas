@@ -142,8 +142,13 @@ begin
     shSunday.Brush.Color := Sunday;
 
     // grid lines
+    {$ifdef KIOSK}
     LineColor := GridLine;
     FixedLineColor := GridLine;
+    {$else}
+    LineColor := $00C5C5C5;
+    FixedLineColor := $00C5C5C5;
+    {$endif}
   end;
 end;
 

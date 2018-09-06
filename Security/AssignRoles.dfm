@@ -29,7 +29,7 @@ inherited frmAssignRoles: TfrmAssignRoles
       Height = 375
       ExplicitWidth = 660
       ExplicitHeight = 375
-      inherited lblError: TJvLabel
+      inherited lblError: TLabel
         Top = 341
         ExplicitTop = 116
       end

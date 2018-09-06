@@ -6,24 +6,17 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseForm, Data.DB, Vcl.Grids,
   Vcl.DBGrids, RzDBGrid, Vcl.ExtCtrls, RzPanel, Vcl.StdCtrls, Vcl.Mask, RzEdit,
-  RzDBEdit, JvExControls, JvLabel, Vcl.DBCtrls, RzDBCmbo, RzButton, RzRadChk,
-  RzDBChk, EmployeeController;
+  RzDBEdit, Vcl.DBCtrls, RzDBCmbo, RzButton, RzRadChk, RzDBChk, EmployeeController;
 
 type
   TfrmFamilyAndRelatives = class(TfrmBase)
     pnlDetail: TRzPanel;
     grSearch: TRzDBGrid;
-    JvLabel1: TJvLabel;
     edLastname: TRzDBEdit;
     edFirstname: TRzDBEdit;
-    JvLabel2: TJvLabel;
-    JvLabel3: TJvLabel;
     edMiddlename: TRzDBEdit;
-    JvLabel8: TJvLabel;
-    JvLabel10: TJvLabel;
     RzDBDateTimeEdit2: TRzDBDateTimeEdit;
     RzDBLookupComboBox1: TRzDBLookupComboBox;
-    JvLabel4: TJvLabel;
     RzDBLookupComboBox2: TRzDBLookupComboBox;
     RzDBCheckBox1: TRzDBCheckBox;
     RzDBCheckBox2: TRzDBCheckBox;
@@ -31,6 +24,12 @@ type
     btnNew: TRzShapeButton;
     pnlCancel: TRzPanel;
     btnCancel: TRzShapeButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnNewClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);

@@ -6,16 +6,16 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BasePopupDetail2, RzButton,
   Vcl.StdCtrls, RzLabel, Vcl.Imaging.pngimage, Vcl.ExtCtrls, RzPanel, RzDBEdit,
-  Vcl.Mask, RzEdit, Vcl.DBCtrls, RzDBCmbo, JvExControls, JvLabel, PafController;
+  Vcl.Mask, RzEdit, Vcl.DBCtrls, RzDBCmbo, PafController;
 
 type
   TfrmAllowanceDetails = class(TfrmBasePopupDetail2)
-    JvLabel9: TJvLabel;
-    JvLabel10: TJvLabel;
     RzDBLookupComboBox5: TRzDBLookupComboBox;
     RzDBNumericEdit1: TRzDBNumericEdit;
-    JvLabel1: TJvLabel;
     RzDBDateTimeEdit1: TRzDBDateTimeEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }

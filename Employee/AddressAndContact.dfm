@@ -8,125 +8,103 @@ inherited frmAddressAndContact: TfrmAddressAndContact
   ExplicitHeight = 542
   PixelsPerInch = 96
   TextHeight = 14
-  object JvLabel1: TJvLabel
+  object Label1: TLabel
     Left = 59
     Top = 67
-    Width = 37
+    Width = 35
     Height = 14
     Caption = 'Street'
-    Transparent = True
   end
-  object JvLabel3: TJvLabel
+  object Label2: TLabel
+    Left = 59
+    Top = 123
+    Width = 49
+    Height = 14
+    Caption = 'Barangay'
+  end
+  object Label3: TLabel
     Left = 59
     Top = 151
-    Width = 55
+    Width = 62
     Height = 14
-    Caption = 'City town'
-    Transparent = True
+    Caption = 'City / town'
   end
-  object JvLabel6: TJvLabel
+  object Label4: TLabel
+    Left = 427
+    Top = 67
+    Width = 35
+    Height = 14
+    Caption = 'Street'
+  end
+  object Label5: TLabel
+    Left = 427
+    Top = 123
+    Width = 49
+    Height = 14
+    Caption = 'Barangay'
+  end
+  object Label6: TLabel
+    Left = 427
+    Top = 151
+    Width = 62
+    Height = 14
+    Caption = 'City / town'
+  end
+  object Label7: TLabel
     Left = 59
     Top = 267
-    Width = 36
+    Width = 34
     Height = 14
     Caption = 'Mobile'
-    Transparent = True
   end
-  object JvLabel7: TJvLabel
-    Left = 59
-    Top = 40
-    Width = 60
-    Height = 14
-    Caption = 'ID number'
-    Transparent = True
-  end
-  object JvLabel8: TJvLabel
+  object Label8: TLabel
     Left = 59
     Top = 295
-    Width = 46
+    Width = 44
     Height = 14
     Caption = 'Landline'
-    Transparent = True
   end
-  object JvLabel9: TJvLabel
+  object Label9: TLabel
     Left = 59
     Top = 324
-    Width = 29
+    Width = 27
     Height = 14
     Caption = 'Email'
-    Transparent = True
   end
-  object JvLabel16: TJvLabel
-    Left = 427
-    Top = 267
-    Width = 33
-    Height = 14
-    Caption = 'Name'
-    Transparent = True
-  end
-  object JvLabel17: TJvLabel
-    Left = 427
-    Top = 295
-    Width = 45
-    Height = 14
-    Caption = 'Address'
-    Transparent = True
-  end
-  object JvLabel18: TJvLabel
+  object Label10: TLabel
     Left = 427
     Top = 351
-    Width = 45
+    Width = 43
     Height = 14
     Caption = 'Relation'
-    Transparent = True
   end
-  object JvLabel14: TJvLabel
+  object Label11: TLabel
     Left = 427
     Top = 379
-    Width = 91
+    Width = 89
     Height = 14
     Caption = 'Contact number'
-    Transparent = True
   end
-  object JvLabel15: TJvLabel
+  object Label12: TLabel
     Left = 427
     Top = 408
-    Width = 29
+    Width = 27
     Height = 14
     Caption = 'Email'
-    Transparent = True
   end
-  object JvLabel4: TJvLabel
-    Left = 59
-    Top = 123
-    Width = 51
-    Height = 14
-    Caption = 'Barangay'
-    Transparent = True
-  end
-  object JvLabel2: TJvLabel
+  object Label13: TLabel
     Left = 427
-    Top = 67
-    Width = 37
+    Top = 267
+    Width = 31
     Height = 14
-    Caption = 'Street'
-    Transparent = True
+    Caption = 'Name'
   end
-  object JvLabel5: TJvLabel
+  object Label14: TLabel
     Left = 427
-    Top = 151
-    Width = 55
+    Top = 295
+    Width = 43
     Height = 14
-    Caption = 'City town'
-    Transparent = True
-  end
-  object JvLabel10: TJvLabel
-    Left = 427
-    Top = 123
-    Width = 51
-    Height = 14
-    Caption = 'Barangay'
-    Transparent = True
+    Caption = 'Address'
   end
   object RzGroupBox2: TRzGroupBox
     Left = 43

@@ -56,7 +56,7 @@
     <Transaction>2018/04/21 08:40:41.000.043,=C:\Projects\HRIS v4\Employee\WebEmployeeMain.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\HRIS v4"/>
+    <File Path="..\..\HRIS-v4.1"/>
     <File Path="..\Base"/>
     <File Path="..\Base\BaseDocked2.pas"/>
     <File Path="..\Base\BaseDocked2.dfm"/>

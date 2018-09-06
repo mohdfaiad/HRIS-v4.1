@@ -5,9 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, RzPanel,
-  JvPageList, JvNavigationPane, JvExControls, RzButton, System.ImageList,
-  Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin, AppConstants, Vcl.StdCtrls, RzLabel,
-  JvImageList, RzStatus, DockIntf, RzLstBox, Vcl.AppEvnts, Generics.Collections, RzTabs,
+  RzButton, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin, AppConstants, Vcl.StdCtrls, RzLabel,
+  RzStatus, DockIntf, RzLstBox, Vcl.AppEvnts, Generics.Collections, RzTabs,
   Vcl.Imaging.pngimage, System.Actions, Vcl.ActnList, Vcl.Buttons;
 
 type
@@ -59,6 +58,8 @@ type
     imgSecurity: TImage;
     pnlLeaves: TRzPanel;
     imgLeaves: TImage;
+    pnlTimelog: TRzPanel;
+    imgTimelog: TImage;
     procedure FormCreate(Sender: TObject);
     procedure pnlTitleMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -78,6 +79,7 @@ type
     procedure imgPendingPAFClick(Sender: TObject);
     procedure imgSecurityClick(Sender: TObject);
     procedure imgLeavesClick(Sender: TObject);
+    procedure imgTimelogClick(Sender: TObject);
   private
     { Private declarations }
     DOCKED_FORM: TForms;
@@ -99,7 +101,8 @@ implementation
 
 uses
   EmployeeDrawer, NewIntf, SaveIntf, FormsUtil, HRISDialogs, EmployeeSearch, Employee,
-  HRISGlobal, PafMain, PafController, PafListPending, SecurityMain, LeaveMain;
+  HRISGlobal, PafMain, PafController, PafListPending, SecurityMain, LeaveMain,
+  TimelogPayPeriodHRIS;
 
 procedure TfrmMain.pnlTitleMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -140,6 +143,7 @@ begin
       fmPendingPaf: frm := TfrmPafListPending.Create(Application);
       fmSecurity: frm := TfrmSecurityMain.Create(Application);
       fmLeaveMain: frm := TfrmLeaveMain.Create(Application);
+      fmTimelogPayPeriodHRIS: frm := TfrmTimelogPayPeriodHRIS.Create(Application);
       else
         frm := nil;
     end;
@@ -274,6 +278,11 @@ end;
 procedure TfrmMain.imgSecurityClick(Sender: TObject);
 begin
   DockForm(fmSecurity,nil);
+end;
+
+procedure TfrmMain.imgTimelogClick(Sender: TObject);
+begin
+  DockForm(fmTimelogPayPeriodHRIS,nil);
 end;
 
 procedure TfrmMain.acSearchEmployeeExecute(Sender: TObject);

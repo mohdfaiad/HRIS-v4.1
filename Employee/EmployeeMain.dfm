@@ -10,204 +10,168 @@ inherited frmEmployeeMain: TfrmEmployeeMain
   ExplicitHeight = 545
   PixelsPerInch = 96
   TextHeight = 14
-  object JvLabel1: TJvLabel
-    Left = 59
-    Top = 104
-    Width = 54
-    Height = 14
-    Caption = 'Lastname'
-    Transparent = True
-  end
-  object JvLabel2: TJvLabel
-    Left = 59
-    Top = 132
-    Width = 54
-    Height = 14
-    Caption = 'Firstname'
-    Transparent = True
-  end
-  object JvLabel3: TJvLabel
-    Left = 59
-    Top = 160
-    Width = 66
-    Height = 14
-    Caption = 'Middlename'
-    Transparent = True
-  end
-  object JvLabel4: TJvLabel
-    Left = 59
-    Top = 240
-    Width = 52
-    Height = 14
-    Caption = 'Birthdate'
-    Transparent = True
-  end
-  object JvLabel5: TJvLabel
-    Left = 59
-    Top = 267
-    Width = 74
-    Height = 14
-    Caption = 'Place of birth'
-    Transparent = True
-  end
-  object JvLabel6: TJvLabel
-    Left = 59
-    Top = 325
-    Width = 42
-    Height = 14
-    Caption = 'Gender'
-    Transparent = True
-  end
-  object JvLabel7: TJvLabel
+  object Label1: TLabel
     Left = 59
     Top = 32
-    Width = 60
-    Height = 14
-    Caption = 'ID number'
-    Transparent = True
-  end
-  object JvLabel8: TJvLabel
-    Left = 59
-    Top = 353
-    Width = 43
-    Height = 14
-    Caption = 'Religion'
-    Transparent = True
-  end
-  object JvLabel9: TJvLabel
-    Left = 59
-    Top = 382
     Width = 58
     Height = 14
-    Caption = 'Civil status'
-    Transparent = True
+    Caption = 'ID number'
   end
-  object JvLabel10: TJvLabel
+  object Label2: TLabel
     Left = 59
-    Top = 411
-    Width = 76
-    Height = 14
-    Caption = 'Marriage date'
-    Transparent = True
-  end
-  object JvLabel11: TJvLabel
-    Left = 427
     Top = 104
-    Width = 38
+    Width = 52
     Height = 14
-    Caption = 'Height'
-    Transparent = True
+    Caption = 'Lastname'
   end
-  object JvLabel12: TJvLabel
-    Left = 427
+  object Label3: TLabel
+    Left = 59
     Top = 132
-    Width = 42
+    Width = 52
     Height = 14
-    Caption = 'Weight'
-    Transparent = True
+    Caption = 'Firstname'
   end
-  object JvLabel13: TJvLabel
+  object Label4: TLabel
+    Left = 59
+    Top = 160
+    Width = 64
+    Height = 14
+    Caption = 'Middlename'
+  end
+  object Label5: TLabel
     Left = 427
     Top = 160
-    Width = 61
+    Width = 59
     Height = 14
     Caption = 'Blood type'
-    Transparent = True
   end
-  object JvLabel16: TJvLabel
+  object Label6: TLabel
     Left = 427
-    Top = 240
-    Width = 22
+    Top = 132
+    Width = 40
     Height = 14
-    Caption = 'TIN'
-    Transparent = True
+    Caption = 'Weight'
   end
-  object JvLabel17: TJvLabel
+  object Label7: TLabel
     Left = 427
-    Top = 268
-    Width = 23
+    Top = 104
+    Width = 36
     Height = 14
-    Caption = 'SSS'
-    Transparent = True
+    Caption = 'Height'
   end
-  object JvLabel18: TJvLabel
+  object Label8: TLabel
     Left = 427
-    Top = 297
-    Width = 33
+    Top = 296
+    Width = 31
     Height = 14
     Caption = 'HDMF'
-    Transparent = True
   end
-  object JvLabel14: TJvLabel
+  object Label9: TLabel
     Left = 427
-    Top = 325
-    Width = 28
+    Top = 268
+    Width = 21
     Height = 14
-    Caption = 'PHIC'
-    Transparent = True
+    Caption = 'SSS'
   end
-  object JvLabel15: TJvLabel
+  object Label10: TLabel
+    Left = 427
+    Top = 240
+    Width = 20
+    Height = 14
+    Caption = 'TIN'
+  end
+  object Label11: TLabel
     Left = 427
     Top = 354
-    Width = 81
+    Width = 83
     Height = 14
-    Caption = 'Driver'#39's license'
-    Transparent = True
+    Caption = 'Driver'#39's License'
   end
-  object lblAge: TJvLabel
-    Left = 289
+  object Label12: TLabel
+    Left = 427
+    Top = 326
+    Width = 26
+    Height = 14
+    Caption = 'PHIC'
+  end
+  object Label13: TLabel
+    Left = 59
+    Top = 411
+    Width = 74
+    Height = 14
+    Caption = 'Marriage date'
+  end
+  object Label14: TLabel
+    Left = 59
+    Top = 383
+    Width = 56
+    Height = 14
+    Caption = 'Civil status'
+  end
+  object Label15: TLabel
+    Left = 59
+    Top = 353
+    Width = 41
+    Height = 14
+    Caption = 'Religion'
+  end
+  object Label16: TLabel
+    Left = 59
+    Top = 325
+    Width = 40
+    Height = 14
+    Caption = 'Gender'
+  end
+  object Label17: TLabel
+    Left = 59
     Top = 240
-    Width = 39
+    Width = 50
+    Height = 14
+    Caption = 'Birthdate'
+  end
+  object Label18: TLabel
+    Left = 59
+    Top = 268
+    Width = 72
+    Height = 14
+    Caption = 'Place of birth'
+  end
+  object lblAge: TLabel
+    Left = 291
+    Top = 240
+    Width = 37
     Height = 14
     Caption = 'Age: 0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clMaroon
     Font.Height = -12
     Font.Name = 'Tahoma'
-    Font.Style = [fsItalic]
+    Font.Style = []
     ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
   end
-  object lblWeight: TJvLabel
-    Left = 596
-    Top = 132
-    Width = 6
-    Height = 14
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsItalic]
-    ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
-  end
-  object lblHeight: TJvLabel
-    Left = 596
+  object lblHeight: TLabel
+    Left = 595
     Top = 104
-    Width = 6
+    Width = 4
     Height = 14
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clMaroon
     Font.Height = -12
     Font.Name = 'Tahoma'
-    Font.Style = [fsItalic]
+    Font.Style = []
     ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
+  end
+  object lblWeight: TLabel
+    Left = 595
+    Top = 132
+    Width = 4
+    Height = 14
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object RzGroupBox2: TRzGroupBox
     Left = 43

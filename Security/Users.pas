@@ -6,8 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseGridDetail, Data.DB, RzButton,
   Vcl.StdCtrls, Vcl.Mask, RzEdit, Vcl.Grids, Vcl.DBGrids, RzDBGrid, RzLabel,
-  Vcl.ExtCtrls, RzPanel, RzDBEdit, Vcl.DBCtrls, RzDBCmbo, User, LocalUser,
-  JvExControls, JvLabel;
+  Vcl.ExtCtrls, RzPanel, RzDBEdit, Vcl.DBCtrls, RzDBCmbo, User, LocalUser;
 
 type
   TfrmUsers = class(TfrmBaseGridDetail)

@@ -59,7 +59,7 @@ implementation
 {$R *.dfm}
 
 uses
-  AppData, AppUtil, HRISGlobal, HRISDialogs, Location;
+  AppData, AppUtil, HRISGlobal, HRISDialogs, Location, PayrollCode;
 
 class function TfrmLogin.LoggedIn: boolean;
 begin
@@ -194,6 +194,7 @@ var
   limit: integer;
   i: integer;
   timer: integer;
+  prCode, prPeriod, prFrom, prUntil: string;
 begin
   limit := LIMITGLOBAL;
   i := 1;
@@ -203,27 +204,32 @@ begin
   lblStatus.Caption := 'Loading settings.';
   self.Update;
 
-  with dmApplication.dstConfig do
+  with dmApplication.dstConfig, dmApplication do
   begin
     Open;
 
     HRIS.CurrentDate := Date;
-//
-//    // location code
-//    Locate('sysconfig_code','LOCATION_CODE',[]);
-//    ifn.LocationCode := FieldbyName('sysconfig_value').AsString;
-//
-//    // location prefix
-//    Locate('sysconfig_code','LOCATION_PREFIX',[]);
-//    ifn.LocationPrefix := FieldbyName('sysconfig_value').AsString;
-//
-//    Close;
-//
-//    // photo path
-//    ifn.PhotoPath := ExtractFilePath(Application.ExeName) + 'photos\';
-//    if not DirectoryExists(ifn.PhotoPath) then
-//      CreateDir(ifn.PhotoPath);
-//
+
+    // location code
+    if dstConfig.Locate('sysconfig_code','LOCATION_CODE',[]) then
+      HRIS.LocationCode := dstConfig.FieldbyName('sysconfig_value').AsString
+    else
+      HRIS.LocationCode := 'CO';
+
+    // payroll code
+    dstPayrollCode.Open;
+    while not dstPayrollCode.Eof do
+    begin
+      prCode := dstPayrollCode.FieldByName('payroll_code').AsString;
+      prPeriod := dstPayrollCode.FieldByName('payroll_period').AsString;
+      prFrom := dstPayrollCode.FieldByName('payroll_from').AsString;
+      prUntil := dstPayrollCode.FieldByName('payroll_until').AsString;
+
+      HRIS.AddActivePayrollCode(TPayrollCode.Create(prCode,prPeriod,prFrom,prUntil));
+
+      dstPayrollCode.Next;
+    end;
+
     // application images path
     HRIS.AppImagesPath := ExtractFilePath(Application.ExeName) + '_snapshots\';
 
@@ -232,6 +238,11 @@ begin
 
     // get all locations
     GetLocations;
+
+    HRIS.Settings.Load;
+
+    dstConfig.Close;
+    dstPayrollCode.Close;
 
   end;
 

@@ -22,6 +22,8 @@ inherited frmConfBox2: TfrmConfBox2
   inherited pnlMain: TRzPanel
     Width = 357
     Height = 108
+    ExplicitLeft = 0
+    ExplicitTop = 21
     ExplicitWidth = 357
     ExplicitHeight = 108
     object Image1: TImage
@@ -69,13 +71,12 @@ inherited frmConfBox2: TfrmConfBox2
         1974455874536F6674776172650041646F626520496D616765526561647971C9
         653C0000000049454E44AE426082}
     end
-    object lblMessage: TJvLabel
+    object lblMessage: TLabel
       Left = 59
       Top = 21
-      Width = 199
+      Width = 197
       Height = 14
       Caption = 'Record has been saved successfully.'
-      Transparent = True
     end
     object pnlClose: TRzPanel
       Left = 299

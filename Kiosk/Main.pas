@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseForm, Vcl.StdCtrls, RzLabel,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, RzPanel, RzBmpBtn, RzButton, RefreshIntf,
-  DockIntf, JvExControls;
+  DockIntf;
 
 type
   TfrmMain = class(TfrmBase, IDock)

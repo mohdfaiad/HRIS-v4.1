@@ -5,7 +5,7 @@ interface
 type
   TForms = (fmNone, fmEmployeeDrawer,fmPaf,fmPendingPaf,fmTimelogYear,
     fmUndertime,fmForApproval,fmSynchronisation,fmTimelogPayPeriod,fmSettings,
-    fmSecurity,fmLeaveMain);
+    fmSecurity,fmLeaveMain,fmTimelogPayPeriodHRIS);
 
   IDock = Interface(IInterface)
     ['{4D2068E2-715C-42F1-BA30-AC450E95F023}']

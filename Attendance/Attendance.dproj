@@ -115,9 +115,6 @@
         <DCCReference Include="vclimg.dcp"/>
         <DCCReference Include="vcldb.dcp"/>
         <DCCReference Include="RaizeComponentsVclDb.dcp"/>
-        <DCCReference Include="Jcl.dcp"/>
-        <DCCReference Include="JvCore.dcp"/>
-        <DCCReference Include="JvStdCtrls.dcp"/>
         <DCCReference Include="xmlrtl.dcp"/>
         <DCCReference Include="fmx.dcp"/>
         <DCCReference Include="dclstd.dcp"/>
@@ -203,6 +200,10 @@
             <Form>frmLeaveMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="TimelogPayPeriodHRIS.pas">
+            <Form>frmTimelogPayPeriodHRIS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -251,6 +252,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="..\_bpl\Attendance.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Attendance.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\Attendance.bpl" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Attendance.bpl</RemoteName>
                         <Overwrite>true</Overwrite>

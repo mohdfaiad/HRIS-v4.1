@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BasePopupDetail2, RzButton, RzTabs,
   Vcl.StdCtrls, RzLabel, Vcl.Imaging.pngimage, Vcl.ExtCtrls, RzPanel, LocalUser, Role,
-  RzLstBox, RzChkLst, BasePopupDetail, JvExControls, JvLabel;
+  RzLstBox, RzChkLst, BasePopupDetail;
 
 type
   TfrmAssignRoles = class(TfrmBasePopupDetail2)

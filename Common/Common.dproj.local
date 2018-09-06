@@ -83,7 +83,7 @@
     <Transaction>2018/06/17 14:16:56.000.889,C:\Projects\HRIS v4\Common\Employee.pas=</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\HRIS v4"/>
+    <File Path="..\..\HRIS-v4.1"/>
     <File Path="..\Base"/>
     <File Path="..\Base\BaseForm.pas"/>
     <File Path="..\Base\BaseForm.dfm"/>

@@ -1,0 +1,5 @@
+HRISWeb.exe: 000018D8: 08:37:14 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000018D8: 08:37:14 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000018D8: 08:37:14 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000018D8: 08:37:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000018D8: 08:37:14 [TUniServerModule]:HTTP Server Started on Port: 8077

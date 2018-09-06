@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RzButton, RzTabs, Vcl.StdCtrls, RzLabel, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, RzPanel, BasePopup2, JvExControls, JvLabel;
+  Vcl.ExtCtrls, RzPanel, BasePopup2;
 
 type
   TfrmBasePopupDetail2 = class(TfrmBasePopup2)
@@ -14,7 +14,7 @@ type
     sbtnSave: TRzShapeButton;
     btnCancel: TRzPanel;
     sbtnCancel: TRzShapeButton;
-    lblError: TJvLabel;
+    lblError: TLabel;
     procedure sbtnSaveClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

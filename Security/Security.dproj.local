@@ -73,7 +73,7 @@
     <Transaction>2018/06/09 10:18:51.000.292,=uIndy25.dcp</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\HRIS v4"/>
+    <File Path="..\..\HRIS-v4.1"/>
     <File Path="..\Base"/>
     <File Path="..\Base\BaseDocked.pas"/>
     <File Path="..\Base\BaseDocked.dfm"/>

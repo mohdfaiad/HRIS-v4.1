@@ -42,7 +42,7 @@ type
     property IsSuperUser: boolean read GetIsSuperUser;
     property UserId: string read FUserId write FUserId;
     property FirstName: string read FFirstName write FFirstName;
-    property LastName: string write FLastName;
+    property LastName: string read FLastName write FLastName;
     property Name: string read GetName;
     property CreditLimit: currency read FCreditLimit write FCreditLimit;
 

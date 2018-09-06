@@ -95,9 +95,6 @@
         <DCCReference Include="dbrtl.dcp"/>
         <DCCReference Include="vcldb.dcp"/>
         <DCCReference Include="RaizeComponentsVclDb.dcp"/>
-        <DCCReference Include="Jcl.dcp"/>
-        <DCCReference Include="JvCore.dcp"/>
-        <DCCReference Include="JvStdCtrls.dcp"/>
         <DCCReference Include="adortl.dcp"/>
         <DCCReference Include="dclstd.dcp"/>
         <DCCReference Include="soaprtl.dcp"/>
@@ -147,6 +144,10 @@
         </DCCReference>
         <DCCReference Include="BaseGridDetail.pas">
             <Form>frmBaseGridDetail</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="BaseCalendarHRIS.pas">
+            <Form>frmBaseCalendarHRIS</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

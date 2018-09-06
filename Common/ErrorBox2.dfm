@@ -30,16 +30,6 @@ inherited frmErrorBox2: TfrmErrorBox2
     Color = 14277119
     ExplicitWidth = 357
     ExplicitHeight = 108
-    object lblMessage: TJvLabel
-      Left = 59
-      Top = 21
-      Width = 270
-      Height = 76
-      AutoSize = False
-      Caption = 'Errors have been found. Unable to save record.'
-      Transparent = True
-      WordWrap = True
-    end
     object Image1: TImage
       Left = 21
       Top = 16
@@ -88,6 +78,15 @@ inherited frmErrorBox2: TfrmErrorBox2
         00323031312D30382D32315431343A31323A31322D30363A30305F33B60B0000
         001974455874536F6674776172650041646F626520496D616765526561647971
         C9653C0000000049454E44AE426082}
+    end
+    object lblMessage: TLabel
+      Left = 59
+      Top = 21
+      Width = 290
+      Height = 76
+      AutoSize = False
+      Caption = 'Errors have been found. Unable to save record.'
+      WordWrap = True
     end
     object pnlClose: TRzPanel
       Left = 299

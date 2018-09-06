@@ -8,8 +8,10 @@ inherited frmInfoBox2: TfrmInfoBox2
   TextHeight = 14
   inherited pnlTitle: TRzPanel
     Width = 357
+    ExplicitWidth = 357
     inherited imgClose: TImage
       Left = 336
+      ExplicitLeft = 336
     end
     inherited lblCaption: TRzLabel
       Width = 68
@@ -20,14 +22,10 @@ inherited frmInfoBox2: TfrmInfoBox2
   inherited pnlMain: TRzPanel
     Width = 357
     Height = 108
-    object lblMessage: TJvLabel
-      Left = 59
-      Top = 21
-      Width = 199
-      Height = 14
-      Caption = 'Record has been saved successfully.'
-      Transparent = True
-    end
+    ExplicitLeft = 0
+    ExplicitTop = 21
+    ExplicitWidth = 357
+    ExplicitHeight = 108
     object Image1: TImage
       Left = 21
       Top = 16
@@ -98,6 +96,13 @@ inherited frmInfoBox2: TfrmInfoBox2
         312D30382D32315431343A31323A33392D30363A30301F11E58C000000197445
         5874536F6674776172650041646F626520496D616765526561647971C9653C00
         00000049454E44AE426082}
+    end
+    object lblMessage: TLabel
+      Left = 59
+      Top = 21
+      Width = 197
+      Height = 14
+      Caption = 'Record has been saved successfully.'
     end
     object pnlClose: TRzPanel
       Left = 299

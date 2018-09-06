@@ -3,132 +3,113 @@ inherited frmPafMain: TfrmPafMain
   ClientHeight = 500
   ClientWidth = 1112
   OnShow = FormShow
+  ExplicitLeft = -181
   ExplicitWidth = 1128
   ExplicitHeight = 539
   PixelsPerInch = 96
   TextHeight = 14
-  object JvLabel7: TJvLabel [0]
+  object Label1: TLabel [0]
     Left = 43
     Top = 64
-    Width = 55
+    Width = 53
     Height = 14
     Caption = 'Employee'
-    Transparent = True
   end
-  object JvLabel1: TJvLabel [1]
+  object Label2: TLabel [1]
     Left = 43
     Top = 92
-    Width = 84
+    Width = 82
     Height = 14
     Caption = 'Effective dates'
-    Transparent = True
   end
-  object JvLabel5: TJvLabel [2]
-    Left = 459
-    Top = 64
-    Width = 47
-    Height = 14
-    Caption = 'Remarks'
-    Transparent = True
-  end
-  object JvLabel2: TJvLabel [3]
+  object Label3: TLabel [2]
     Left = 43
     Top = 122
-    Width = 37
+    Width = 35
     Height = 14
     Caption = 'Status'
-    Transparent = True
   end
-  object JvLabel3: TJvLabel [4]
+  object Label4: TLabel [3]
     Left = 60
     Top = 205
-    Width = 44
+    Width = 42
     Height = 14
     Caption = 'Position'
-    Transparent = True
   end
-  object JvLabel4: TJvLabel [5]
+  object Label5: TLabel [4]
     Left = 60
     Top = 234
-    Width = 81
+    Width = 79
     Height = 14
     Caption = 'Position status'
-    Transparent = True
   end
-  object JvLabel6: TJvLabel [6]
+  object Label6: TLabel [5]
     Left = 60
     Top = 263
-    Width = 107
+    Width = 105
     Height = 14
     Caption = 'Employment status'
-    Transparent = True
   end
-  object JvLabel8: TJvLabel [7]
+  object Label7: TLabel [6]
     Left = 60
     Top = 291
-    Width = 39
-    Height = 14
-    Caption = 'Branch'
-    Transparent = True
-  end
-  object JvLabel9: TJvLabel [8]
-    Left = 60
-    Top = 319
-    Width = 68
-    Height = 14
-    Caption = 'Department'
-    Transparent = True
-  end
-  object JvLabel10: TJvLabel [9]
-    Left = 60
-    Top = 347
-    Width = 33
-    Height = 14
-    Caption = 'Salary'
-    Transparent = True
-  end
-  object JvLabel11: TJvLabel [10]
-    Left = 715
-    Top = 347
     Width = 37
     Height = 14
-    Caption = 'Total:'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
+    Caption = 'Branch'
   end
-  object lblTotalAllowance: TJvLabel [11]
-    Left = 763
-    Top = 347
-    Width = 30
+  object Label8: TLabel [7]
+    Left = 60
+    Top = 319
+    Width = 66
     Height = 14
-    Caption = '0.00'
+    Caption = 'Department'
+  end
+  object Label9: TLabel [8]
+    Left = 60
+    Top = 347
+    Width = 31
+    Height = 14
+    Caption = 'Salary'
+  end
+  object Label10: TLabel [9]
+    Left = 459
+    Top = 64
+    Width = 45
+    Height = 14
+    Caption = 'Remarks'
+  end
+  object lblTotalAllowance: TLabel [10]
+    Left = 715
+    Top = 347
+    Width = 67
+    Height = 14
+    Caption = 'Total: 0.00'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
   end
-  object lblSummary: TJvLabel [12]
+  object lblSummaryOfChanges: TLabel [11]
     Left = 884
-    Top = 64
-    Width = 130
+    Top = 92
+    Width = 197
+    Height = 389
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    AutoSize = False
+    Caption = 'Remarks'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsItalic]
+    ParentFont = False
+  end
+  object lblSummary: TLabel [12]
+    Left = 884
+    Top = 65
+    Width = 128
     Height = 14
     Caption = 'Summary of changes'
     Font.Charset = DEFAULT_CHARSET
@@ -137,34 +118,6 @@ inherited frmPafMain: TfrmPafMain
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    Transparent = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
-  end
-  object lblSummaryOfChanges: TJvLabel [13]
-    Left = 884
-    Top = 92
-    Width = 197
-    Height = 381
-    AutoSize = False
-    Caption = 'None'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsItalic]
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    ParentFont = False
-    Transparent = True
-    WordWrap = True
-    HotTrackFont.Charset = DEFAULT_CHARSET
-    HotTrackFont.Color = clWindowText
-    HotTrackFont.Height = -12
-    HotTrackFont.Name = 'Tahoma'
-    HotTrackFont.Style = []
   end
   inherited pnlTitle: TRzPanel
     Width = 1112

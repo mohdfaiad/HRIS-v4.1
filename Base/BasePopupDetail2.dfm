@@ -22,6 +22,8 @@ inherited frmBasePopupDetail2: TfrmBasePopupDetail2
   inherited pnlMain: TRzPanel
     Width = 533
     Height = 227
+    ExplicitLeft = 0
+    ExplicitTop = 21
     ExplicitWidth = 533
     ExplicitHeight = 227
     DesignSize = (
@@ -41,24 +43,18 @@ inherited frmBasePopupDetail2: TfrmBasePopupDetail2
       DesignSize = (
         514
         179)
-      object lblError: TJvLabel
+      object lblError: TLabel
         Left = 28
         Top = 145
-        Width = 6
+        Width = 4
         Height = 14
+        Anchors = [akLeft, akBottom]
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -12
         Font.Name = 'Tahoma'
         Font.Style = []
-        Anchors = [akLeft, akBottom]
         ParentFont = False
-        Transparent = True
-        HotTrackFont.Charset = DEFAULT_CHARSET
-        HotTrackFont.Color = clWindowText
-        HotTrackFont.Height = -12
-        HotTrackFont.Name = 'Tahoma'
-        HotTrackFont.Style = []
       end
     end
     object btnSave: TRzPanel

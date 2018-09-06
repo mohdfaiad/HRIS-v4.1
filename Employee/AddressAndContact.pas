@@ -5,22 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseForm, Vcl.StdCtrls, Vcl.DBCtrls,
-  RzDBEdit, Vcl.Mask, RzEdit, Vcl.ExtCtrls, RzPanel, JvExControls, JvLabel,
-  RzCmboBx, RzDBCmbo, RzButton, RzRadChk, RzDBChk;
+  RzDBEdit, Vcl.Mask, RzEdit, Vcl.ExtCtrls, RzPanel, RzCmboBx, RzDBCmbo, RzButton,
+  RzRadChk, RzDBChk;
 
 type
   TfrmAddressAndContact = class(TfrmBase)
-    JvLabel1: TJvLabel;
-    JvLabel3: TJvLabel;
-    JvLabel6: TJvLabel;
-    JvLabel7: TJvLabel;
-    JvLabel8: TJvLabel;
-    JvLabel9: TJvLabel;
-    JvLabel16: TJvLabel;
-    JvLabel17: TJvLabel;
-    JvLabel18: TJvLabel;
-    JvLabel14: TJvLabel;
-    JvLabel15: TJvLabel;
     RzGroupBox2: TRzGroupBox;
     RzGroupBox1: TRzGroupBox;
     RzDBEdit1: TRzDBEdit;
@@ -32,18 +21,28 @@ type
     RzDBEdit10: TRzDBEdit;
     RzDBEdit11: TRzDBEdit;
     RzDBEdit12: TRzDBEdit;
-    JvLabel4: TJvLabel;
     RzDBMemo1: TRzDBMemo;
-    JvLabel2: TJvLabel;
-    JvLabel5: TJvLabel;
     RzDBEdit4: TRzDBEdit;
-    JvLabel10: TJvLabel;
     RzDBMemo2: TRzDBMemo;
     RzDBEdit5: TRzDBEdit;
     RzDBLookupComboBox2: TRzDBLookupComboBox;
     RzDBLookupComboBox1: TRzDBLookupComboBox;
     RzDBMemo3: TRzDBMemo;
     RzDBCheckBox1: TRzDBCheckBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private

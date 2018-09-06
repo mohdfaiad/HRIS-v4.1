@@ -5,18 +5,15 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseDocked2, Vcl.StdCtrls, RzLabel,
-  Vcl.ExtCtrls, RzPanel, JvExControls, JvLabel, Vcl.Mask, RzEdit, RzBtnEdt,
+  Vcl.ExtCtrls, RzPanel, Vcl.Mask, RzEdit, RzBtnEdt,
   Vcl.DBCtrls, RzDBEdit, RzButton, RzRadChk, RzDBCmbo, Data.DB, Vcl.Grids,
   Vcl.DBGrids, RzDBGrid, PafController, SaveIntf, RzDBChk;
 
 type
   TfrmPafMain = class(TfrmBaseDocked2,ISave)
     edEmployee: TRzButtonEdit;
-    JvLabel7: TJvLabel;
-    JvLabel1: TJvLabel;
     RzDBDateTimeEdit1: TRzDBDateTimeEdit;
     RzDBDateTimeEdit2: TRzDBDateTimeEdit;
-    JvLabel5: TJvLabel;
     RzDBMemo1: TRzDBMemo;
     RzGroupBox3: TRzGroupBox;
     RzDBLookupComboBox1: TRzDBLookupComboBox;
@@ -25,21 +22,10 @@ type
     RzDBLookupComboBox4: TRzDBLookupComboBox;
     RzDBLookupComboBox5: TRzDBLookupComboBox;
     RzDBLookupComboBox6: TRzDBLookupComboBox;
-    JvLabel2: TJvLabel;
     RzGroupBox1: TRzGroupBox;
     pnlDetail: TRzPanel;
     grSearch: TRzDBGrid;
-    JvLabel3: TJvLabel;
-    JvLabel4: TJvLabel;
-    JvLabel6: TJvLabel;
-    JvLabel8: TJvLabel;
-    JvLabel9: TJvLabel;
-    JvLabel10: TJvLabel;
     RzDBNumericEdit1: TRzDBNumericEdit;
-    JvLabel11: TJvLabel;
-    lblTotalAllowance: TJvLabel;
-    lblSummary: TJvLabel;
-    lblSummaryOfChanges: TJvLabel;
     pnlApprove: TRzPanel;
     btnApprove: TRzShapeButton;
     pnlStatus: TRzPanel;
@@ -49,6 +35,19 @@ type
     btnAdd: TRzShapeButton;
     pnlDelete: TRzPanel;
     btnDelete: TRzShapeButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    lblTotalAllowance: TLabel;
+    lblSummaryOfChanges: TLabel;
+    lblSummary: TLabel;
     procedure edEmployeeButtonClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure btnApproveClick(Sender: TObject);

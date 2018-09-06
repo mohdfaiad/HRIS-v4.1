@@ -23,10 +23,14 @@ inherited frmAssignRights: TfrmAssignRights
   inherited pnlMain: TRzPanel
     Width = 888
     Height = 422
+    ExplicitWidth = 888
+    ExplicitHeight = 422
     inherited pnlDetail: TRzPanel
       Width = 869
       Height = 374
-      inherited lblError: TJvLabel
+      ExplicitWidth = 869
+      ExplicitHeight = 374
+      inherited lblError: TLabel
         Left = 1
         Top = 359
         ExplicitLeft = 1
@@ -53,10 +57,14 @@ inherited frmAssignRights: TfrmAssignRights
     inherited btnSave: TRzPanel
       Left = 772
       Top = 391
+      ExplicitLeft = 772
+      ExplicitTop = 391
     end
     inherited btnCancel: TRzPanel
       Left = 828
       Top = 391
+      ExplicitLeft = 828
+      ExplicitTop = 391
     end
   end
 end

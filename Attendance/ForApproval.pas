@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BaseDocked, Vcl.StdCtrls, RzLabel,
   Vcl.ExtCtrls, RzPanel, Data.DB, RzButton, Vcl.Grids, Vcl.DBGrids, RzDBGrid,
-  RzCmboBx, RzDBLbl, JvExControls, JvLabel, RzTabs, Vcl.Imaging.pngimage,
+  RzCmboBx, RzDBLbl, RzTabs, Vcl.Imaging.pngimage,
   RzRadChk, Entitlement, ADODB, RefreshIntf;
 
 type
@@ -23,38 +23,38 @@ type
     pcDetails: TRzPageControl;
     tsUndertime: TRzTabSheet;
     tsLeave: TRzTabSheet;
-    JvLabel3: TJvLabel;
     RzDBLabel4: TRzDBLabel;
-    JvLabel4: TJvLabel;
     RzDBLabel5: TRzDBLabel;
-    JvLabel5: TJvLabel;
     RzDBLabel6: TRzDBLabel;
-    JvLabel6: TJvLabel;
     RzDBLabel7: TRzDBLabel;
-    JvLabel7: TJvLabel;
     RzDBLabel8: TRzDBLabel;
-    JvLabel1: TJvLabel;
-    JvLabel10: TJvLabel;
     RzDBLabel1: TRzDBLabel;
-    JvLabel40: TJvLabel;
     RzDBLabel21: TRzDBLabel;
-    JvLabel11: TJvLabel;
     RzDBLabel2: TRzDBLabel;
     RzDBLabel3: TRzDBLabel;
-    JvLabel2: TJvLabel;
     RzDBLabel16: TRzDBLabel;
-    JvLabel8: TJvLabel;
     RzDBLabel9: TRzDBLabel;
-    JvLabel9: TJvLabel;
     RzDBLabel10: TRzDBLabel;
-    JvLabel12: TJvLabel;
     RzDBLabel11: TRzDBLabel;
-    JvLabel13: TJvLabel;
     RzDBLabel12: TRzDBLabel;
     imgConflict: TImage;
     cbxConflicts: TRzCheckBox;
     RzLabel2: TRzLabel;
     cmbPeriod: TRzComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure cmbEntitlementClick(Sender: TObject);
     procedure btnApproveClick(Sender: TObject);

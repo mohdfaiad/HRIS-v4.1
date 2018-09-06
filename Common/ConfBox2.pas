@@ -5,14 +5,14 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, BasePopup2, Vcl.StdCtrls, RzLabel,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, RzPanel, JvExControls, JvLabel, RzButton;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, RzPanel, RzButton;
 
 type
   TfrmConfBox2 = class(TfrmBasePopup2)
     pnlClose: TRzPanel;
     btnClose: TRzShapeButton;
     Image1: TImage;
-    lblMessage: TJvLabel;
+    lblMessage: TLabel;
     procedure btnCloseClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
   private

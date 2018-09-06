@@ -113,6 +113,7 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=4.0.0.1;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_UnitSearchPath>..\Security;..\Attendance;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_Build>1</VerInfo_Build>
+        <DCC_Define>HRIS;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -132,7 +133,8 @@
         <VerInfo_MajorVer>4</VerInfo_MajorVer>
         <VerInfo_Keys>CompanyName=;FileDescription=Human Resource Integrated System;FileVersion=4.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=HRIS;ProductVersion=4.0.0.0;Comments=</VerInfo_Keys>
         <Icon_MainIcon>..\_images\HRIS.ico</Icon_MainIcon>
-        <DCC_UnitSearchPath>..\Security;..\Attendance;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\Security;..\Attendance;..\Tools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_Define>HRIS;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>

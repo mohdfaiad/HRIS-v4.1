@@ -49,7 +49,7 @@
     <Transaction>2018/06/17 14:35:46.000.706,=uniTools25.dcp</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\HRIS v4"/>
+    <File Path="..\..\HRIS-v4.1"/>
     <File Path="..\Base"/>
     <File Path="..\Base\BaseDocked2.pas"/>
     <File Path="..\Base\BaseDocked2.dfm"/>

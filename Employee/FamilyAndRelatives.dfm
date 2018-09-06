@@ -24,53 +24,47 @@ inherited frmFamilyAndRelatives: TfrmFamilyAndRelatives
     DesignSize = (
       283
       460)
-    object JvLabel1: TJvLabel
+    object Label1: TLabel
       Left = 27
       Top = 24
-      Width = 54
-      Height = 14
-      Caption = 'Lastname'
-      Transparent = True
-    end
-    object JvLabel2: TJvLabel
-      Left = 27
-      Top = 76
-      Width = 54
-      Height = 14
-      Caption = 'Firstname'
-      Transparent = True
-    end
-    object JvLabel3: TJvLabel
-      Left = 27
-      Top = 128
-      Width = 66
-      Height = 14
-      Caption = 'Middlename'
-      Transparent = True
-    end
-    object JvLabel8: TJvLabel
-      Left = 27
-      Top = 178
-      Width = 45
-      Height = 14
-      Caption = 'Relation'
-      Transparent = True
-    end
-    object JvLabel10: TJvLabel
-      Left = 27
-      Top = 228
       Width = 52
       Height = 14
-      Caption = 'Birthdate'
-      Transparent = True
+      Caption = 'Lastname'
     end
-    object JvLabel4: TJvLabel
+    object Label2: TLabel
       Left = 27
-      Top = 278
+      Top = 76
+      Width = 52
+      Height = 14
+      Caption = 'Firstname'
+    end
+    object Label3: TLabel
+      Left = 27
+      Top = 128
       Width = 64
       Height = 14
+      Caption = 'Middlename'
+    end
+    object Label4: TLabel
+      Left = 27
+      Top = 178
+      Width = 43
+      Height = 14
+      Caption = 'Relation'
+    end
+    object Label5: TLabel
+      Left = 27
+      Top = 228
+      Width = 50
+      Height = 14
+      Caption = 'Birthdate'
+    end
+    object Label6: TLabel
+      Left = 27
+      Top = 278
+      Width = 62
+      Height = 14
       Caption = 'Occupation'
-      Transparent = True
     end
     object edLastname: TRzDBEdit
       Left = 27

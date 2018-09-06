@@ -33,9 +33,6 @@ type
     procedure ClearCalendar; override;
   end;
 
-var
-  frmTimelogPayPeriod: TfrmTimelogPayPeriod;
-
 implementation
 
 {$R *.dfm}
