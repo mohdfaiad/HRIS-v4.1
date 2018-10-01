@@ -3,9 +3,10 @@ unit AttendanceUtils;
 interface
 
 uses
-  RzCmboBx, DateUtils, SysUtils, StrUtils;
+  RzCmboBx, DateUtils, SysUtils, StrUtils, uniMultiItem, uniComboBox;
 
-procedure PopulateYear(const combo: TRzComboBox);
+procedure PopulateYear(const combo: TRzComboBox); overload;
+procedure PopulateYear(const combo: TUniComboBox); overload;
 procedure GetDateParamsYear(const year: integer; var fromDate, toDate: TDate);
 
 function FormatTimeString(const time: string; const showAmPM: boolean = false): string;
@@ -17,6 +18,26 @@ const
 implementation
 
 procedure PopulateYear(const combo: TRzComboBox);
+var
+  mm: Word;
+  yy: Word;
+  dd: Word;
+  i: integer;
+begin
+  DecodeDate(Date, yy, mm, dd);
+
+  with combo do
+  begin
+    Clear;
+
+    for i := yy downto BASE_YEAR do
+        combo.Items.Add(IntToStr(i));
+
+    ItemIndex := 0;
+  end;
+end;
+
+procedure PopulateYear(const combo: TUniComboBox);
 var
   mm: Word;
   yy: Word;

@@ -9,7 +9,7 @@ uses
   uniPanel, uniGUIFrame, Vcl.Imaging.pngimage, uniImage;
 
 type
-  TWebFrames = (frEmployeeDrawer,frTagRegistrationList,frShipList,frReportSettings);
+  TWebFrames = (frEmployeeDrawer,frLeaves);
 
   TWebMainForm = class(TUniForm)
     DockPanel: TUniPanel;
@@ -23,9 +23,9 @@ type
     imgLogout: TUniImage;
     UniLabel2: TUniLabel;
     procedure UniFormAfterShow(Sender: TObject);
-    procedure lblShipsClick(Sender: TObject);
     procedure imgProfileClick(Sender: TObject);
     procedure imgLogoutClick(Sender: TObject);
+    procedure imgLeavesClick(Sender: TObject);
   private
     { Private declarations }
     procedure DockFrame(frame: TWebFrames);
@@ -40,7 +40,7 @@ implementation
 {$R *.dfm}
 
 uses
-  uniGUIVars, MainModule, uniGUIApplication, WebEmployeeDrawer;
+  uniGUIVars, MainModule, uniGUIApplication, WebEmployeeDrawer, WebLeaveMain;
 
 function WebMainForm: TWebMainForm;
 begin
@@ -56,11 +56,17 @@ begin
 
   case frame of
     frEmployeeDrawer: LFrame := TEmployeeDrawerFrame.Create(self);
+    frLeaves: LFrame := TLeaveMainFrame.Create(self);
   end;
 
   // dock the new frame
   LFrame.Parent := DockPanel;
   LFrame.Show;
+end;
+
+procedure TWebMainForm.imgLeavesClick(Sender: TObject);
+begin
+  DockFrame(frLeaves);
 end;
 
 procedure TWebMainForm.imgLogoutClick(Sender: TObject);
@@ -71,11 +77,6 @@ end;
 procedure TWebMainForm.imgProfileClick(Sender: TObject);
 begin
   DockFrame(frEmployeeDrawer);
-end;
-
-procedure TWebMainForm.lblShipsClick(Sender: TObject);
-begin
-  DockFrame(frShipList);
 end;
 
 procedure TWebMainForm.UniFormAfterShow(Sender: TObject);

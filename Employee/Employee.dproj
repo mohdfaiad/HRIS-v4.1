@@ -135,9 +135,6 @@
         <DCCReference Include="RaizeComponentsVcl.dcp"/>
         <DCCReference Include="dclstd.dcp"/>
         <DCCReference Include="vcldb.dcp"/>
-        <DCCReference Include="Jcl.dcp"/>
-        <DCCReference Include="JvCore.dcp"/>
-        <DCCReference Include="JvStdCtrls.dcp"/>
         <DCCReference Include="RaizeComponentsVclDb.dcp"/>
         <DCCReference Include="DSPack_DXE4.dcp"/>
         <DCCReference Include="EmployeeData.pas">

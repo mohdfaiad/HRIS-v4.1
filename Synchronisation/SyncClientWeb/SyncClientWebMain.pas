@@ -10,7 +10,6 @@ uses
 type
   TfrmSyncClientWebMain = class(TForm)
     ConnectionMain: TADOConnection;
-    SyncTimer: TTimer;
     Sychronize: TCheckBox;
     Label1: TLabel;
     DBGrid1: TDBGrid;
@@ -21,11 +20,11 @@ type
     ConnectionHRIS: TADOConnection;
     edSQL: TEdit;
     dqSync: TADOQuery;
+    btnSkipRecord: TButton;
     procedure ConnectionMainBeforeConnect(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SychronizeClick(Sender: TObject);
-    procedure SyncTimerTimer(Sender: TObject);
     procedure ConnectionHRISBeforeConnect(Sender: TObject);
   private
     { Private declarations }
@@ -40,7 +39,7 @@ var
 implementation
 
 uses
-  ConnUtil;
+  ConnUtil, System.Threading;
 
 {$R *.dfm}
 
@@ -81,8 +80,6 @@ end;
 procedure TfrmSyncClientWebMain.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  SyncTimer.Enabled := false;
-
   ConnectionMain.Close;
   ConnectionHRIS.Close;
 end;
@@ -95,9 +92,27 @@ end;
 
 procedure TfrmSyncClientWebMain.SychronizeClick(Sender: TObject);
 begin
-  SyncTimer.Enabled := (Sender as TCheckBox).Checked;
+  TTask.Run(
+      procedure
+      begin
+        dstLeaves.Open;
+        while (Sender as TCheckBox).Checked do
+        begin
+          Sleep(200);
 
-  if not (Sender as TCheckBox).Checked then dstLeaves.Close;
+          SyncLeave;
+          TThread.Synchronize(nil,
+            procedure
+            begin
+              lblUpdate.Caption := 'Last update at ' + FormatDateTime('mmm dd yyyy hh:mm:ss',Now);
+              lblRecordsRemaining.Caption := 'Records remaining: ' + IntToStr(dstLeaves.RecordCount);
+            end
+            );
+
+          dstLeaves.Requery;
+        end;
+      end
+    );
 end;
 
 procedure TfrmSyncClientWebMain.SyncLeave;
@@ -127,20 +142,6 @@ begin
   except
     on E: Exception do MessageDlg(E.Message,mtError,[mbOK],0);
   end;
-end;
-
-procedure TfrmSyncClientWebMain.SyncTimerTimer(Sender: TObject);
-begin
-  dstLeaves.Close;
-  dstLeaves.Open;
-
-  lblUpdate.Caption := 'Last update at ' + FormatDateTime('mmm dd yyyy hh:mm:ss',Now);
-  lblRecordsRemaining.Caption := 'Record remaining: ' + IntToStr(dstLeaves.RecordCount);
-
-  Application.ProcessMessages;
-  Update;
-
-  SyncLeave;
 end;
 
 end.

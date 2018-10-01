@@ -162,6 +162,48 @@ inherited frmLeaveMain: TfrmLeaveMain
     Font.Style = []
     ParentFont = False
   end
+  object shLeave: TShape [11]
+    Left = 955
+    Top = 425
+    Width = 12
+    Height = 12
+    Brush.Color = clMoneyGreen
+    Pen.Style = psClear
+  end
+  object RzLabel7: TRzLabel [12]
+    Left = 973
+    Top = 444
+    Width = 67
+    Height = 14
+    Caption = 'Business trip'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object shBusinessTrip: TShape [13]
+    Left = 955
+    Top = 445
+    Width = 12
+    Height = 12
+    Brush.Color = clSkyBlue
+    Pen.Style = psClear
+  end
+  object RzLabel8: TRzLabel [14]
+    Left = 973
+    Top = 424
+    Width = 37
+    Height = 14
+    Caption = 'Leaves'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   inherited pnlTitle: TRzPanel
     Width = 1160
     ExplicitWidth = 1160
@@ -239,6 +281,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
   end
   object RzPanel1: TRzPanel
@@ -289,6 +345,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader2: TRzPanel
       Left = 1
@@ -359,6 +429,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader3: TRzPanel
       Left = 1
@@ -429,6 +513,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader4: TRzPanel
       Left = 1
@@ -499,6 +597,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader5: TRzPanel
       Left = 1
@@ -569,6 +681,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader6: TRzPanel
       Left = 1
@@ -639,6 +765,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader7: TRzPanel
       Left = 1
@@ -709,6 +849,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader8: TRzPanel
       Left = 1
@@ -779,6 +933,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader9: TRzPanel
       Left = 1
@@ -849,6 +1017,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader10: TRzPanel
       Left = 1
@@ -919,6 +1101,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader11: TRzPanel
       Left = 1
@@ -989,6 +1185,20 @@ inherited frmLeaveMain: TfrmLeaveMain
       FixedLineColor = 12961221
       LineColor = 12961221
       UseDrawingStyle = False
+      ColWidths = (
+        23
+        23
+        23
+        23
+        23
+        23
+        23)
+      RowHeights = (
+        23
+        23
+        23
+        23
+        23)
     end
     object pnlCalendarHeader12: TRzPanel
       Left = 1

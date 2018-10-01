@@ -4,7 +4,7 @@ interface
 
 uses
   Leave, System.Classes, ADODB, SysUtils, Employee, System.UITypes, RzGrids,
-  System.Types, Graphics, DateUtils;
+  System.Types, Graphics, DateUtils, uniStringGrid, uniGUITypes;
 
 type
   TOnUpdate = procedure of object;
@@ -49,7 +49,7 @@ type
     property StartDate: TDateTime read FStartDate write FStartDate;
     property EndDate: TDateTime read FEndDate write FEndDate;
     property OnUpdate: TOnUpdate read FOnUpdate write FOnUpdate;
-    property Employee: TEmployee read FEmployee;
+    property Employee: TEmployee read FEmployee write FEmployee;
     property VacationLeaveCredits: single read GetVacationLeaveCredits;
     property SickLeaveCredits: single read GetSickLeaveCredits;
     property VacationLeavesRemaining: single read GetVacationLeavesRemaining;
@@ -61,7 +61,8 @@ type
     procedure RemoveLeave(ALeave: TEmployeeLeave);
     procedure Retrieve;
     procedure FindEmployee;
-    procedure Render(const grid: TRzStringGrid; const ADate: TDateTime; Rect: TRect);
+    procedure Render(const grid: TRzStringGrid; const ADate: TDateTime; Rect: TRect); overload;
+    procedure Render(const attribs: TUniCellAttribs; const ADate: TDateTime); overload;
 
     function Save: boolean;
     function HasLeave(const ADate: TDateTime): boolean;
@@ -70,10 +71,13 @@ type
     destructor Destroy; override;
   end;
 
+const
+  CALENDARS = 12;
+
 implementation
 
 uses
-  LeaveData, Holiday, EmployeeSearch, HRISGlobal, HRISDialogs;
+  LeaveData, Holiday, EmployeeSearch, HRISGlobal, HRISDialogs, MainModule;
 
 { TLeaveController }
 
@@ -94,7 +98,11 @@ end;
 
 constructor TLeaveController.Create;
 begin
+  {$ifdef WEB}
+  FData := TdmLeave.Create(nil,UniMainModule.MainConnection);
+  {$else}
   FData := TdmLeave.Create(nil);
+  {$endif}
 end;
 
 destructor TLeaveController.Destroy;
@@ -235,6 +243,42 @@ begin
 
 end;
 
+procedure TLeaveController.Render(const attribs: TUniCellAttribs;
+  const ADate: TDateTime);
+var
+  conflictWidth: integer;
+  LLeave: TEmployeeLeave;
+  i: integer;
+begin
+  try
+    i := IndexOf(ADate);
+
+    if i > -1 then
+    begin
+      LLeave := FLeaves[i];
+      while LLeave.Date = ADate do
+      begin
+        if (LLeave.IsPaid) and (LLeave.IsApproved) then
+        begin
+          if LLeave.IsBusinessTrip then attribs.Color := $00B3CBFF
+          else attribs.Color := clMoneyGreen;
+          {begin
+            if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
+            // else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
+            else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
+          end; }
+        end;
+
+        Inc(i);
+
+        LLeave := FLeaves[i];
+      end;
+    end;
+  finally
+
+  end;
+end;
+
 procedure TLeaveController.Render(const grid: TRzStringGrid;
   const ADate: TDateTime; Rect: TRect);
 var
@@ -252,12 +296,15 @@ begin
         LLeave := FLeaves[i];
         while LLeave.Date = ADate do
         begin
-          if LLeave.IsBusinessTrip then Canvas.Brush.Color := clSkyBlue
-          else
+          if (LLeave.IsPaid) and (LLeave.IsApproved) then
           begin
-            if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
-            else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
-            // else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
+            if LLeave.IsBusinessTrip then Canvas.Brush.Color := $00B3CBFF
+            else Canvas.Brush.Color := clMoneyGreen;
+            {begin
+              if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
+              // else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
+              else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
+            end; }
           end;
 
           Inc(i);
@@ -267,6 +314,7 @@ begin
       end;
     end;
 
+    {$region 'More display options'}
       {if IndexOf( then
       begin
         // has conflict
@@ -335,6 +383,7 @@ begin
                   Rect.Top+11);
       end;
     end;    // end width  }
+    {$endregion}
   except
 
   end;
@@ -357,7 +406,11 @@ begin
     try
       try
         Parameters.ParamByName('@id_num').Value := FEmployee.IdNumber;
+        {$ifdef WEB}
+        Parameters.ParamByName('@year').Value := YearOf(Now);
+        {$else}
         Parameters.ParamByName('@year').Value := YearOf(HRIS.CurrentDate);
+        {$endif}
 
         Open;
 

@@ -2,9 +2,9 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2018/08/30 22:15:55.000.650,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/09/06 10:35:17.803,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/09/06 10:36:27.550,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWebMain.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/09/06 10:36:27.550,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWebMain.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2018/09/06 10:36:45.265,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWeb.dproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/09/06 10:35:17.000.803,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/06 10:36:27.000.550,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWebMain.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/09/06 10:36:27.000.550,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWebMain.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/06 10:36:45.000.265,C:\Projects\HRIS-v4.1\Synchronisation\SyncClientWeb\SyncClientWeb.dproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

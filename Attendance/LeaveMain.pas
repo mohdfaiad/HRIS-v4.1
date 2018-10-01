@@ -66,6 +66,10 @@ type
     RzLabel2: TRzLabel;
     RzLabel3: TRzLabel;
     RzLabel4: TRzLabel;
+    shLeave: TShape;
+    RzLabel7: TRzLabel;
+    shBusinessTrip: TShape;
+    RzLabel8: TRzLabel;
     procedure grCalendar1Exit(Sender: TObject);
     procedure grCalendar1Enter(Sender: TObject);
     procedure grCalendar1DrawCell(Sender: TObject; ACol, ARow: Integer;
@@ -82,9 +86,6 @@ type
   public
     { Public declarations }
   end;
-
-const
-  CALENDARS = 12;
 
 implementation
 
@@ -157,7 +158,7 @@ begin
       end;
 
       // change colour for Sundays
-      // if ACol = 6 then Brush.Color := $00D9D9FF;
+      if ACol = 6 then Brush.Color := $00D9D9FF;
 
       if Focused then
       begin

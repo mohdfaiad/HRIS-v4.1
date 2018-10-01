@@ -90,7 +90,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_DcpOutput>..\_dcp</DCC_DcpOutput>
-        <DCC_UnitSearchPath>..\_dcu;..\Base;..\Employee;..\Tools;..\Common;..\Security;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\_dcu;..\Base;..\Employee;..\Tools;..\Common;..\Security;..\HRISWeb;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_BplOutput>..\_bpl</DCC_BplOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -203,6 +203,11 @@
         <DCCReference Include="TimelogPayPeriodHRIS.pas">
             <Form>frmTimelogPayPeriodHRIS</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="WebLeaveMain.pas">
+            <Form>LeaveMainFrame</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

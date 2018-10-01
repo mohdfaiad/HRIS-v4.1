@@ -64,7 +64,6 @@ object WebMainForm: TWebMainForm
       Height = 372
       Hint = ''
       Align = alClient
-      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 1
       BorderStyle = ubsNone
       ShowCaption = False
@@ -249,6 +248,7 @@ object WebMainForm: TWebMainForm
         F21EC99F66E473C8DD31FBDF8EFFA9B1B20AE4E66F2AC1ACED5FEC16CD7BB7BB
         43540000000049454E44AE426082}
       Anchors = [akTop, akRight]
+      OnClick = imgLeavesClick
     end
   end
   object UniSimplePanel2: TUniSimplePanel

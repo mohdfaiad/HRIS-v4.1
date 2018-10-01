@@ -114,6 +114,14 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Anchors = [akLeft, akBottom]
     TabOrder = 2
   end
+  object btnSkipRecord: TButton
+    Left = 840
+    Top = 35
+    Width = 75
+    Height = 25
+    Caption = 'Skip record'
+    TabOrder = 3
+  end
   object ConnectionMain: TADOConnection
     ConnectionString = 
       'Provider=SQLNCLI11.1;Persist Security Info=False;User ID=sa;Init' +
@@ -123,13 +131,6 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Provider = 'SQLNCLI11.1'
     BeforeConnect = ConnectionMainBeforeConnect
     Left = 664
-    Top = 16
-  end
-  object SyncTimer: TTimer
-    Enabled = False
-    Interval = 3000
-    OnTimer = SyncTimerTimer
-    Left = 736
     Top = 16
   end
   object dscLeaves: TDataSource

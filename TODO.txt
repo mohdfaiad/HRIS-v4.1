@@ -1,0 +1,4 @@
+details for leave - just like timelog
+window for editing leave credits
+display all leaves
+sync all

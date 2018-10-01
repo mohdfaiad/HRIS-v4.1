@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/08/30 22:15:55.000.650,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/15 12:18:54.000.076,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/15 12:19:05.000.306,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/15 12:21:01.000.111,C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncMainV2.dfm</Transaction>
+    <Transaction>2018/09/15 12:21:01.000.111,C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncMainV2.pas</Transaction>
+    <Transaction>2018/09/15 12:22:03.000.031,C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\HRISSync.dproj</Transaction>
+    <Transaction>2018/09/26 20:04:44.000.615,C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncClientMain.pas=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncMainV2.pas</Transaction>
+    <Transaction>2018/09/26 20:04:44.000.615,C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncClientMain.dfm=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncMainV2.dfm</Transaction>
+    <Transaction>2018/09/26 20:05:01.000.537,C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\SyncClientV2.dproj=C:\Projects\HRIS-v4.1\Synchronisation\SyncMainV2\HRISSync.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
