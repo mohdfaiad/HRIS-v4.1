@@ -188,7 +188,7 @@ inherited frmLeaveMain: TfrmLeaveMain
     Top = 445
     Width = 12
     Height = 12
-    Brush.Color = clSkyBlue
+    Brush.Color = 11783167
     Pen.Style = psClear
   end
   object RzLabel8: TRzLabel [14]

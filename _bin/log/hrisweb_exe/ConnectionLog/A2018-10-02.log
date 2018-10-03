@@ -1,0 +1,24 @@
+HRISWeb.exe: 00001920: 21:41:32 [127.0.0.1]:Failed Sequence Recovery: SeqId: 17, Event: select
+HRISWeb.exe: 00001920: 21:41:32 [127.0.0.1]:Sequence sent from cache:  SeqId: 17
+HRISWeb.exe: 00001920: 21:41:32 [127.0.0.1]:Processed: Id: 17, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 00002E94: 21:42:21 [127.0.0.1]:Failed Sequence Recovery: SeqId: 18, Event: select
+HRISWeb.exe: 00002E94: 21:42:21 [127.0.0.1]:Sequence sent from cache:  SeqId: 18
+HRISWeb.exe: 00002E94: 21:42:21 [127.0.0.1]:Processed: Id: 18, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 00003D3C: 21:43:11 [127.0.0.1]:Failed Sequence Recovery: SeqId: 19, Event: select
+HRISWeb.exe: 00003D3C: 21:43:11 [127.0.0.1]:Sequence sent from cache:  SeqId: 19
+HRISWeb.exe: 00003D3C: 21:43:11 [127.0.0.1]:Processed: Id: 19, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 00003D70: 21:44:27 [127.0.0.1]:Failed Sequence Recovery: SeqId: 20, Event: select
+HRISWeb.exe: 00002FCC: 21:44:27 [127.0.0.1]:Failed Sequence Recovery: SeqId: 20, Event: select
+HRISWeb.exe: 00003D70: 21:44:27 [127.0.0.1]:Sequence sent from cache:  SeqId: 20
+HRISWeb.exe: 00003D70: 21:44:27 [127.0.0.1]:Processed: Id: 20, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 00002FCC: 21:44:28 [127.0.0.1]:Sequence sent from cache:  SeqId: 20
+HRISWeb.exe: 00002FCC: 21:44:28 [127.0.0.1]:Processed: Id: 20, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 0000137C: 21:45:13 [127.0.0.1]:Failed Sequence Recovery: SeqId: 24, Event: click
+HRISWeb.exe: 0000137C: 21:45:13 [127.0.0.1]:Sequence sent from cache:  SeqId: 24
+HRISWeb.exe: 0000137C: 21:45:15 [127.0.0.1]:Processed: Id: 24, Evt: click, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 000027F0: 21:46:43 [127.0.0.1]:Failed Sequence Recovery: SeqId: 25, Event: select
+HRISWeb.exe: 00000474: 21:46:44 [127.0.0.1]:Failed Sequence Recovery: SeqId: 25, Event: select
+HRISWeb.exe: 000027F0: 21:46:44 [127.0.0.1]:Sequence sent from cache:  SeqId: 25
+HRISWeb.exe: 000027F0: 21:46:44 [127.0.0.1]:Processed: Id: 25, Evt: select, [alfmCTRtUQ1028A601D]
+HRISWeb.exe: 00000474: 21:46:46 [127.0.0.1]:Sequence sent from cache:  SeqId: 25
+HRISWeb.exe: 00000474: 21:46:46 [127.0.0.1]:Processed: Id: 25, Evt: select, [alfmCTRtUQ1028A601D]

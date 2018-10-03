@@ -1,0 +1,260 @@
+HRISWeb.exe: 000009D8: 17:54:53 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000009D8: 17:54:53 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000009D8: 17:54:53 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000009D8: 17:54:53 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+HRISWeb.exe: 000009D8: 17:54:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000009D8: 17:54:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002E10: 17:57:02 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002E10: 17:57:02 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002E10: 17:57:02 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002E10: 17:57:02 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+HRISWeb.exe: 00002E10: 17:57:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002E10: 17:57:03 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002D3C: 18:04:08 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002D3C: 18:04:08 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002D3C: 18:04:08 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002D3C: 18:04:08 [TUniServerModule]:Global Cache Folder Erased. <15> Files deleted.
+HRISWeb.exe: 00002D3C: 18:04:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002D3C: 18:04:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000024DC: 18:04:15 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 0000230C: 18:07:08 []:>--------------------------------------------------------------<
+HRISWeb.exe: 0000230C: 18:07:08 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 0000230C: 18:07:08 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 0000230C: 18:07:08 [TUniServerModule]:Global Cache Folder Erased. <14> Files deleted.
+HRISWeb.exe: 0000230C: 18:07:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 0000230C: 18:07:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000012C8: 18:07:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00001EEC: 18:08:57 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001EEC: 18:08:57 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001EEC: 18:08:57 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001EEC: 18:08:57 [TUniServerModule]:Global Cache Folder Erased. <12> Files deleted.
+HRISWeb.exe: 00001EEC: 18:08:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001EEC: 18:08:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002F80: 18:09:05 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000F10: 18:30:52 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000F10: 18:30:52 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000F10: 18:30:52 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000F10: 18:30:52 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 00000F10: 18:30:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000F10: 18:30:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000F30: 18:30:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00002DBC: 18:31:56 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002DBC: 18:31:56 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002DBC: 18:31:56 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002DBC: 18:31:56 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 00002DBC: 18:31:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002DBC: 18:31:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002DAC: 18:31:58 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00002DBC: 18:38:45 [TUniServerModule]:Shutting Down Server.
+HRISWeb.exe: 00002DBC: 18:38:45 [TUniServerModule]:Stopping HTTP Server.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniServerModule]:HTTP Server Stopped.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniGUISessionManager]:Terminating Session manager.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniGUISessionManager]:Stopping Cache Eraser...
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniGUISessionManager]:Cache Eraser Stopped.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniGUISessionManager]:Destroying Worker Threads.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniGUISessionManager]:Session manager terminated.
+HRISWeb.exe: 00002DBC: 18:38:48 [TUniServerModule]:Server Shutdown Completed.
+HRISWeb.exe: 00002DBC: 18:38:48 []:<-------------------------------------------------------------->
+HRISWeb.exe: 00002DBC: 18:38:48 [Terminated]:Exit Code: 0
+HRISWeb.exe: 000033B0: 18:40:56 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000033B0: 18:40:56 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000033B0: 18:40:56 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000033B0: 18:40:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000033B0: 18:40:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002A70: 18:41:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 0000152C: 18:42:51 []:>--------------------------------------------------------------<
+HRISWeb.exe: 0000152C: 18:42:51 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 0000152C: 18:42:51 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 0000152C: 18:42:51 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 0000152C: 18:42:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 0000152C: 18:42:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000028A4: 18:42:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000D88: 18:44:03 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000D88: 18:44:03 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000D88: 18:44:03 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000D88: 18:44:03 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 00000D88: 18:44:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000D88: 18:44:03 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000017D4: 18:44:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00002D98: 18:46:15 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002D98: 18:46:15 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002D98: 18:46:15 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002D98: 18:46:15 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 00002D98: 18:46:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002D98: 18:46:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001B70: 18:46:17 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 000006AC: 18:50:07 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000006AC: 18:50:07 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000006AC: 18:50:07 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000006AC: 18:50:07 [TUniServerModule]:Global Cache Folder Erased. <12> Files deleted.
+HRISWeb.exe: 000006AC: 18:50:07 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000006AC: 18:50:07 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002374: 18:50:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000F94: 18:50:59 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $0087D467
+HRISWeb.exe: 00000A6C: 18:51:31 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000A6C: 18:51:31 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000A6C: 18:51:31 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000A6C: 18:51:31 [TUniServerModule]:Global Cache Folder Erased. <15> Files deleted.
+HRISWeb.exe: 00000A6C: 18:51:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000A6C: 18:51:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000CA0: 18:51:36 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00002398: 18:52:15 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002398: 18:52:15 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002398: 18:52:15 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002398: 18:52:15 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+HRISWeb.exe: 00002398: 18:52:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002398: 18:52:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000C34: 18:53:37 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000C34: 18:53:37 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000C34: 18:53:37 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000C34: 18:53:37 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+HRISWeb.exe: 00000C34: 18:53:37 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000C34: 18:53:37 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002FCC: 18:53:43 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00001A88: 18:54:01 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $0087D44F
+HRISWeb.exe: 000019C0: 18:55:08 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000019C0: 18:55:08 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000019C0: 18:55:08 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000019C0: 18:55:08 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 000019C0: 18:55:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000019C0: 18:55:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 0000129C: 18:55:14 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 000031BC: 18:55:35 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00000548: 19:38:42 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000548: 19:38:42 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000548: 19:38:42 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000548: 19:38:42 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+HRISWeb.exe: 00000548: 19:38:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000548: 19:38:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002ECC: 19:40:18 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00002AE0: 19:40:28 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00000C20: 19:41:17 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00000C20: 19:41:17 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00000C20: 19:41:17 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00000C20: 19:41:17 [TUniServerModule]:Global Cache Folder Erased. <27> Files deleted.
+HRISWeb.exe: 00000C20: 19:41:17 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00000C20: 19:41:18 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000028DC: 19:41:26 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00002EFC: 19:55:56 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002EFC: 19:55:56 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002EFC: 19:55:56 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002EFC: 19:55:56 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 00002EFC: 19:55:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002EFC: 19:55:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000006A8: 19:55:58 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000E30: 19:56:00 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000A84: 19:56:25 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00002D0C: 19:56:52 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002D0C: 19:56:52 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002D0C: 19:56:52 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002D0C: 19:56:52 [TUniServerModule]:Global Cache Folder Erased. <14> Files deleted.
+HRISWeb.exe: 00002D0C: 19:56:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002D0C: 19:56:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000BD0: 19:56:58 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 000028D4: 19:58:27 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000028D4: 19:58:27 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000028D4: 19:58:27 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000028D4: 19:58:27 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 000028D4: 19:58:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000028D4: 19:58:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000AD0: 19:58:32 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000F78: 19:59:08 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00001D58: 19:59:10 [127.0.0.1]:EAccessViolation : Access violation at address 0040A1E4 in module 'HRISWeb.exe'. Read of address FFFFFFD1 : Addr: $0040A1E4
+HRISWeb.exe: 00002040: 20:00:04 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002040: 20:00:04 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002040: 20:00:04 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002040: 20:00:04 [TUniServerModule]:Global Cache Folder Erased. <15> Files deleted.
+HRISWeb.exe: 00002040: 20:00:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002040: 20:00:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000014D8: 20:00:10 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 000022D0: 20:00:30 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 000025E4: 20:01:00 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000025E4: 20:01:00 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000025E4: 20:01:00 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000025E4: 20:01:00 [TUniServerModule]:Global Cache Folder Erased. <14> Files deleted.
+HRISWeb.exe: 000025E4: 20:01:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000025E4: 20:01:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001140: 20:01:07 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 000004C8: 20:03:00 []:>--------------------------------------------------------------<
+HRISWeb.exe: 000004C8: 20:03:00 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 000004C8: 20:03:00 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 000004C8: 20:03:00 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 000004C8: 20:03:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 000004C8: 20:03:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000022E4: 20:03:06 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00000CD4: 20:03:26 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 0000209C: 20:03:38 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+HRISWeb.exe: 00001D14: 20:06:11 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001D14: 20:06:11 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001D14: 20:06:11 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001D14: 20:06:11 [TUniServerModule]:Global Cache Folder Erased. <15> Files deleted.
+HRISWeb.exe: 00001D14: 20:06:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001D14: 20:06:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002BD0: 20:06:20 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00001FEC: 20:08:06 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001FEC: 20:08:06 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001FEC: 20:08:06 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001FEC: 20:08:06 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+HRISWeb.exe: 00001FEC: 20:08:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001FEC: 20:08:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001160: 20:16:16 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001160: 20:16:16 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001160: 20:16:16 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001160: 20:16:16 [TUniServerModule]:Global Cache Folder Erased. <26> Files deleted.
+HRISWeb.exe: 00001160: 20:16:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001160: 20:16:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001B34: 20:16:22 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44C7
+HRISWeb.exe: 00001614: 20:20:36 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001614: 20:20:36 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001614: 20:20:36 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001614: 20:20:36 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+HRISWeb.exe: 00001614: 20:20:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001614: 20:20:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000001FC: 20:20:41 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB
+HRISWeb.exe: 00002B10: 20:31:05 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002B10: 20:31:05 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002B10: 20:31:06 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002B10: 20:31:06 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 00002B10: 20:31:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002B10: 20:31:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002700: 20:31:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB
+HRISWeb.exe: 00002D58: 20:47:56 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002D58: 20:47:56 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002D58: 20:47:56 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002D58: 20:47:56 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 00002D58: 20:47:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002D58: 20:47:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00002600: 20:48:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB
+HRISWeb.exe: 0000271C: 20:50:00 []:>--------------------------------------------------------------<
+HRISWeb.exe: 0000271C: 20:50:00 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 0000271C: 20:50:00 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 0000271C: 20:50:00 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+HRISWeb.exe: 0000271C: 20:50:01 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 0000271C: 20:50:01 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001230: 20:51:27 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001230: 20:51:27 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001230: 20:51:27 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001230: 20:51:27 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+HRISWeb.exe: 00001230: 20:51:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001230: 20:51:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000033F8: 20:51:33 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB
+HRISWeb.exe: 00002E1C: 21:01:01 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00002E1C: 21:01:01 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00002E1C: 21:01:01 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00002E1C: 21:01:01 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+HRISWeb.exe: 00002E1C: 21:01:01 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00002E1C: 21:01:01 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00001CD4: 21:02:59 []:>--------------------------------------------------------------<
+HRISWeb.exe: 00001CD4: 21:02:59 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 00001CD4: 21:02:59 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 00001CD4: 21:02:59 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+HRISWeb.exe: 00001CD4: 21:02:59 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 00001CD4: 21:02:59 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 000007D8: 21:03:05 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB
+HRISWeb.exe: 0000297C: 21:05:16 []:>--------------------------------------------------------------<
+HRISWeb.exe: 0000297C: 21:05:16 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 0000297C: 21:05:16 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 0000297C: 21:05:16 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 0000297C: 21:05:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 0000297C: 21:05:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+HRISWeb.exe: 00000A84: 21:05:23 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB

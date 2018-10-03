@@ -158,7 +158,7 @@ begin
       end;
 
       // change colour for Sundays
-      if ACol = 6 then Brush.Color := $00D9D9FF;
+      if ACol = 6 then Brush.Color := $00EAEAEA;
 
       if Focused then
       begin

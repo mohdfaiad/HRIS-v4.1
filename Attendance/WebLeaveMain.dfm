@@ -13,7 +13,7 @@ object LeaveMainFrame: TLeaveMainFrame
   ParentBackground = False
   object grCalendar1: TUniStringGrid
     Left = 56
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -36,7 +36,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader1: TUniPanel
     Left = 56
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -55,6 +55,7 @@ object LeaveMainFrame: TLeaveMainFrame
     Width = 145
     Height = 24
     Hint = ''
+    Enabled = False
     Text = 'YearCombo'
     TabOrder = 2
     ForceSelection = False
@@ -62,7 +63,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar2: TUniStringGrid
     Left = 320
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -85,7 +86,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader2: TUniPanel
     Left = 320
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -100,7 +101,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar3: TUniStringGrid
     Left = 584
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -123,7 +124,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader3: TUniPanel
     Left = 584
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -138,7 +139,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar4: TUniStringGrid
     Left = 848
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -161,7 +162,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader4: TUniPanel
     Left = 848
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -176,7 +177,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar5: TUniStringGrid
     Left = 1112
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -199,7 +200,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader5: TUniPanel
     Left = 1112
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -214,7 +215,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar6: TUniStringGrid
     Left = 1376
-    Top = 88
+    Top = 128
     Width = 246
     Height = 107
     Hint = ''
@@ -237,7 +238,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader6: TUniPanel
     Left = 1376
-    Top = 64
+    Top = 104
     Width = 246
     Height = 25
     Hint = ''
@@ -252,7 +253,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar7: TUniStringGrid
     Left = 56
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -275,7 +276,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader7: TUniPanel
     Left = 56
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''
@@ -290,7 +291,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar8: TUniStringGrid
     Left = 320
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -313,7 +314,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader8: TUniPanel
     Left = 320
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''
@@ -328,7 +329,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar9: TUniStringGrid
     Left = 584
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -351,7 +352,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader9: TUniPanel
     Left = 584
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''
@@ -366,7 +367,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar10: TUniStringGrid
     Left = 848
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -389,7 +390,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader10: TUniPanel
     Left = 848
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''
@@ -404,7 +405,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar11: TUniStringGrid
     Left = 1112
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -427,7 +428,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader11: TUniPanel
     Left = 1112
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''
@@ -442,7 +443,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object grCalendar12: TUniStringGrid
     Left = 1376
-    Top = 256
+    Top = 296
     Width = 246
     Height = 107
     Hint = ''
@@ -465,7 +466,7 @@ object LeaveMainFrame: TLeaveMainFrame
   end
   object pnlHeader12: TUniPanel
     Left = 1376
-    Top = 232
+    Top = 272
     Width = 246
     Height = 25
     Hint = ''

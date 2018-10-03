@@ -84,13 +84,21 @@ begin
       // change colour of cells depending on status
       if Assigned(Objects[ACol,ARow]) then
       begin
-        LCellDate := (Objects[ACol,ARow] as TCellDate);
-        FController.Render(Attribs,LCellDate.Date);
+        if Objects[ACol,ARow] is TCellDate then
+        begin
+          LCellDate := (Objects[ACol,ARow] as TCellDate);
+          FController.Render(Attribs,LCellDate.Date);
+        end;
       end;
 
-      if ACol = 6 then Attribs.Color := $00F7F7F7;
+      if ACol = 6 then
+      begin
+        Attribs.Color := $00F7F7F7;
+        Attribs.Font.Color := clRed;
+      end;
 
     end;
+
   except
     on E: Exception do ShowMessage('Check error at date ' + DateToStr(LCellDate.Date));
   end;
@@ -102,6 +110,7 @@ var
   LGrid: TUniStringGrid;
   LHeader: TUniPanel;
   selectedYear: string;
+  cellObject: TCellDate;
 begin
 
   selectedYear := YearCombo.Text;
@@ -130,7 +139,18 @@ begin
 
     for LRow := 0 to LGrid.RowCount - 1 do
       for LCol := 0 to LGrid.ColCount - 1 do
+      begin
         LGrid.Cells[LCol,LRow] := '';
+
+        if Assigned(LGrid.Objects[LCol,LRow]) then
+        begin
+          if LGrid.Objects[LCol,LRow] is TCellDate then
+          begin
+            cellObject := LGrid.Objects[LCol,LRow] as TCellDate;
+            //FreeAndNil(cellObject)
+          end;
+        end;
+      end;
   end;
 end;
 
@@ -178,12 +198,12 @@ begin
       end;
 
       // display the day
-      Cells[LCol,LRow] := IntToStr(dd);
+      Cells[LCol,LRow] := IntToStr(DayOf(dt));
 
       LCellDate := TCellDate.Create;
       LCellDate.Date := dt;
 
-      Objects[LCol,LRow] := TObject(LCellDate);
+      Objects[LCol,LRow] := LCellDate;
     end;
   end;
 end;

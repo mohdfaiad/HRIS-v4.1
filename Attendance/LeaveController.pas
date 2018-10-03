@@ -35,7 +35,6 @@ type
 
     function GetLeave(const i: integer): TEmployeeLeave;
     function GetLeaveCount: integer;
-    function IndexOf(const ADate: TDate): integer;
     function GetSickLeaveCredits: single;
     function GetVacationLeaveCredits: single;
     function GetSickLeavesRemaining: single;
@@ -62,10 +61,11 @@ type
     procedure Retrieve;
     procedure FindEmployee;
     procedure Render(const grid: TRzStringGrid; const ADate: TDateTime; Rect: TRect); overload;
-    procedure Render(const attribs: TUniCellAttribs; const ADate: TDateTime); overload;
+    procedure Render(AAttribs: TUniCellAttribs; const ADate: TDateTime); overload;
 
     function Save: boolean;
     function HasLeave(const ADate: TDateTime): boolean;
+    function IndexOf(const ADate: TDate): integer;
 
     constructor Create;
     destructor Destroy; override;
@@ -243,13 +243,14 @@ begin
 
 end;
 
-procedure TLeaveController.Render(const attribs: TUniCellAttribs;
+procedure TLeaveController.Render(AAttribs: TUniCellAttribs;
   const ADate: TDateTime);
 var
   conflictWidth: integer;
   LLeave: TEmployeeLeave;
   i: integer;
 begin
+
   try
     i := IndexOf(ADate);
 
@@ -260,13 +261,13 @@ begin
       begin
         if (LLeave.IsPaid) and (LLeave.IsApproved) then
         begin
-          if LLeave.IsBusinessTrip then attribs.Color := $00B3CBFF
-          else attribs.Color := clMoneyGreen;
+          if LLeave.IsBusinessTrip then AAttribs.Color := $00B3CBFF
+          else AAttribs.Color := clMoneyGreen;
           {begin
             if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
             // else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
             else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
-          end; }
+          end;  }
         end;
 
         Inc(i);
@@ -406,11 +407,7 @@ begin
     try
       try
         Parameters.ParamByName('@id_num').Value := FEmployee.IdNumber;
-        {$ifdef WEB}
-        Parameters.ParamByName('@year').Value := YearOf(Now);
-        {$else}
-        Parameters.ParamByName('@year').Value := YearOf(HRIS.CurrentDate);
-        {$endif}
+        Parameters.ParamByName('@year').Value := YearOf(FStartDate);
 
         Open;
 

@@ -1,0 +1,6 @@
+HRISWeb.exe: 0000065C: 21:40:13 []:>--------------------------------------------------------------<
+HRISWeb.exe: 0000065C: 21:40:13 [TUniServerModule]:Server First Init.
+HRISWeb.exe: 0000065C: 21:40:13 [TUniServerModule]:Debug Mode = ON
+HRISWeb.exe: 0000065C: 21:40:13 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+HRISWeb.exe: 0000065C: 21:40:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+HRISWeb.exe: 0000065C: 21:40:13 [TUniServerModule]:HTTP Server Started on Port: 8077
