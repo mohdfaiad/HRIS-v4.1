@@ -114,7 +114,6 @@ object LoginForm: TLoginForm
     ParentColor = False
     Color = clTeal
     Align = alTop
-    Anchors = [akLeft, akTop, akRight]
     TabOrder = 6
     object UniLabel3: TUniLabel
       Left = 6
@@ -133,7 +132,7 @@ object LoginForm: TLoginForm
     end
   end
   object UniImage1: TUniImage
-    Left = 112
+    Left = 184
     Top = 23
     Width = 48
     Height = 48
@@ -267,12 +266,12 @@ object LoginForm: TLoginForm
       6D760000000049454E44AE426082}
   end
   object UniLabel4: TUniLabel
-    Left = 176
+    Left = 248
     Top = 28
-    Width = 275
+    Width = 124
     Height = 19
     Hint = ''
-    Caption = 'Human Resource Integrated System'
+    Caption = 'Employee Kiosk'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -282,7 +281,7 @@ object LoginForm: TLoginForm
     TabOrder = 8
   end
   object UniLabel5: TUniLabel
-    Left = 176
+    Left = 248
     Top = 48
     Width = 97
     Height = 14

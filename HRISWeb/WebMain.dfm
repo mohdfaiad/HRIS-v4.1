@@ -35,14 +35,14 @@ object WebMainForm: TWebMainForm
   object lblWelcomeUser: TUniLabel
     Left = 64
     Top = 46
-    Width = 8
-    Height = 33
+    Width = 7
+    Height = 25
     Hint = ''
     Caption = ''
     ParentFont = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clTeal
-    Font.Height = -27
+    Font.Height = -21
     TabOrder = 0
   end
   object UniSimplePanel1: TUniSimplePanel
@@ -322,12 +322,12 @@ object WebMainForm: TWebMainForm
   object UniLabel2: TUniLabel
     Left = 64
     Top = 497
-    Width = 315
+    Width = 200
     Height = 14
     Cursor = crHandPoint
     Hint = ''
     Alignment = taRightJustify
-    Caption = 'Human Resource Integrated System Web version 1.0.0.0'
+    Caption = 'Employee Kiosk Web version 1.0.0.0'
     Anchors = [akLeft, akBottom]
     ParentFont = False
     Font.Charset = ANSI_CHARSET

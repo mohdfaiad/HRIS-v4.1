@@ -41,6 +41,9 @@ type
     function GetVacationLeavesRemaining: single;
     function GetSickLeavesAvailed: single;
     function GetVacationLeavesAvailed: single;
+    function GetTotalLeaveCredits: single;
+    function GetTotalLeavesAvailed: single;
+    function GetTotalLeavesRemaining: single;
 
   public
     property Leaves[const i: integer]: TEmployeeLeave read GetLeave write SetLeave;
@@ -55,6 +58,9 @@ type
     property SickLeavesRemaining: single read GetSickLeavesRemaining;
     property VacationLeavesAvailed: single read GetVacationLeavesAvailed;
     property SickLeavesAvailed: single read GetSickLeavesAvailed;
+    property TotalLeaveCredits: single read GetTotalLeaveCredits;
+    property TotalLeavesAvailed: single read GetTotalLeavesAvailed;
+    property TotalLeavesRemaining: single read GetTotalLeavesRemaining;
 
     procedure AddLeave(ALeave: TEmployeeLeave);
     procedure RemoveLeave(ALeave: TEmployeeLeave);
@@ -155,7 +161,7 @@ begin
   leavesAvailed := 0;
 
   for LLeave in FLeaves do
-    if (LLeave.LeaveType = 'SL') and (LLeave.IsApproved)  then
+    if (LLeave.LeaveType = 'SL') and (LLeave.IsApproved) and (LLeave.IsPaid)  then
     begin
       if LLeave.IsWholeDay then leavesAvailed := leavesAvailed + 1
       else if LLeave.IsMorning then leavesAvailed := leavesAvailed + 0.4375
@@ -168,6 +174,23 @@ end;
 function TLeaveController.GetSickLeavesRemaining: single;
 begin
   Result := SickLeaveCredits - SickLeavesAvailed;
+end;
+
+function TLeaveController.GetTotalLeaveCredits: single;
+begin
+  Result := GetSickLeaveCredits + GetVacationLeaveCredits;
+end;
+
+function TLeaveController.GetTotalLeavesAvailed: single;
+begin
+  Result := GetSickLeavesAvailed + GetVacationLeavesAvailed;
+end;
+
+function TLeaveController.GetTotalLeavesRemaining: single;
+begin
+  Result := GetTotalLeaveCredits - GetTotalLeavesAvailed;
+
+  if Result < 0 then Result := 0;
 end;
 
 function TLeaveController.GetVacationLeaveCredits: single;
@@ -187,7 +210,7 @@ begin
   leavesAvailed := 0;
 
   for LLeave in FLeaves do
-    if (LLeave.LeaveType = 'VL') and (LLeave.IsApproved)  then
+    if (LLeave.LeaveType = 'VL') and (LLeave.IsApproved) and (LLeave.IsPaid)  then
     begin
       if LLeave.IsWholeDay then leavesAvailed := leavesAvailed + 1
       else if LLeave.IsMorning then leavesAvailed := leavesAvailed + 0.4375
@@ -259,15 +282,16 @@ begin
       LLeave := FLeaves[i];
       while LLeave.Date = ADate do
       begin
-        if (LLeave.IsPaid) and (LLeave.IsApproved) then
+        if LLeave.IsApproved then
         begin
           if LLeave.IsBusinessTrip then AAttribs.Color := $00B3CBFF
-          else AAttribs.Color := clMoneyGreen;
-          {begin
-            if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
+          else
+          begin
+            if LLeave.IsPaid then AAttribs.Color := clMoneyGreen
+            else AAttribs.Color := $006666FF;
             // else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
-            else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
-          end;  }
+            // else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
+          end;
         end;
 
         Inc(i);

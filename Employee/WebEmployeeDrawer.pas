@@ -18,6 +18,8 @@ type
     FamilyAndRelativesLabel: TUniLabel;
     PafRecordsLabel: TUniLabel;
     DockPanel: TUniSimplePanel;
+    HeaderPanel: TUniSimplePanel;
+    UniLabel5: TUniLabel;
     procedure MainLabelClick(Sender: TObject);
     procedure UniFrameDestroy(Sender: TObject);
     procedure UniFrameCreate(Sender: TObject);

@@ -81,7 +81,7 @@ end;
 
 procedure TWebMainForm.UniFormAfterShow(Sender: TObject);
 begin
-  lblWelcomeUser.Caption := 'Welcome back ' + UniMainModule.User.FirstName + '.';
+  lblWelcomeUser.Caption := 'Welcome back ' + UniMainModule.User.Name2;
 end;
 
 initialization

@@ -43,6 +43,17 @@ type
     grCalendar12: TUniStringGrid;
     pnlHeader12: TUniPanel;
     UniLabel1: TUniLabel;
+    UniLabel2: TUniLabel;
+    UniLabel3: TUniLabel;
+    UniLabel4: TUniLabel;
+    LeaveCreditsLabel: TUniLabel;
+    LeavesAvailedLabel: TUniLabel;
+    LeavesRemainingLabel: TUniLabel;
+    UniPanel1: TUniPanel;
+    UniPanel2: TUniPanel;
+    UniLabel5: TUniLabel;
+    HeaderPanel: TUniSimplePanel;
+    UniPanel3: TUniPanel;
     procedure grCalendar1DrawCell(Sender: TObject; ACol, ARow: Integer;
       var Value: string; Attribs: TUniCellAttribs);
     procedure UniFrameCreate(Sender: TObject);
@@ -53,6 +64,7 @@ type
     procedure InitCalendar;
     procedure PopulateCalendar;
     procedure RefreshFrame;
+    procedure UpdateTotals;
   public
     { Public declarations }
   end;
@@ -235,6 +247,15 @@ begin
   FController.Retrieve;
 
   PopulateCalendar;
+
+  UpdateTotals;
+end;
+
+procedure TLeaveMainFrame.UpdateTotals;
+begin
+  LeaveCreditsLabel.Caption := FormatFloat('0.0000',FController.TotalLeaveCredits);
+  LeavesAvailedLabel.Caption := FormatFloat('0.0000',FController.TotalLeavesAvailed);
+  LeavesRemainingLabel.Caption := FormatFloat('0.0000',FController.TotalLeavesRemaining);
 end;
 
 procedure TLeaveMainFrame.YearComboSelect(Sender: TObject);

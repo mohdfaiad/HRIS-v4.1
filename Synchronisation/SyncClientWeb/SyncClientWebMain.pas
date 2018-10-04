@@ -26,9 +26,11 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SychronizeClick(Sender: TObject);
     procedure ConnectionHRISBeforeConnect(Sender: TObject);
+    procedure btnSkipRecordClick(Sender: TObject);
   private
     { Private declarations }
     procedure SyncLeave;
+    procedure MarkSkip;
   public
     { Public declarations }
   end;
@@ -42,6 +44,11 @@ uses
   ConnUtil, System.Threading;
 
 {$R *.dfm}
+
+procedure TfrmSyncClientWebMain.btnSkipRecordClick(Sender: TObject);
+begin
+  MarkSkip;
+end;
 
 procedure TfrmSyncClientWebMain.ConnectionHRISBeforeConnect(Sender: TObject);
 begin
@@ -90,6 +97,33 @@ begin
   ConnectionHRIS.Open;
 end;
 
+procedure TfrmSyncClientWebMain.MarkSkip;
+var
+  eventObject,pkEventObject,sourceLocation, sql: string;
+begin
+  try
+    with dstLeaves do
+    begin
+      if RecordCount = 0 then Exit;
+
+      eventObject := FieldByName('event_object').AsString;
+      pkEventObject := FieldByName('pk_event_object').AsString;
+      sourceLocation := FieldByName('source_location').AsString;
+    end;
+
+    sql := 'update wsmessage set skip = true ' +
+      ' where event_object = ' + QuotedStr(eventObject) +
+      ' and pk_event_object = ' + QuotedStr(pkEventObject) +
+      ' and source_location = ' + QuotedStr(sourceLocation);
+
+    edSQL.Text := sql;
+
+    ConnectionHRIS.Execute(sql);
+  except
+    on E: Exception do MessageDlg(E.Message,mtError,[mbOK],0);
+  end;
+end;
+
 procedure TfrmSyncClientWebMain.SychronizeClick(Sender: TObject);
 begin
   TTask.Run(
@@ -123,7 +157,7 @@ begin
     with dstLeaves do
     begin
       if RecordCount = 0 then Exit;
-    
+
       eventObject := FieldByName('event_object').AsString;
       pkEventObject := FieldByName('pk_event_object').AsString;
       sourceLocation := FieldByName('source_location').AsString;

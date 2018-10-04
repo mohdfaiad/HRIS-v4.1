@@ -31,6 +31,7 @@ type
     function GetHasRole: boolean;
     function GetIsSuperUser: boolean;
     function GetName: string;
+    function GetName2: string;
 
   public
     property Passkey: string read FPasskey write FPasskey;
@@ -45,6 +46,7 @@ type
     property LastName: string read FLastName write FLastName;
     property Name: string read GetName;
     property CreditLimit: currency read FCreditLimit write FCreditLimit;
+    property Name2: string read GetName2;
 
     procedure SetRight(const right: string);
     procedure AddRight(const code: string);
@@ -127,6 +129,11 @@ end;
 function TUser.GetName: string;
 begin
   Result := FLastName + ', ' + FFirstName;
+end;
+
+function TUser.GetName2: string;
+begin
+  Result := FFirstName + ' ' + FLastName;
 end;
 
 constructor TUser.Create;

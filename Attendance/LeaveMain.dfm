@@ -114,7 +114,7 @@ inherited frmLeaveMain: TfrmLeaveMain
     Alignment = taCenter
     AutoSize = False
     Caption = '-'
-    Color = clRed
+    Color = 6711039
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -12

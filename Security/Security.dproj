@@ -5,7 +5,7 @@
         <ProjectVersion>18.2</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Package</AppType>
@@ -130,11 +130,6 @@
         <DCCReference Include="bindcomp.dcp"/>
         <DCCReference Include="bindcompvcl.dcp"/>
         <DCCReference Include="RaizeComponentsVclDb.dcp"/>
-        <DCCReference Include="Jcl.dcp"/>
-        <DCCReference Include="JvCore.dcp"/>
-        <DCCReference Include="JvStdCtrls.dcp"/>
-        <DCCReference Include="JvPageComps.dcp"/>
-        <DCCReference Include="bdertl.dcp"/>
         <DCCReference Include="frce.dcp"/>
         <DCCReference Include="LockBoxDR.dcp"/>
         <DCCReference Include="adortl.dcp"/>

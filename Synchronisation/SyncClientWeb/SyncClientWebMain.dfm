@@ -121,6 +121,7 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Height = 25
     Caption = 'Skip record'
     TabOrder = 3
+    OnClick = btnSkipRecordClick
   end
   object ConnectionMain: TADOConnection
     ConnectionString = 

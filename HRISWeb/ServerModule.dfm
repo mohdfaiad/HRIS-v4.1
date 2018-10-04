@@ -2,7 +2,7 @@ object UniServerModule: TUniServerModule
   OldCreateOrder = False
   AutoCoInitialize = True
   TempFolder = 'temp\'
-  Title = 'Human Resource Integrated System Web version'
+  Title = 'Employee Kiosk Web version'
   Favicon.Data = {
     000001000C00303010000100040068060000C60000002020100001000400E802
     00002E0700001818100001000400E8010000160A000010101000010004002801
@@ -942,7 +942,6 @@ object UniServerModule: TUniServerModule
     0000FE030000}
   SuppressErrors = []
   Bindings = <>
-  ServerLimits.MaxSessions = 30
   SSL.SSLOptions.RootCertFile = 'root.pem'
   SSL.SSLOptions.CertFile = 'cert.pem'
   SSL.SSLOptions.KeyFile = 'key.pem'

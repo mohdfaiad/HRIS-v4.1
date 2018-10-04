@@ -1,0 +1,6 @@
+KioskWeb.exe: 00002974: 19:57:33 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002974: 19:57:33 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002974: 19:57:33 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002974: 19:57:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002974: 19:57:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002B88: 19:57:42 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A44EB

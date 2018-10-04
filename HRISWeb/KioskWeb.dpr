@@ -1,4 +1,4 @@
-program HRISWeb;
+program KioskWeb;
 
 uses
   Forms,
