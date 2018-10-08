@@ -1,8 +1,8 @@
 object LoginForm: TLoginForm
   Left = 0
   Top = 0
-  ClientHeight = 289
-  ClientWidth = 554
+  ClientHeight = 293
+  ClientWidth = 313
   Caption = 'Login'
   Color = clWhite
   BorderStyle = bsNone
@@ -24,55 +24,65 @@ object LoginForm: TLoginForm
   PixelsPerInch = 96
   TextHeight = 14
   object UniLabel1: TUniLabel
-    Left = 168
-    Top = 100
-    Width = 54
+    Left = 52
+    Top = 87
+    Width = 59
     Height = 14
     Hint = ''
     Caption = 'Username'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = 10526880
     Font.Height = -12
+    Font.Style = [fsBold]
     TabOrder = 0
   end
   object edUsername: TUniEdit
-    Left = 240
-    Top = 94
-    Width = 145
+    Left = 52
+    Top = 107
+    Width = 217
     Height = 23
     Hint = ''
     CharCase = ecUpperCase
     Text = ''
+    ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
     TabOrder = 1
   end
   object UniLabel2: TUniLabel
-    Left = 168
-    Top = 141
-    Width = 51
+    Left = 52
+    Top = 139
+    Width = 59
     Height = 14
     Hint = ''
     Caption = 'Password'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = 10526880
     Font.Height = -12
+    Font.Style = [fsBold]
     TabOrder = 2
   end
   object edPassword: TUniEdit
-    Left = 240
-    Top = 135
-    Width = 145
+    Left = 52
+    Top = 159
+    Width = 217
     Height = 23
     Hint = ''
     PasswordChar = '*'
     Text = ''
+    ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
     TabOrder = 3
     OnKeyPress = edPasswordKeyPress
   end
   object btnLogin: TUniButton
-    Left = 168
-    Top = 207
+    Left = 52
+    Top = 217
     Width = 217
     Height = 30
     Hint = ''
@@ -91,8 +101,8 @@ object LoginForm: TLoginForm
     OnClick = btnLoginClick
   end
   object lblError: TUniLabel
-    Left = 168
-    Top = 174
+    Left = 52
+    Top = 193
     Width = 3
     Height = 15
     Hint = ''
@@ -107,8 +117,8 @@ object LoginForm: TLoginForm
   object a: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 554
-    Height = 21
+    Width = 313
+    Height = 29
     Hint = ''
     ParentShowHint = False
     ParentColor = False
@@ -117,22 +127,21 @@ object LoginForm: TLoginForm
     TabOrder = 6
     object UniLabel3: TUniLabel
       Left = 6
-      Top = 3
-      Width = 36
-      Height = 16
+      Top = 6
+      Width = 41
+      Height = 18
       Hint = ''
       Caption = 'Login'
       ParentFont = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
-      Font.Height = -13
-      Font.Name = 'Arial'
+      Font.Height = -15
       Font.Style = [fsBold]
       TabOrder = 1
     end
   end
   object UniImage1: TUniImage
-    Left = 184
+    Left = 52
     Top = 23
     Width = 48
     Height = 48
@@ -266,31 +275,29 @@ object LoginForm: TLoginForm
       6D760000000049454E44AE426082}
   end
   object UniLabel4: TUniLabel
-    Left = 248
+    Left = 118
     Top = 28
-    Width = 124
-    Height = 19
+    Width = 151
+    Height = 23
     Hint = ''
     Caption = 'Employee Kiosk'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -16
-    Font.Name = 'Arial'
+    Font.Color = 7237230
+    Font.Height = -19
     Font.Style = [fsBold]
     TabOrder = 8
   end
   object UniLabel5: TUniLabel
-    Left = 248
-    Top = 48
-    Width = 97
-    Height = 14
+    Left = 118
+    Top = 51
+    Width = 99
+    Height = 13
     Hint = ''
     Caption = 'Web version 1.0.0.0'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Name = 'Arial'
+    Font.Color = 7237230
     TabOrder = 9
   end
 end

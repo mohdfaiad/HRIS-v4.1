@@ -10,7 +10,7 @@ uses
 
 type
   TCellDate = class
-  private
+  strict private
     FDate: TDateTime;
   public
     property Date: TDateTime read FDate write FDate;
@@ -54,10 +54,16 @@ type
     UniLabel5: TUniLabel;
     HeaderPanel: TUniSimplePanel;
     UniPanel3: TUniPanel;
+    UniLabel6: TUniLabel;
+    LeavesAvailedUnpaidLabel: TUniLabel;
+    UniLabel7: TUniLabel;
+    BusinessTripsLabel: TUniLabel;
     procedure grCalendar1DrawCell(Sender: TObject; ACol, ARow: Integer;
       var Value: string; Attribs: TUniCellAttribs);
     procedure UniFrameCreate(Sender: TObject);
     procedure YearComboSelect(Sender: TObject);
+    procedure UniFrameDestroy(Sender: TObject);
+    procedure grCalendar1DblClick(Sender: TObject);
   private
     { Private declarations }
     FController: TLeaveController;
@@ -75,6 +81,29 @@ implementation
 
 uses
   Leave, AttendanceUtils, HRISGlobal, DateUtils, Employee, MainModule;
+
+procedure TLeaveMainFrame.grCalendar1DblClick(Sender: TObject);
+var
+  LGrid: TUniStringGrid;
+  LRow,LColumn: integer;
+  LCellDate: TCellDate;
+begin
+  LGrid := Sender as TUniStringGrid;
+  LRow := LGrid.Row;
+  LColumn := LGrid.Col;
+
+  with LGrid do
+  begin
+    if Assigned(Objects[LColumn,LRow]) then
+    begin
+      if Objects[LColumn,LRow] is TCellDate then
+      begin
+        LCellDate := Objects[LColumn,LRow] as TCellDate;
+        FController.DisplayLeaveDetails(LCellDate.Date);
+      end;
+    end;
+  end;
+end;
 
 procedure TLeaveMainFrame.grCalendar1DrawCell(Sender: TObject; ACol,
   ARow: Integer; var Value: string; Attribs: TUniCellAttribs);
@@ -124,7 +153,6 @@ var
   selectedYear: string;
   cellObject: TCellDate;
 begin
-
   selectedYear := YearCombo.Text;
 
   // clear the calendars
@@ -149,20 +177,24 @@ begin
 
     LGrid := FindComponent('grCalendar' + IntToStr(i)) as TUniStringGrid;
 
-    for LRow := 0 to LGrid.RowCount - 1 do
-      for LCol := 0 to LGrid.ColCount - 1 do
-      begin
-        LGrid.Cells[LCol,LRow] := '';
-
-        if Assigned(LGrid.Objects[LCol,LRow]) then
+    try
+      for LRow := 0 to LGrid.RowCount - 1 do
+        for LCol := 0 to LGrid.ColCount - 1 do
         begin
-          if LGrid.Objects[LCol,LRow] is TCellDate then
+          LGrid.Cells[LCol,LRow] := '';
+
+          if Assigned(LGrid.Objects[LCol,LRow]) then
           begin
-            cellObject := LGrid.Objects[LCol,LRow] as TCellDate;
-            //FreeAndNil(cellObject)
+            if LGrid.Objects[LCol,LRow] is TCellDate then
+            begin
+              cellObject := LGrid.Objects[LCol,LRow] as TCellDate;
+              if Assigned(cellObject) then FreeAndNil(cellObject)
+            end;
           end;
         end;
-      end;
+    except
+      on E: Exception do ShowMessage('Calendar ' + IntToStr(i) + ' Not TCellDate: ROW ' + IntToStr(LRow) + ' COL ' + IntToStr(LCol));
+    end;
   end;
 end;
 
@@ -251,11 +283,47 @@ begin
   UpdateTotals;
 end;
 
+procedure TLeaveMainFrame.UniFrameDestroy(Sender: TObject);
+var
+  i, LRow, LCol: integer;
+  LGrid: TUniStringGrid;
+  cellObject: TCellDate;
+begin
+
+  // clear the calendars
+  for i := 1 to CALENDARS do
+  begin
+
+    LGrid := FindComponent('grCalendar' + IntToStr(i)) as TUniStringGrid;
+
+    for LRow := 0 to LGrid.RowCount - 1 do
+      for LCol := 0 to LGrid.ColCount - 1 do
+      begin
+        if Assigned(LGrid.Objects[LCol,LRow]) then
+        begin
+          if LGrid.Objects[LCol,LRow] is TCellDate then
+          begin
+            cellObject := LGrid.Objects[LCol,LRow] as TCellDate;
+            FreeAndNil(cellObject);
+          end
+          else ShowMessage('Calendar ' + IntToStr(i) + ' Not TCellDate: ROW ' + IntToStr(LRow) + ' COL ' + IntToStr(LCol));
+        end;
+        // else ShowMessage('Calendar ' + IntToStr(i) + ' Not assigned: ROW ' + IntToStr(LRow) + ' COL ' + IntToStr(LCol));
+      end
+
+  end;
+
+  FController.Free;
+end;
+
 procedure TLeaveMainFrame.UpdateTotals;
 begin
   LeaveCreditsLabel.Caption := FormatFloat('0.0000',FController.TotalLeaveCredits);
   LeavesAvailedLabel.Caption := FormatFloat('0.0000',FController.TotalLeavesAvailed);
   LeavesRemainingLabel.Caption := FormatFloat('0.0000',FController.TotalLeavesRemaining);
+
+  LeavesAvailedUnpaidLabel.Caption := FormatFloat('0.0000',FController.TotalLeaveAvailedUnpaid);
+  BusinessTripsLabel.Caption := FormatFloat('0.0000',FController.TotalBusinessTrips);
 end;
 
 procedure TLeaveMainFrame.YearComboSelect(Sender: TObject);

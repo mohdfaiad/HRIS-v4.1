@@ -1,20 +1,18 @@
 object EmployeeDrawerFrame: TEmployeeDrawerFrame
   Left = 0
   Top = 0
-  Width = 992
-  Height = 580
+  Width = 451
+  Height = 305
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alClient
   Anchors = [akLeft, akTop, akRight, akBottom]
   TabOrder = 0
-  ExplicitWidth = 451
-  ExplicitHeight = 305
   object MenuPanel: TUniSimplePanel
     Left = 0
     Top = 89
     Width = 200
-    Height = 491
+    Height = 216
     Hint = ''
     ParentColor = False
     Color = 16250871
@@ -22,8 +20,6 @@ object EmployeeDrawerFrame: TEmployeeDrawerFrame
     AlignmentControl = uniAlignmentClient
     ParentAlignmentControl = False
     TabOrder = 0
-    ExplicitTop = 0
-    ExplicitHeight = 305
     object MainLabel: TUniLabel
       Left = 41
       Top = 26
@@ -95,8 +91,8 @@ object EmployeeDrawerFrame: TEmployeeDrawerFrame
   object DockPanel: TUniSimplePanel
     Left = 200
     Top = 89
-    Width = 792
-    Height = 491
+    Width = 251
+    Height = 216
     Hint = ''
     ParentColor = False
     Color = clWhite
@@ -104,14 +100,11 @@ object EmployeeDrawerFrame: TEmployeeDrawerFrame
     AlignmentControl = uniAlignmentClient
     ParentAlignmentControl = False
     TabOrder = 1
-    ExplicitTop = 0
-    ExplicitWidth = 251
-    ExplicitHeight = 305
   end
   object HeaderPanel: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 992
+    Width = 451
     Height = 89
     Hint = ''
     ParentColor = False
@@ -120,15 +113,13 @@ object EmployeeDrawerFrame: TEmployeeDrawerFrame
     AlignmentControl = uniAlignmentClient
     ParentAlignmentControl = False
     TabOrder = 2
-    ExplicitLeft = -685
-    ExplicitWidth = 1677
     object UniLabel5: TUniLabel
       Left = 56
       Top = 27
-      Width = 313
+      Width = 139
       Height = 39
       Hint = ''
-      Caption = 'Employee Information'
+      Caption = 'My Profile'
       ParentFont = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite

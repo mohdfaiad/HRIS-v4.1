@@ -21,6 +21,7 @@ type
     function GetIsAfternoon: boolean;
     function GetIsMorning: boolean;
     function GetIsWholeDay: boolean;
+    function GetPeriodDescription: string;
 
   public
     property AmPm: string read FAmPm write FAmPm;
@@ -35,6 +36,7 @@ type
     property IsWholeDay: boolean read GetIsWholeDay;
     property IsMorning: boolean read GetIsMorning;
     property IsAfternoon: boolean read GetIsAfternoon;
+    property PeriodDescription: string read GetPeriodDescription;
 
     constructor Create; overload;
     constructor Create(const ap, tp, nm, rs, rm: string; const ip: boolean); reintroduce; overload;
@@ -56,6 +58,8 @@ type
     property IsPending: boolean read GetIsPending;
     property IsApproved: boolean read GetIsApproved;
     property IsCancelled: boolean read GetIsCancelled;
+
+    destructor Destroy; override;
   end;
 
 implementation
@@ -106,7 +110,21 @@ begin
   else Result := 'No';
 end;
 
+function TLeave.GetPeriodDescription: string;
+begin
+  if IsMorning then Result := 'Morning'
+  else if IsAfternoon then Result := 'Afternoon'
+  else Result := 'Whole day';
+end;
+
 { TEmployeeLeave }
+
+destructor TEmployeeLeave.Destroy;
+begin
+  if Assigned(FEmployee) then FreeAndNil(FEmployee);
+
+  inherited;
+end;
 
 function TEmployeeLeave.GetIsApproved: boolean;
 begin

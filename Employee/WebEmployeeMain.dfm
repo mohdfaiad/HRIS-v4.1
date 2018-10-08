@@ -200,6 +200,7 @@ object EmployeeMainFrame: TEmployeeMainFrame
     DataSource = dmEmployee.dsEmployee
     TabOrder = 17
     Color = clWindow
+    ForceSelection = False
   end
   object UniDBMemo1: TUniDBMemo
     Left = 176
@@ -224,6 +225,7 @@ object EmployeeMainFrame: TEmployeeMainFrame
     DataSource = dmEmployee.dsEmployee
     TabOrder = 19
     Color = clWindow
+    ForceSelection = False
   end
   object UniDBLookupComboBox3: TUniDBLookupComboBox
     Left = 176
@@ -238,6 +240,7 @@ object EmployeeMainFrame: TEmployeeMainFrame
     DataSource = dmEmployee.dsEmployee
     TabOrder = 20
     Color = clWindow
+    ForceSelection = False
   end
   object UniDBDateTimePicker2: TUniDBDateTimePicker
     Left = 176
@@ -454,6 +457,7 @@ object EmployeeMainFrame: TEmployeeMainFrame
     DataSource = dmEmployee.dsEmployee
     TabOrder = 41
     Color = clWindow
+    ForceSelection = False
   end
   object lblAge: TUniLabel
     Left = 328

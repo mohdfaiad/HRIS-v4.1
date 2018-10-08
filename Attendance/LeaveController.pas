@@ -32,6 +32,7 @@ type
 
     procedure SetLeave(const i: integer; const Value: TEmployeeLeave);
     procedure Clear;
+    procedure ClearLeaveCredits;
 
     function GetLeave(const i: integer): TEmployeeLeave;
     function GetLeaveCount: integer;
@@ -44,6 +45,8 @@ type
     function GetTotalLeaveCredits: single;
     function GetTotalLeavesAvailed: single;
     function GetTotalLeavesRemaining: single;
+    function GetTotalLeavesAvailedUnpaid: single;
+    function GetTotalBusinessTrips: single;
 
   public
     property Leaves[const i: integer]: TEmployeeLeave read GetLeave write SetLeave;
@@ -61,6 +64,8 @@ type
     property TotalLeaveCredits: single read GetTotalLeaveCredits;
     property TotalLeavesAvailed: single read GetTotalLeavesAvailed;
     property TotalLeavesRemaining: single read GetTotalLeavesRemaining;
+    property TotalLeaveAvailedUnpaid: single read GetTotalLeavesAvailedUnpaid;
+    property TotalBusinessTrips: single read GetTotalBusinessTrips;
 
     procedure AddLeave(ALeave: TEmployeeLeave);
     procedure RemoveLeave(ALeave: TEmployeeLeave);
@@ -68,6 +73,7 @@ type
     procedure FindEmployee;
     procedure Render(const grid: TRzStringGrid; const ADate: TDateTime; Rect: TRect); overload;
     procedure Render(AAttribs: TUniCellAttribs; const ADate: TDateTime); overload;
+    procedure DisplayLeaveDetails(ADate: TDateTime);
 
     function Save: boolean;
     function HasLeave(const ADate: TDateTime): boolean;
@@ -83,7 +89,7 @@ const
 implementation
 
 uses
-  LeaveData, Holiday, EmployeeSearch, HRISGlobal, HRISDialogs, MainModule;
+  LeaveData, Holiday, EmployeeSearch, HRISGlobal, HRISDialogs, MainModule, WebLeaveDetails;
 
 { TLeaveController }
 
@@ -102,6 +108,15 @@ begin
   FLeaves := [];
 end;
 
+procedure TLeaveController.ClearLeaveCredits;
+var
+  i: integer;
+begin
+  for i := Low(FLeaveCredits) to High(FLeaveCredits) do FreeAndNil(FLeaveCredits[i]);
+
+  FLeaveCredits := [];
+end;
+
 constructor TLeaveController.Create;
 begin
   {$ifdef WEB}
@@ -115,7 +130,31 @@ destructor TLeaveController.Destroy;
 begin
   if Assigned(FData) then FreeAndNil(FData);
 
+  Clear;
+
+  ClearLeaveCredits;
+
+  if Assigned(FEmployee) then FreeAndNil(FEmployee);
+  
   inherited;
+end;
+
+procedure TLeaveController.DisplayLeaveDetails(ADate: TDateTime);
+var
+  LLeave: TEmployeeLeave;
+  i: integer;
+begin
+  i := IndexOf(ADate);
+
+  if i > -1 then
+  begin
+    LLeave := FLeaves[i];
+
+    with LeaveDetailsForm.Create(LLeave) do
+    begin
+      ShowModal;
+    end;
+  end;
 end;
 
 procedure TLeaveController.FindEmployee;
@@ -176,6 +215,24 @@ begin
   Result := SickLeaveCredits - SickLeavesAvailed;
 end;
 
+function TLeaveController.GetTotalBusinessTrips: single;
+var
+  LLeave: TEmployeeLeave;
+  businessTrips: single;
+begin
+  businessTrips := 0;
+
+  for LLeave in FLeaves do
+    if (LLeave.LeaveType = 'BT') and (LLeave.IsApproved)  then
+    begin
+      if LLeave.IsWholeDay then businessTrips := businessTrips + 1
+      else if LLeave.IsMorning then businessTrips := businessTrips + 0.4375
+      else businessTrips := businessTrips + 0.5625
+    end;
+
+  Result := businessTrips;
+end;
+
 function TLeaveController.GetTotalLeaveCredits: single;
 begin
   Result := GetSickLeaveCredits + GetVacationLeaveCredits;
@@ -184,6 +241,24 @@ end;
 function TLeaveController.GetTotalLeavesAvailed: single;
 begin
   Result := GetSickLeavesAvailed + GetVacationLeavesAvailed;
+end;
+
+function TLeaveController.GetTotalLeavesAvailedUnpaid: single;
+var
+  LLeave: TEmployeeLeave;
+  leavesAvailed: single;
+begin
+  leavesAvailed := 0;
+
+  for LLeave in FLeaves do
+    if (LLeave.IsApproved) and (not LLeave.IsPaid)  then
+    begin
+      if LLeave.IsWholeDay then leavesAvailed := leavesAvailed + 1
+      else if LLeave.IsMorning then leavesAvailed := leavesAvailed + 0.4375
+      else leavesAvailed := leavesAvailed + 0.5625
+    end;
+
+  Result := leavesAvailed;
 end;
 
 function TLeaveController.GetTotalLeavesRemaining: single;

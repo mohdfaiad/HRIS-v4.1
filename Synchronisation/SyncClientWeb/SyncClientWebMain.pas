@@ -111,14 +111,18 @@ begin
       sourceLocation := FieldByName('source_location').AsString;
     end;
 
-    sql := 'update wsmessage set skip = true ' +
+    sql := 'update wsmessage set skip = 1 ' +
       ' where event_object = ' + QuotedStr(eventObject) +
       ' and pk_event_object = ' + QuotedStr(pkEventObject) +
       ' and source_location = ' + QuotedStr(sourceLocation);
 
     edSQL.Text := sql;
 
-    ConnectionHRIS.Execute(sql);
+    Application.ProcessMessages;
+
+    ConnectionMain.Execute(sql);
+
+    dstLeaves.Requery;
   except
     on E: Exception do MessageDlg(E.Message,mtError,[mbOK],0);
   end;

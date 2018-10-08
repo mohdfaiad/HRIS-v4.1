@@ -9,7 +9,7 @@ uses
   uniPanel, uniGUIFrame, Vcl.Imaging.pngimage, uniImage;
 
 type
-  TWebFrames = (frEmployeeDrawer,frLeaves);
+  TWebFrames = (frEmployeeDrawer,frLeaves,frForApproval,frDashboard);
 
   TWebMainForm = class(TUniForm)
     DockPanel: TUniPanel;
@@ -22,10 +22,16 @@ type
     UniSimplePanel2: TUniSimplePanel;
     imgLogout: TUniImage;
     UniLabel2: TUniLabel;
+    pnlForApproval: TUniSimplePanel;
+    imgForApproval: TUniImage;
+    pnlDashboard: TUniSimplePanel;
+    imgDashboard: TUniImage;
     procedure UniFormAfterShow(Sender: TObject);
     procedure imgProfileClick(Sender: TObject);
     procedure imgLogoutClick(Sender: TObject);
     procedure imgLeavesClick(Sender: TObject);
+    procedure imgForApprovalClick(Sender: TObject);
+    procedure imgDashboardClick(Sender: TObject);
   private
     { Private declarations }
     procedure DockFrame(frame: TWebFrames);
@@ -40,7 +46,8 @@ implementation
 {$R *.dfm}
 
 uses
-  uniGUIVars, MainModule, uniGUIApplication, WebEmployeeDrawer, WebLeaveMain;
+  uniGUIVars, MainModule, uniGUIApplication, WebEmployeeDrawer, WebLeaveMain,
+  WebForApproval, WebDashboard;
 
 function WebMainForm: TWebMainForm;
 begin
@@ -57,11 +64,23 @@ begin
   case frame of
     frEmployeeDrawer: LFrame := TEmployeeDrawerFrame.Create(self);
     frLeaves: LFrame := TLeaveMainFrame.Create(self);
+    frForApproval: LFrame := TForApprovalFrame.Create(self);
+    frDashboard: LFrame := TDashboardFrame.Create(self);
   end;
 
   // dock the new frame
   LFrame.Parent := DockPanel;
   LFrame.Show;
+end;
+
+procedure TWebMainForm.imgDashboardClick(Sender: TObject);
+begin
+  DockFrame(frDashboard);
+end;
+
+procedure TWebMainForm.imgForApprovalClick(Sender: TObject);
+begin
+  DockFrame(frForApproval);
 end;
 
 procedure TWebMainForm.imgLeavesClick(Sender: TObject);
@@ -82,6 +101,9 @@ end;
 procedure TWebMainForm.UniFormAfterShow(Sender: TObject);
 begin
   lblWelcomeUser.Caption := 'Welcome back ' + UniMainModule.User.Name2;
+
+  // dock the dashboard
+  DockFrame(frDashboard);
 end;
 
 initialization

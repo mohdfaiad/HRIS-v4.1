@@ -1,8 +1,8 @@
 object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
   Left = 0
   Top = 0
-  Width = 927
-  Height = 511
+  Width = 1009
+  Height = 546
   OnCreate = UniFrameCreate
   Color = clWindow
   Align = alClient
@@ -15,20 +15,19 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
   ExplicitWidth = 451
   ExplicitHeight = 305
   DesignSize = (
-    927
-    511)
+    1009
+    546)
   object DetailPanel: TUniSimplePanel
-    Left = 612
+    Left = 694
     Top = 0
     Width = 315
-    Height = 511
+    Height = 546
     Hint = ''
     ParentColor = False
     Color = 16250871
     Align = alRight
     AlignmentControl = uniAlignmentClient
     ParentAlignmentControl = False
-    Anchors = [akTop, akRight, akBottom]
     TabOrder = 0
     ExplicitLeft = 560
     ExplicitHeight = 491
@@ -133,6 +132,7 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
       Font.Height = -12
       TabOrder = 8
       Color = clWindow
+      ForceSelection = False
     end
     object UniLabel5: TUniLabel
       Left = 32
@@ -185,6 +185,7 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
       Font.Height = -12
       TabOrder = 12
       Color = clWindow
+      ForceSelection = False
     end
     object UniDBCheckBox1: TUniDBCheckBox
       Left = 32
@@ -200,6 +201,8 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
       ParentFont = False
       Font.Height = -12
       TabOrder = 13
+      ParentColor = False
+      Color = clBtnFace
     end
     object UniDBCheckBox2: TUniDBCheckBox
       Left = 32
@@ -215,13 +218,15 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
       ParentFont = False
       Font.Height = -12
       TabOrder = 14
+      ParentColor = False
+      Color = clBtnFace
     end
   end
   object ListGrid: TUniDBGrid
     Left = 2
-    Top = 2
-    Width = 609
-    Height = 507
+    Top = 0
+    Width = 690
+    Height = 546
     Hint = ''
     DataSource = dmEmployee.dscFamily
     Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
@@ -235,6 +240,7 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
         FieldName = 'ef_lastname'
         Title.Alignment = taCenter
         Title.Caption = 'Lastname'
+        Title.Font.Height = -12
         Title.Font.Style = [fsBold]
         Width = 200
         Font.Height = -12
@@ -243,6 +249,7 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
         FieldName = 'ef_firstname'
         Title.Alignment = taCenter
         Title.Caption = 'Firstname'
+        Title.Font.Height = -12
         Title.Font.Style = [fsBold]
         Width = 200
         Font.Height = -12
@@ -251,6 +258,7 @@ object FamilyAndRelativesFrame: TFamilyAndRelativesFrame
         FieldName = 'ef_middlename'
         Title.Alignment = taCenter
         Title.Caption = 'Middle'
+        Title.Font.Height = -12
         Title.Font.Style = [fsBold]
         Width = 200
         Font.Height = -12

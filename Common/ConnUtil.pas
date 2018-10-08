@@ -32,33 +32,37 @@ begin
 
   Ini := TIniFile.Create(inifile);
 
-  provider := Ini.ReadString(section,'Provider','');
-  user := Ini.ReadString(section,'User','');
-  pw := Ini.ReadString(section,'Password','');
-  server := Ini.ReadString(section,'Server','BRYAN-PC\SQLEXPRESS');
-  db := Ini.ReadString(section,'Dbase','');
-  datasource := Ini.ReadString(section,'DataSource','');
+  try
+    provider := Ini.ReadString(section,'Provider','');
+    user := Ini.ReadString(section,'User','');
+    pw := Ini.ReadString(section,'Password','');
+    server := Ini.ReadString(section,'Server','BRYAN-PC\SQLEXPRESS');
+    db := Ini.ReadString(section,'Dbase','');
+    datasource := Ini.ReadString(section,'DataSource','');
 
-  // overwrite the username and password with the parameters
-  if AUser <> '' then
-    user := AUser;
+    // overwrite the username and password with the parameters
+    if AUser <> '' then
+      user := AUser;
 
-  if APassword <> '' then
-    pw := APassword;
+    if APassword <> '' then
+      pw := APassword;
 
-  connStr := 'Provider=' + provider + ';Password=' + pw + ';' +
-              'Persist Security Info=False;' +
-              'User ID=' + user + ';Initial Catalog=' + db +
-              ';Data Source=' + datasource +
-              ';Use Procedure for Prepare=1;' +
-              'Auto Translate=True;Packet Size=4096;' +
-              'Workstation ID=' + server +
-              ';Use Encryption for Data=False;' +
-              'Tag with column collation when possible=False;' +
-              'MARS Connection=False;DataTypeCompatibility=0;' +
-              'Trust Server Certificate=False';
+    connStr := 'Provider=' + provider + ';Password=' + pw + ';' +
+                'Persist Security Info=False;' +
+                'User ID=' + user + ';Initial Catalog=' + db +
+                ';Data Source=' + datasource +
+                ';Use Procedure for Prepare=1;' +
+                'Auto Translate=True;Packet Size=4096;' +
+                'Workstation ID=' + server +
+                ';Use Encryption for Data=False;' +
+                'Tag with column collation when possible=False;' +
+                'MARS Connection=False;DataTypeCompatibility=0;' +
+                'Trust Server Certificate=False';
 
-  Result := connStr;
+    Result := connStr;
+  finally
+    Ini.Free;
+  end;
 end;
 
 
