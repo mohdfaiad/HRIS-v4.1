@@ -11,6 +11,9 @@ inherited frmTimelogDetails: TfrmTimelogDetails
     Width = 612
     ParentFont = False
     ExplicitWidth = 612
+    DesignSize = (
+      612
+      21)
     inherited imgClose: TImage
       Left = 591
       ExplicitLeft = 637
@@ -27,6 +30,9 @@ inherited frmTimelogDetails: TfrmTimelogDetails
     ParentFont = False
     ExplicitWidth = 612
     ExplicitHeight = 331
+    DesignSize = (
+      612
+      331)
     object lblDate: TRzLabel
       Left = 19
       Top = 23
@@ -913,7 +919,7 @@ inherited frmTimelogDetails: TfrmTimelogDetails
     Left = 536
     Top = 301
     Bitmap = {
-      494C010102000800280010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101020008002C0010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

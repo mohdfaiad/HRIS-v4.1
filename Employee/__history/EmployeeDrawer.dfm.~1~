@@ -1,5 +1,5 @@
 inherited frmEmployeeDrawer: TfrmEmployeeDrawer
-  Caption = 'frmEmployeeDrawer'
+  Caption = 'gm'
   ClientHeight = 352
   ClientWidth = 696
   OnShow = FormShow

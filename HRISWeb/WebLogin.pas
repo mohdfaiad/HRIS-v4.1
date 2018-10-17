@@ -63,31 +63,35 @@ end;
 
 function TLoginForm.UserIsValid: boolean;
 var
-  username: string;
+  username, password: string;
   LUser: TUser;
 begin
+  Result := false;
   with UniMainModule, UniMainModule.dstUser do
   begin
     try
       MainConnection.Open;
       
       username := Trim(edUsername.Text);
+      password := Trim(edPassword.Text);
 
       Close;
       Parameters.ParamByName('@username').Value := username;
       Open;
 
-      Result := RecordCount > 0;
-
-      if Result then
+      if RecordCount > 0 then
       begin
-        LUser := TUser.Create;
-        
-        LUser.UserId := FieldByName('id_num').AsString;
-        LUser.FirstName := FieldByName('employee_firstname').AsString;
-        LUser.LastName := FieldByName('employee_lastname').AsString;
+        Result := password = FieldByName('password').AsString;
+        if Result then
+        begin
+          LUser := TUser.Create;
 
-        User := LUser;
+          LUser.UserId := FieldByName('id_num').AsString;
+          LUser.FirstName := FieldByName('employee_firstname').AsString;
+          LUser.LastName := FieldByName('employee_lastname').AsString;
+
+          User := LUser;
+        end;
       end;
     finally
       Close;

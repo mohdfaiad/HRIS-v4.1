@@ -396,15 +396,16 @@ begin
         LLeave := FLeaves[i];
         while LLeave.Date = ADate do
         begin
-          if (LLeave.IsPaid) and (LLeave.IsApproved) then
+          if LLeave.IsApproved then
           begin
             if LLeave.IsBusinessTrip then Canvas.Brush.Color := $00B3CBFF
-            else Canvas.Brush.Color := clMoneyGreen;
-            {begin
-              if LLeave.IsApproved then Canvas.Brush.Color := clMoneyGreen
+            else
+            begin
+              if LLeave.IsPaid then Canvas.Brush.Color := clMoneyGreen
+              else Canvas.Brush.Color := $006666FF;
               // else if LLeave.IsPending then Canvas.Brush.Color := $00FFA4A4;
-              else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
-            end; }
+              // else if LLeave.IsCancelled then Canvas.Brush.Color := $00B0B0FF;
+            end;
           end;
 
           Inc(i);

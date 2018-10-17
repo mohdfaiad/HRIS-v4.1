@@ -95,9 +95,6 @@ type
     { Public declarations }
   end;
 
-var
-  frmTimelogDetails: TfrmTimelogDetails;
-
 implementation
 
 {$R *.dfm}
@@ -362,11 +359,17 @@ var
 begin
   // changes tab colors depending on information availability
   // light blue (transparent) no info is found
+  {$ifdef KIOSK}
   enabledColor1 := $00845F3E; // $0086603E;
   enabledColor2 := $00845F3E; // $00A98867;
-
   disabledColor1 := $00E3D9CE; // $00C5AE98;
   disabledColor2 := $00E3D9CE; // $00CAB59F;
+  {$else}
+  enabledColor1 := $00808040; // $0086603E;
+  enabledColor2 := $00808040; // $00A98867;
+  disabledColor1 := clMenu; // $00C5AE98;
+  disabledColor2 := clMenu; // $00CAB59F;
+  {$endif}
 
   // office log
   if (tlog.NoLog) and (not tlog.HasOverride) then

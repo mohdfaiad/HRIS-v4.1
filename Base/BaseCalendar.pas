@@ -59,7 +59,12 @@ implementation
 {$R *.dfm}
 
 uses
-  FilterSelect, ResourceFilter, TimeLogs, HRISGlobal;
+  {$ifdef KIOSK}
+  FilterSelect
+  {$else}
+  FilterSelectHRIS
+  {$endif}
+  ,ResourceFilter, TimeLogs, HRISGlobal;
 
 procedure TfrmBaseCalendar.bteFilterAltBtnClick(Sender: TObject);
 begin
@@ -75,7 +80,11 @@ end;
 
 procedure TfrmBaseCalendar.bteFilterButtonClick(Sender: TObject);
 begin
+  {$ifdef KIOSK}
   with TfrmFilterSelect.Create(nil) do
+  {$else}
+  with TfrmFilterSelectHRIS.Create(nil) do
+  {$endif}
   begin
     ShowModal;
 

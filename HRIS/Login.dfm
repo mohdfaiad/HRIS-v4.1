@@ -38,7 +38,7 @@ inherited frmLogin: TfrmLogin
       Caption = 'Human Resource Integrated System'
       Color = clWhite
       Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
+      Font.Color = 8224125
       Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
@@ -268,7 +268,7 @@ inherited frmLogin: TfrmLogin
       Caption = 'Version 4'
       Color = clWhite
       Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
+      Font.Color = 9803157
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []

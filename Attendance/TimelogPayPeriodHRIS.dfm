@@ -29,15 +29,25 @@ inherited frmTimelogPayPeriodHRIS: TfrmTimelogPayPeriodHRIS
   inherited cmbPeriod: TRzComboBox
     Ctl3D = False
     DisabledColor = clMenu
+    FlatButtonColor = 13816530
     FrameColor = 13816530
   end
   inherited pnlCalendar: TRzPanel
+    Top = 83
+    Height = 358
+    ExplicitTop = 83
+    ExplicitHeight = 358
     inherited grCalendar: TRzStringGrid
+      Height = 358
+      BevelEdges = []
+      BorderStyle = bsSingle
       Color = clMenu
       FixedColor = 15066597
       Font.Color = clGray
       ParentColor = False
+      FrameColor = 13816530
       FixedLineColor = 12961221
+      ExplicitHeight = 360
     end
   end
   inherited bteFilter: TRzButtonEdit

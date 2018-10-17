@@ -42,6 +42,9 @@ inherited frmTimelogPayPeriod: TfrmTimelogPayPeriod
     ExplicitLeft = 318
   end
   inherited pnlTitle: TRzPanel
+    DesignSize = (
+      1091
+      28)
     inherited lblTitle: TRzLabel
       Width = 47
       Caption = 'Timelog'

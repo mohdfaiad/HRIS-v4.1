@@ -60,6 +60,8 @@ type
     imgLeaves: TImage;
     pnlTimelog: TRzPanel;
     imgTimelog: TImage;
+    pnlLeaveCredits: TRzPanel;
+    imgLeaveCredits: TImage;
     procedure FormCreate(Sender: TObject);
     procedure pnlTitleMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

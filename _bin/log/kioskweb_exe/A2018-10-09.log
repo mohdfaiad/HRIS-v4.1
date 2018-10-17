@@ -1,0 +1,5 @@
+KioskWeb.exe: 00002710: 17:59:47 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002710: 17:59:47 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002710: 17:59:47 [TUniServerModule]:Global Cache Folder Erased. <14> Files deleted.
+KioskWeb.exe: 00002710: 17:59:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002710: 17:59:47 [TUniServerModule]:HTTP Server Started on Port: 8077

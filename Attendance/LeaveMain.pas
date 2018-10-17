@@ -57,12 +57,9 @@ type
     RzLabel18: TRzLabel;
     cmbYear: TRzComboBox;
     edEmployee: TRzButtonEdit;
-    lblVacationCredits: TRzLabel;
-    lblVacationAvailed: TRzLabel;
-    lblVacationRemaining: TRzLabel;
-    lblSickCredits: TRzLabel;
-    lblSickAvailed: TRzLabel;
-    lblSickRemaining: TRzLabel;
+    lblLeaveCredits: TRzLabel;
+    lblPaidLeaves: TRzLabel;
+    lblLeaveBalance: TRzLabel;
     RzLabel2: TRzLabel;
     RzLabel3: TRzLabel;
     RzLabel4: TRzLabel;
@@ -70,6 +67,12 @@ type
     RzLabel7: TRzLabel;
     shBusinessTrip: TShape;
     RzLabel8: TRzLabel;
+    Shape1: TShape;
+    RzLabel5: TRzLabel;
+    lblUnpaidLeaves: TRzLabel;
+    lblBusinessTrips: TRzLabel;
+    RzLabel10: TRzLabel;
+    RzLabel11: TRzLabel;
     procedure grCalendar1Exit(Sender: TObject);
     procedure grCalendar1Enter(Sender: TObject);
     procedure grCalendar1DrawCell(Sender: TObject; ACol, ARow: Integer;
@@ -158,7 +161,11 @@ begin
       end;
 
       // change colour for Sundays
-      if ACol = 6 then Brush.Color := $00EAEAEA;
+      if ACol = 6 then
+      begin
+        Brush.Color := $00EAEAEA;
+        Font.Color := clRed;
+      end;
 
       if Focused then
       begin
@@ -296,14 +303,12 @@ begin
     LGrid.Refresh;
   end;
 
-  // credits
-  lblVacationCredits.Caption := FormatFloat('0.0000',FController.VacationLeaveCredits);
-  lblVacationAvailed.Caption := FormatFloat('0.0000',FController.VacationLeavesAvailed);
-  lblVacationRemaining.Caption := FormatFloat('0.0000',FController.VacationLeavesRemaining);
-
-  lblSickCredits.Caption := FormatFloat('0.0000',FController.SickLeaveCredits);
-  lblSickAvailed.Caption := FormatFloat('0.0000',FController.SickLeavesAvailed);
-  lblSickRemaining.Caption := FormatFloat('0.0000',FController.SickLeavesRemaining);
+  // totals
+  lblLeaveCredits.Caption := FormatFloat('0.0000',FController.TotalLeaveCredits);
+  lblPaidLeaves.Caption := FormatFloat('0.0000',FController.TotalLeavesAvailed);
+  lblLeaveBalance.Caption := FormatFloat('0.0000',FController.TotalLeavesRemaining);
+  lblUnpaidLeaves.Caption := FormatFloat('0.0000',FController.TotalLeaveAvailedUnpaid);
+  lblBusinessTrips.Caption := FormatFloat('0.0000',FController.TotalBusinessTrips);
 end;
 
 end.

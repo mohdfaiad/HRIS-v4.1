@@ -40,8 +40,13 @@ implementation
 { TfrmTimelogPayPeriod }
 
 uses
-  DockIntf, FormsUtil, PayrollCode, Timelogs, Timelog, AttendanceUtils,
-  TimelogUtils, TimelogDetails, ResourceFilter;
+  {$ifdef KIOSK}
+  TimelogDetails
+  {$else}
+  TimelogDetailsHRIS
+  {$endif}
+  ,DockIntf, FormsUtil, PayrollCode, Timelogs, Timelog, AttendanceUtils,
+  TimelogUtils, ResourceFilter;
 
 procedure TfrmTimelogPayPeriod.ClearCalendar;
 var
@@ -79,7 +84,11 @@ begin
     if Assigned(Objects[c,r]) then
     begin
       tlog := TTimelog(Objects[c,r]);
+      {$ifdef KIOSK}
       with TfrmTimelogDetails.Create(self) do
+      {$else}
+      with TfrmTimelogDetailsHRIS.Create(self) do
+      {$endif}
       begin
         ShowModal;
         Free;
