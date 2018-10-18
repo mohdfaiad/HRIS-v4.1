@@ -80,6 +80,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure edEmployeeButtonClick(Sender: TObject);
     procedure cmbYearChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
     FController: TLeaveController;
@@ -116,6 +117,12 @@ begin
   inherited;
   FController.FindEmployee;
   FController.Retrieve;
+end;
+
+procedure TfrmLeaveMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  FreeAndNil(FController);
 end;
 
 procedure TfrmLeaveMain.FormCreate(Sender: TObject);

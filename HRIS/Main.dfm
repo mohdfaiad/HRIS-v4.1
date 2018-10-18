@@ -4,7 +4,7 @@ object frmMain: TfrmMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
   Caption = 'i-Finance - Integrated Financial Management Information System'
-  ClientHeight = 568
+  ClientHeight = 548
   ClientWidth = 1190
   Color = 14273211
   Font.Charset = DEFAULT_CHARSET
@@ -124,7 +124,7 @@ object frmMain: TfrmMain
     Left = 0
     Top = 21
     Width = 1190
-    Height = 547
+    Height = 527
     Align = alClient
     BorderOuter = fsNone
     BorderSides = [sdLeft, sdRight, sdBottom]
@@ -134,10 +134,10 @@ object frmMain: TfrmMain
     TabOrder = 1
     DesignSize = (
       1190
-      547)
+      527)
     object lblDate: TLabel
       Left = 601
-      Top = 519
+      Top = 499
       Width = 144
       Height = 14
       Alignment = taRightJustify
@@ -153,7 +153,7 @@ object frmMain: TfrmMain
     end
     object lblVersion: TLabel
       Left = 1100
-      Top = 519
+      Top = 499
       Width = 69
       Height = 14
       Alignment = taRightJustify
@@ -169,7 +169,7 @@ object frmMain: TfrmMain
     end
     object lblWelcome: TRzLabel
       Left = 18
-      Top = 519
+      Top = 499
       Width = 133
       Height = 14
       Anchors = [akLeft, akBottom]
@@ -1009,6 +1009,7 @@ object frmMain: TfrmMain
               10092F7B7A4F6BA3EB5F4A32B384CE8A5C020000000049454E44AE426082}
             Proportional = True
             ShowHint = True
+            OnClick = imgLeaveCreditsClick
             OnMouseDown = imgAddEmployeeMouseDown
             OnMouseUp = imgAddEmployeeMouseUp
           end
@@ -1216,7 +1217,7 @@ object frmMain: TfrmMain
       Left = 18
       Top = 98
       Width = 1151
-      Height = 410
+      Height = 390
       Anchors = [akLeft, akTop, akRight, akBottom]
       BiDiMode = bdLeftToRight
       BorderOuter = fsNone

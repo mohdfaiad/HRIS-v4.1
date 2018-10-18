@@ -82,6 +82,7 @@ type
     procedure imgSecurityClick(Sender: TObject);
     procedure imgLeavesClick(Sender: TObject);
     procedure imgTimelogClick(Sender: TObject);
+    procedure imgLeaveCreditsClick(Sender: TObject);
   private
     { Private declarations }
     DOCKED_FORM: TForms;
@@ -104,7 +105,7 @@ implementation
 uses
   EmployeeDrawer, NewIntf, SaveIntf, FormsUtil, HRISDialogs, EmployeeSearch, Employee,
   HRISGlobal, PafMain, PafController, PafListPending, SecurityMain, LeaveMain,
-  TimelogPayPeriodHRIS;
+  TimelogPayPeriodHRIS, LeaveCredits;
 
 procedure TfrmMain.pnlTitleMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -146,6 +147,7 @@ begin
       fmSecurity: frm := TfrmSecurityMain.Create(Application);
       fmLeaveMain: frm := TfrmLeaveMain.Create(Application);
       fmTimelogPayPeriodHRIS: frm := TfrmTimelogPayPeriodHRIS.Create(Application);
+      fmLeaveCredits: frm := TfrmLeaveCredits.Create(Application);
       else
         frm := nil;
     end;
@@ -255,6 +257,11 @@ begin
   finally
     Free;
   end;
+end;
+
+procedure TfrmMain.imgLeaveCreditsClick(Sender: TObject);
+begin
+  DockForm(fmLeaveCredits,nil);
 end;
 
 procedure TfrmMain.imgLeavesClick(Sender: TObject);

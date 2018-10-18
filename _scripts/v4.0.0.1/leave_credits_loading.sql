@@ -27,9 +27,9 @@
 	 select 2018,
 	        tp.id_num,
 			'VL',
-			(case when (datediff(MONTH,tdh.date_hired,GETDATE()) / 12) >= 3 then 8
+			(case when (datediff(MONTH,tdh.date_hired,GETDATE()) / 12) >= 3 then 15
 			      -- when (datediff(MONTH,tdh.date_hired,GETDATE()) / 12) >= 2 then 5
-				  else 5 end
+				  else 10 end
 			     
 			)
 	   from #tmpPaf tp 
@@ -37,7 +37,7 @@
 	     on tdh.id_num = tp.id_num
 
 	-- SICK LEAVE
-	 insert 
+	/* insert 
 	   into leavecredit
 	 select 2018,
 	        tp.id_num,
@@ -49,7 +49,7 @@
 			)
 	   from #tmpPaf tp 
 	   join #tmpDateHired tdh 
-	     on tdh.id_num = tp.id_num
+	     on tdh.id_num = tp.id_num */
 	   
 	 drop table #tmpPaf
 	 drop table #tmpDateHired
