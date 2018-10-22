@@ -25,6 +25,7 @@ type
     FFirstName: string;
     FUserId: string;
     FCreditLimit: currency;
+    FLocationCode: string;
 
     function GetHasName: boolean;
     function GetHasPasskey: boolean;
@@ -47,6 +48,7 @@ type
     property Name: string read GetName;
     property CreditLimit: currency read FCreditLimit write FCreditLimit;
     property Name2: string read GetName2;
+    property LocationCode: string read FLocationCode write FLocationCode;
 
     procedure SetRight(const right: string);
     procedure AddRight(const code: string);

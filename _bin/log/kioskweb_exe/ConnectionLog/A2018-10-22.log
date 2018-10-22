@@ -1,0 +1,18 @@
+KioskWeb.exe: 0000361C: 22:29:11 [127.0.0.1]:Sequence Error Timeout : TDiff:45859, Event: move, Expected: 11, Received: 13, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 0000361C: 22:29:13 [127.0.0.1]:Failed Sequence Reset to: 11
+KioskWeb.exe: 00000884: 22:29:13 [127.0.0.1]:Sequence Error Timeout : TDiff:47281, Event: resize, Expected: 11, Received: 12, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 0000091C: 22:29:13 [127.0.0.1]:Failed Sequence Recovery: SeqId: 13, Event: move
+KioskWeb.exe: 000014A0: 22:29:13 [127.0.0.1]:Failed Sequence Recovery: SeqId: 12, Event: resize
+KioskWeb.exe: 000014A0: 22:29:13 [127.0.0.1]:Processing: Id: 12, Evt: resize
+KioskWeb.exe: 000014A0: 22:29:13 [127.0.0.1]:Processed: Id: 12, Evt: resize, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 0000091C: 22:29:13 [127.0.0.1]:Processing: Id: 13, Evt: move
+KioskWeb.exe: 0000091C: 22:29:13 [127.0.0.1]:Processed: Id: 13, Evt: move, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 000031A4: 22:29:15 [127.0.0.1]:Failed Sequence Recovery: SeqId: 10, Event: show
+KioskWeb.exe: 000031A4: 22:29:15 [127.0.0.1]:Sequence sent from cache:  SeqId: 10
+KioskWeb.exe: 000031A4: 22:29:15 [127.0.0.1]:Processed: Id: 10, Evt: show, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 00004498: 22:29:15 [127.0.0.1]:Failed Sequence Recovery: SeqId: 11, Event: screensize
+KioskWeb.exe: 00004498: 22:29:15 [127.0.0.1]:Sequence sent from cache:  SeqId: 11
+KioskWeb.exe: 00004498: 22:29:15 [127.0.0.1]:Processed: Id: 11, Evt: screensize, [Qv5rNOmFcd102A8F1A2]
+KioskWeb.exe: 00004284: 22:29:15 [127.0.0.1]:Failed Sequence Recovery: SeqId: 15, Event: resize
+KioskWeb.exe: 00004284: 22:29:15 [127.0.0.1]:Processing: Id: 15, Evt: resize
+KioskWeb.exe: 00004284: 22:29:15 [127.0.0.1]:Processed: Id: 15, Evt: resize, [Qv5rNOmFcd102A8F1A2]

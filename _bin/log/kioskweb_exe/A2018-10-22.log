@@ -1,0 +1,222 @@
+KioskWeb.exe: 00003A0C: 17:20:47 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003A0C: 17:20:47 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003A0C: 17:20:47 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003A0C: 17:20:47 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+KioskWeb.exe: 00003A0C: 17:20:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003A0C: 17:20:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003E38: 17:21:09 [Procedure or function dtr_get_for_approval has too many arguments specified-127.0.0.1]:EOleException : Procedure or function dtr_get_for_approval has too many arguments specified : Addr: $007B6BBF
+KioskWeb.exe: 00003300: 17:23:57 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003300: 17:23:57 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003300: 17:23:57 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003300: 17:23:57 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+KioskWeb.exe: 00003300: 17:23:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003300: 17:23:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003354: 17:27:59 [Procedure or function dtr_get_for_approval has too many arguments specified-127.0.0.1]:EOleException : Procedure or function dtr_get_for_approval has too many arguments specified : Addr: $007B6B93
+KioskWeb.exe: 00001338: 17:28:24 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001338: 17:28:24 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001338: 17:28:24 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001338: 17:28:24 [TUniServerModule]:Global Cache Folder Erased. <42> Files deleted.
+KioskWeb.exe: 00001338: 17:28:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001338: 17:28:24 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000461C: 17:28:44 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308B
+KioskWeb.exe: 00004284: 17:28:45 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308B
+KioskWeb.exe: 000035AC: 17:28:46 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308B
+KioskWeb.exe: 00000F94: 17:28:47 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308B
+KioskWeb.exe: 00003AF8: 17:28:49 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308B
+KioskWeb.exe: 0000332C: 18:19:54 []:>--------------------------------------------------------------<
+KioskWeb.exe: 0000332C: 18:19:54 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 0000332C: 18:19:54 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 0000332C: 18:19:54 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+KioskWeb.exe: 0000332C: 18:19:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 0000332C: 18:19:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003FD8: 18:20:13 [dstForApproval: Parameter '@location_code' not found-127.0.0.1]:EDatabaseError : dstForApproval: Parameter '@location_code' not found : Addr: $00634C4E
+KioskWeb.exe: 00002814: 18:21:04 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002814: 18:21:04 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002814: 18:21:04 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002814: 18:21:04 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+KioskWeb.exe: 00002814: 18:21:05 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002814: 18:21:05 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00000E78: 18:21:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A3047
+KioskWeb.exe: 00002168: 18:33:33 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002168: 18:33:33 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002168: 18:33:33 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002168: 18:33:33 [TUniServerModule]:Global Cache Folder Erased. <25> Files deleted.
+KioskWeb.exe: 00002168: 18:33:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002168: 18:33:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000029EC: 18:34:02 [127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@payroll_code', which was not supplied : Addr: $007B8BBC
+KioskWeb.exe: 00001F9C: 18:34:15 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@payroll_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@payroll_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00002E60: 18:34:59 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002E60: 18:34:59 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002E60: 18:34:59 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002E60: 18:34:59 [TUniServerModule]:Global Cache Folder Erased. <23> Files deleted.
+KioskWeb.exe: 00002E60: 18:35:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002E60: 18:35:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000404C: 18:35:07 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00003E00: 18:41:58 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003E00: 18:41:58 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003E00: 18:41:58 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003E00: 18:41:58 [TUniServerModule]:Global Cache Folder Erased. <17> Files deleted.
+KioskWeb.exe: 00003E00: 18:41:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003E00: 18:41:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00004500: 18:45:08 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00004500: 18:45:08 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00004500: 18:45:08 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00004500: 18:45:08 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+KioskWeb.exe: 00004500: 18:45:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00004500: 18:45:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000004E8: 18:45:28 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00001D94: 18:45:50 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001D94: 18:45:50 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001D94: 18:45:50 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001D94: 18:45:50 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+KioskWeb.exe: 00001D94: 18:45:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001D94: 18:45:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002E54: 18:45:57 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002F50: 18:46:27 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002F50: 18:46:27 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002F50: 18:46:27 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002F50: 18:46:27 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+KioskWeb.exe: 00002F50: 18:46:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002F50: 18:46:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00000B30: 18:47:02 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00003B5C: 18:47:13 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00002A24: 18:48:29 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002A24: 18:48:29 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002A24: 18:48:29 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002A24: 18:48:29 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+KioskWeb.exe: 00002A24: 18:48:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002A24: 18:48:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000027C4: 18:48:37 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00004470: 18:49:06 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 000020C4: 18:50:10 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000020C4: 18:50:10 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000020C4: 18:50:10 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 000020C4: 18:50:10 [TUniServerModule]:Global Cache Folder Erased. <17> Files deleted.
+KioskWeb.exe: 000020C4: 18:50:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000020C4: 18:50:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000308C: 18:50:14 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001A3C: 18:50:32 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 000040A8: 19:02:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002FA8: 19:02:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00004118: 19:02:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00004160: 19:02:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 0000154C: 19:02:30 [dstForApproval: Field 'entitlement' not found-127.0.0.1]:EDatabaseError : dstForApproval: Field 'entitlement' not found : Addr: $00634C4E
+KioskWeb.exe: 000007E8: 19:03:15 [127.0.0.1]:EOleException : Incorrect syntax near '/' : Addr: $007B2DC2
+KioskWeb.exe: 00001FF4: 19:04:06 [127.0.0.1]:EOleException : Incorrect syntax near '/' : Addr: $007B2DC2
+KioskWeb.exe: 00000B3C: 19:04:44 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00000B3C: 19:04:44 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00000B3C: 19:04:44 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00000B3C: 19:04:44 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+KioskWeb.exe: 00000B3C: 19:04:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00000B3C: 19:04:45 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002020: 19:04:51 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00000450: 19:05:17 [127.0.0.1]:EOleException : Procedure or function dtr_approve_leave has too many arguments specified : Addr: $007B2DC2
+KioskWeb.exe: 00003E38: 19:15:10 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003E38: 19:15:10 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003E38: 19:15:10 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003E38: 19:15:10 [TUniServerModule]:Global Cache Folder Erased. <18> Files deleted.
+KioskWeb.exe: 00003E38: 19:15:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003E38: 19:15:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003A40: 19:15:14 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002F84: 19:15:49 [127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8BBC
+KioskWeb.exe: 00003F30: 19:15:58 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00003C1C: 19:16:20 [Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied-127.0.0.1]:EOleException : Procedure or function 'dtr_get_for_approval_web' expects parameter '@location_code', which was not supplied : Addr: $007B8817
+KioskWeb.exe: 00001310: 19:17:28 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001310: 19:17:28 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001310: 19:17:28 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001310: 19:17:28 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+KioskWeb.exe: 00001310: 19:17:28 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001310: 19:17:28 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003D84: 19:17:32 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001424: 19:24:46 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001424: 19:24:46 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001424: 19:24:46 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001424: 19:24:46 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 00001424: 19:24:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001424: 19:24:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003F88: 19:24:52 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00000E18: 20:24:15 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00000E18: 20:24:15 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00000E18: 20:24:15 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00000E18: 20:24:15 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+KioskWeb.exe: 00000E18: 20:24:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00000E18: 20:24:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002E70: 20:26:58 [dstForApproval: Field 'entitlement' not found-127.0.0.1]:EDatabaseError : dstForApproval: Field 'entitlement' not found : Addr: $00634C4E
+KioskWeb.exe: 00001290: 21:16:21 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001290: 21:16:21 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001290: 21:16:21 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001290: 21:16:21 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+KioskWeb.exe: 00001290: 21:16:21 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001290: 21:16:21 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002338: 21:16:37 [Missing Connection or ConnectionString-127.0.0.1]:EDatabaseError : Missing Connection or ConnectionString : Addr: $00634C63
+KioskWeb.exe: 00004480: 21:17:23 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00004480: 21:17:23 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00004480: 21:17:23 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00004480: 21:17:23 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 00004480: 21:17:23 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00004480: 21:17:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000315C: 21:22:16 []:>--------------------------------------------------------------<
+KioskWeb.exe: 0000315C: 21:22:16 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 0000315C: 21:22:16 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 0000315C: 21:22:16 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+KioskWeb.exe: 0000315C: 21:22:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 0000315C: 21:22:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003428: 21:22:27 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00000848: 21:39:51 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00000848: 21:39:51 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00000848: 21:39:51 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00000848: 21:39:51 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 00000848: 21:39:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00000848: 21:39:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000311C: 21:40:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 000042DC: 21:46:55 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000042DC: 21:46:55 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000042DC: 21:46:55 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 000042DC: 21:46:55 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 000042DC: 21:46:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000042DC: 21:46:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00004710: 21:47:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00004030: 22:14:06 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00004030: 22:14:06 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00004030: 22:14:06 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00004030: 22:14:06 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+KioskWeb.exe: 00004030: 22:14:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00004030: 22:14:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00001BB4: 22:23:47 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001BB4: 22:23:47 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001BB4: 22:23:47 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001BB4: 22:23:47 [TUniServerModule]:Global Cache Folder Erased. <18> Files deleted.
+KioskWeb.exe: 00001BB4: 22:23:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001BB4: 22:23:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00001A3C: 22:23:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A30CF
+KioskWeb.exe: 00003FE4: 22:24:46 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003FE4: 22:24:46 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003FE4: 22:24:46 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003FE4: 22:24:46 [TUniServerModule]:Global Cache Folder Erased. <16> Files deleted.
+KioskWeb.exe: 00003FE4: 22:24:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003FE4: 22:24:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000013B0: 22:25:00 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A30CF
+KioskWeb.exe: 00003228: 22:27:58 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003228: 22:27:58 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003228: 22:27:58 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003228: 22:27:58 [TUniServerModule]:Global Cache Folder Erased. <14> Files deleted.
+KioskWeb.exe: 00003228: 22:27:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003228: 22:27:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00000DC4: 22:28:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 0000365C: 22:28:03 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001244: 22:28:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001E50: 22:28:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002598: 22:28:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 000017A0: 22:28:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001818: 22:28:15 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00003EA4: 22:28:16 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001D9C: 22:28:16 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 000035C4: 22:29:21 [dstForApproval: Field 'entitlement' not found-127.0.0.1]:EDatabaseError : dstForApproval: Field 'entitlement' not found : Addr: $00634C4E
+KioskWeb.exe: 00001B30: 22:29:46 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001B30: 22:29:46 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001B30: 22:29:46 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001B30: 22:29:46 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+KioskWeb.exe: 00001B30: 22:29:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001B30: 22:29:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003B08: 22:29:56 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A30FF
+KioskWeb.exe: 000046E0: 22:30:12 [dstForApproval: Field 'entitlement' not found-127.0.0.1]:EDatabaseError : dstForApproval: Field 'entitlement' not found : Addr: $00634C4E

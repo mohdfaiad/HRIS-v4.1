@@ -10,7 +10,7 @@ uses
 type
   TfrmSyncClientWebMain = class(TForm)
     ConnectionMain: TADOConnection;
-    Sychronize: TCheckBox;
+    SychronizeToWeb: TCheckBox;
     Label1: TLabel;
     DBGrid1: TDBGrid;
     dscLeaves: TDataSource;
@@ -21,16 +21,20 @@ type
     edSQL: TEdit;
     dqSync: TADOQuery;
     btnSkipRecord: TButton;
+    SynchronizeToServer: TCheckBox;
+    lblSyncServerUpdate: TLabel;
     procedure ConnectionMainBeforeConnect(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure SychronizeClick(Sender: TObject);
+    procedure SychronizeToWebClick(Sender: TObject);
     procedure ConnectionHRISBeforeConnect(Sender: TObject);
     procedure btnSkipRecordClick(Sender: TObject);
+    procedure SynchronizeToServerClick(Sender: TObject);
   private
     { Private declarations }
     procedure SyncLeave;
     procedure MarkSkip;
+    procedure SendMessage;
   public
     { Public declarations }
   end;
@@ -41,7 +45,7 @@ var
 implementation
 
 uses
-  ConnUtil, System.Threading;
+  ConnUtil, System.Threading, ISyncWebWSDL;
 
 {$R *.dfm}
 
@@ -128,7 +132,69 @@ begin
   end;
 end;
 
-procedure TfrmSyncClientWebMain.SychronizeClick(Sender: TObject);
+procedure TfrmSyncClientWebMain.SendMessage;
+var
+  sql, path, rtn: string;
+  dstXML: TADODataSet;
+  qryWMMessage: TADOQuery;
+  wsMessage: ISyncWebWSDL.TWSMessage;
+begin
+  dstXML := TADODataSet.Create(nil);
+
+  wsMessage := ISyncWebWSDL.TWSMessage.Create;
+
+  try
+    try
+      sql := 'exec dbo.sync_generate_xml';
+
+      dstXML.ConnectionString := ConnectionHRIS.ConnectionString;
+      dstXML.CommandText := sql;
+      dstXML.Open;
+
+      qryWMMessage := TADOQuery.Create(nil);
+      qryWMMessage.ConnectionString := dstXML.ConnectionString;
+
+      if dstXML.FieldByName('event_object').AsString <> '' then
+      begin
+        wsMessage.EventObject := dstXML.FieldByName('event_object').AsString;
+        wsMessage.PkEventObject := dstXML.FieldByName('pk_event_object').AsString;
+        wsMessage.WSMessage := dstXML.FieldByName('ws_message').AsString;
+        wsMessage.WSMessageDate := dstXML.FieldByName('ws_message_date').AsDateTime;
+        wsMessage.Priority := dstXML.FieldByName('priority').AsInteger;
+        wsMessage.SourceLocation := dstXML.FieldByName('source_location').AsString;
+        wsMessage.DestinationLocation := dstXML.FieldByName('destination_location').AsString;
+        wsMessage.MessageTypeCode := dstXML.FieldByName('messagetype_code').AsString;
+        wsMessage.MessageStatusCode := dstXML.FieldByName('messagestatus_code').AsString;
+
+        // iniFile.WriteString('SyncError','SyncEventObject',wsMessage.EventObject);
+        // iniFile.WriteString('SyncError','SyncPK',IntToStr(wsMessage.PkEventObject));
+        // iniFile.WriteString('SyncError','SyncMessage',wsMessage.WSMessage);
+        // iniFile.WriteString('SyncError','Sync',GetISyncWeb.SendMessage(wsMessage));
+
+        rtn := GetISyncWeb.SendMessage(wsMessage);
+
+        if  rtn = '' then
+        begin
+          qryWMMessage.SQL.Text := 'exec dbo.sync_set_wsmessageout_status ''' +
+            wsMessage.EventObject + ''',''' + wsMessage.PkEventObject +
+            ''',''' + wsMessage.DestinationLocation + ''',''SSV''';
+          qryWMMessage.ExecSQL;
+        end
+      end
+      else
+    except
+      on e : exception do
+      begin
+
+      end;
+    end;
+  finally
+    dstXML.Close;
+    dstXML.Free;
+    qryWMMessage.Free;
+  end;
+end;
+procedure TfrmSyncClientWebMain.SychronizeToWebClick(Sender: TObject);
 begin
   TTask.Run(
       procedure
@@ -144,6 +210,31 @@ begin
             begin
               lblUpdate.Caption := 'Last update at ' + FormatDateTime('mmm dd yyyy hh:mm:ss',Now);
               lblRecordsRemaining.Caption := 'Records remaining: ' + IntToStr(dstLeaves.RecordCount);
+            end
+            );
+
+          dstLeaves.Requery;
+        end;
+      end
+    );
+end;
+
+procedure TfrmSyncClientWebMain.SynchronizeToServerClick(Sender: TObject);
+begin
+  TTask.Run(
+      procedure
+      begin
+        dstLeaves.Open;
+        while (Sender as TCheckBox).Checked do
+        begin
+          Sleep(300);
+
+          SendMessage;
+
+          TThread.Synchronize(nil,
+            procedure
+            begin
+              lblSyncServerUpdate.Caption := 'Last message sent: ' + FormatDateTime('mm-dd-yyyy hh:mm:ss am/pm',Now);
             end
             );
 

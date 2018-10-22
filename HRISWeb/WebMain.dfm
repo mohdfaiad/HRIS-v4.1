@@ -348,7 +348,7 @@ object WebMainForm: TWebMainForm
     DesignSize = (
       38
       38)
-    object imgForApproval: TUniImage
+    object ForApprovalImage: TUniImage
       Left = 3
       Top = 3
       Width = 32
@@ -480,7 +480,7 @@ object WebMainForm: TWebMainForm
         5874646174653A6D6F6469667900323031312D30382D32315431323A33363A30
         342D30363A3030012B45C90000000049454E44AE426082}
       Anchors = [akTop, akRight]
-      OnClick = imgForApprovalClick
+      OnClick = ForApprovalImageClick
     end
   end
   object pnlDashboard: TUniSimplePanel

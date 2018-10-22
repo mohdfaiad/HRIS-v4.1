@@ -23,18 +23,19 @@ type
     imgLogout: TUniImage;
     UniLabel2: TUniLabel;
     pnlForApproval: TUniSimplePanel;
-    imgForApproval: TUniImage;
+    ForApprovalImage: TUniImage;
     pnlDashboard: TUniSimplePanel;
     imgDashboard: TUniImage;
     procedure UniFormAfterShow(Sender: TObject);
     procedure imgProfileClick(Sender: TObject);
     procedure imgLogoutClick(Sender: TObject);
     procedure imgLeavesClick(Sender: TObject);
-    procedure imgForApprovalClick(Sender: TObject);
+    procedure ForApprovalImageClick(Sender: TObject);
     procedure imgDashboardClick(Sender: TObject);
   private
     { Private declarations }
     procedure DockFrame(frame: TWebFrames);
+    procedure SetAccess;
   public
     { Public declarations }
   end;
@@ -47,7 +48,7 @@ implementation
 
 uses
   uniGUIVars, MainModule, uniGUIApplication, WebEmployeeDrawer, WebLeaveMain,
-  WebForApproval, WebDashboard;
+  WebForApproval, WebDashboard, AppConstants;
 
 function WebMainForm: TWebMainForm;
 begin
@@ -78,7 +79,7 @@ begin
   DockFrame(frDashboard);
 end;
 
-procedure TWebMainForm.imgForApprovalClick(Sender: TObject);
+procedure TWebMainForm.ForApprovalImageClick(Sender: TObject);
 begin
   DockFrame(frForApproval);
 end;
@@ -98,9 +99,16 @@ begin
   DockFrame(frEmployeeDrawer);
 end;
 
+procedure TWebMainForm.SetAccess;
+begin
+  ForApprovalImage.Enabled := UniMainModule.User.HasRights(['LEAVE_APPROVE','LEAVE_DISAPPROVE']);
+end;
+
 procedure TWebMainForm.UniFormAfterShow(Sender: TObject);
 begin
   lblWelcomeUser.Caption := 'Welcome back ' + UniMainModule.User.Name2;
+
+  SetAccess;
 
   // dock the dashboard
   DockFrame(frDashboard);

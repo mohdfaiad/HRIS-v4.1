@@ -1,8 +1,8 @@
 object ForApprovalFrame: TForApprovalFrame
   Left = 0
   Top = 0
-  Width = 1049
-  Height = 598
+  Width = 1222
+  Height = 715
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alClient
@@ -11,12 +11,12 @@ object ForApprovalFrame: TForApprovalFrame
   ExplicitWidth = 451
   ExplicitHeight = 305
   DesignSize = (
-    1049
-    598)
+    1222
+    715)
   object HeaderPanel: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 1049
+    Width = 1222
     Height = 89
     Hint = ''
     ParentColor = False
@@ -43,8 +43,8 @@ object ForApprovalFrame: TForApprovalFrame
   object ListGrid: TUniDBGrid
     Left = 32
     Top = 136
-    Width = 976
-    Height = 389
+    Width = 1149
+    Height = 506
     Hint = ''
     ClientEvents.ExtEvents.Strings = (
       
@@ -55,7 +55,7 @@ object ForApprovalFrame: TForApprovalFrame
         'store.afterCreate=function store.afterCreate(sender)'#13#10'{'#13#10'  sende' +
         'r.remoteSort=false;'#13#10'}')
     DataSource = UniMainModule.dscForApproval
-    Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+    Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
     ReadOnly = True
     LoadMask.Message = 'Loading data...'
     EmptyText = 'No pending entitlements found.'
@@ -69,11 +69,13 @@ object ForApprovalFrame: TForApprovalFrame
         ActionColumn.Enabled = True
         ActionColumn.Buttons = <
           item
+            Action = ActionApprove
             ButtonId = 0
             Hint = 'Approve'
             IconCls = 'action'
           end
           item
+            Action = ActionDisapprove
             ButtonId = 1
             Hint = 'Disapprove'
             IconCls = 'compose'
@@ -146,7 +148,7 @@ object ForApprovalFrame: TForApprovalFrame
         Title.Caption = 'Remarks'
         Title.Font.Height = -12
         Title.Font.Style = [fsBold]
-        Width = 650
+        Width = 450
         Font.Height = -12
         Sortable = True
         Menu.MenuEnabled = False
@@ -165,5 +167,61 @@ object ForApprovalFrame: TForApprovalFrame
         Menu.MenuEnabled = False
         Menu.ColumnHideable = False
       end>
+  end
+  object ApproveButton: TUniButton
+    Left = 32
+    Top = 661
+    Width = 129
+    Height = 30
+    Hint = ''
+    Caption = 'Approve'
+    Anchors = [akLeft, akBottom]
+    ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    TabOrder = 2
+    Default = True
+    ClientEvents.ExtEvents.Strings = (
+      
+        'added=function added(sender, container, pos, eOpts)'#13#10'{'#13#10'  sender' +
+        '.addCls('#39'bntLogin'#39');'#13#10'}')
+    ScaleButton = False
+    OnClick = ApproveButtonClick
+    ExplicitTop = 251
+  end
+  object DisapproveButton: TUniButton
+    Left = 176
+    Top = 661
+    Width = 129
+    Height = 30
+    Hint = ''
+    Caption = 'Disapprove'
+    Anchors = [akLeft, akBottom]
+    ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    TabOrder = 3
+    Default = True
+    ClientEvents.ExtEvents.Strings = (
+      
+        'added=function added(sender, container, pos, eOpts)'#13#10'{'#13#10'  sender' +
+        '.addCls('#39'bntLogin'#39');'#13#10'}')
+    ScaleButton = False
+    OnClick = DisapproveButtonClick
+    ExplicitTop = 251
+  end
+  object LeaveActionList: TActionList
+    Left = 1152
+    Top = 176
+    object ActionApprove: TAction
+      Caption = 'ActionApprove'
+      OnExecute = ActionApproveExecute
+    end
+    object ActionDisapprove: TAction
+      Caption = 'ActionDisapprove'
+      OnExecute = ActionDisapproveExecute
+    end
   end
 end

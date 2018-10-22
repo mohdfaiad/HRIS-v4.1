@@ -3,7 +3,7 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Synchronization Client for Web'
-  ClientHeight = 420
+  ClientHeight = 495
   ClientWidth = 933
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   OnCreate = FormCreate
   DesignSize = (
     933
-    420)
+    495)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -43,20 +43,26 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Width = 3
     Height = 13
   end
-  object Sychronize: TCheckBox
+  object lblSyncServerUpdate: TLabel
+    Left = 136
+    Top = 66
+    Width = 3
+    Height = 13
+  end
+  object SychronizeToWeb: TCheckBox
     Left = 8
     Top = 39
-    Width = 97
+    Width = 122
     Height = 17
-    Caption = 'Sychronize'
+    Caption = 'Sychronize to web'
     TabOrder = 0
-    OnClick = SychronizeClick
+    OnClick = SychronizeToWebClick
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 71
+    Top = 96
     Width = 933
-    Height = 329
+    Height = 379
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = dscLeaves
     TabOrder = 1
@@ -108,11 +114,12 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   end
   object edSQL: TEdit
     Left = 0
-    Top = 399
+    Top = 474
     Width = 933
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 2
+    ExplicitTop = 399
   end
   object btnSkipRecord: TButton
     Left = 840
@@ -123,6 +130,15 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     TabOrder = 3
     OnClick = btnSkipRecordClick
   end
+  object SynchronizeToServer: TCheckBox
+    Left = 8
+    Top = 62
+    Width = 122
+    Height = 17
+    Caption = 'Sychronize to server'
+    TabOrder = 4
+    OnClick = SynchronizeToServerClick
+  end
   object ConnectionMain: TADOConnection
     ConnectionString = 
       'Provider=SQLNCLI11.1;Persist Security Info=False;User ID=sa;Init' +
@@ -131,13 +147,13 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     LoginPrompt = False
     Provider = 'SQLNCLI11.1'
     BeforeConnect = ConnectionMainBeforeConnect
-    Left = 664
-    Top = 16
+    Left = 832
+    Top = 344
   end
   object dscLeaves: TDataSource
     DataSet = dstLeaves
-    Left = 536
-    Top = 16
+    Left = 704
+    Top = 344
   end
   object dstLeaves: TADODataSet
     Connection = ConnectionMain
@@ -145,8 +161,8 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     CommandText = 'sync_get_message_web;1'
     CommandType = cmdStoredProc
     Parameters = <>
-    Left = 600
-    Top = 16
+    Left = 768
+    Top = 344
   end
   object ConnectionHRIS: TADOConnection
     ConnectionString = 
@@ -156,13 +172,13 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     LoginPrompt = False
     Provider = 'SQLNCLI11.1'
     BeforeConnect = ConnectionHRISBeforeConnect
-    Left = 384
-    Top = 16
+    Left = 552
+    Top = 344
   end
   object dqSync: TADOQuery
     Connection = ConnectionHRIS
     Parameters = <>
-    Left = 464
-    Top = 16
+    Left = 632
+    Top = 344
   end
 end

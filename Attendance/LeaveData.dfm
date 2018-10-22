@@ -1,7 +1,7 @@
 object dmLeave: TdmLeave
   OldCreateOrder = False
-  Height = 163
-  Width = 315
+  Height = 180
+  Width = 421
   object dstLeaves: TADODataSet
     Connection = dmApplication.acMain
     CursorType = ctStatic

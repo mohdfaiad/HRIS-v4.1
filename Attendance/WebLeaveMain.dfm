@@ -1,8 +1,8 @@
 object LeaveMainFrame: TLeaveMainFrame
   Left = 0
   Top = 0
-  Width = 1502
-  Height = 804
+  Width = 1491
+  Height = 840
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Color = clWhite
@@ -639,7 +639,7 @@ object LeaveMainFrame: TLeaveMainFrame
   object HeaderPanel: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 1502
+    Width = 1491
     Height = 89
     Hint = ''
     ParentColor = False

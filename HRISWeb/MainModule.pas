@@ -3,10 +3,10 @@ unit MainModule;
 interface
 
 uses
-  uniGUIMainModule, SysUtils, Classes, User, Data.DB, Data.Win.ADODB;
+  uniGUIMainModule, SysUtils, Classes, User, Data.DB, Data.Win.ADODB, WebLeaveIntf;
 
 type
-  TUniMainModule = class(TUniGUIMainModule)
+  TUniMainModule = class(TUniGUIMainModule,IWebLeave)
     MainConnection: TADOConnection;
     dstUser: TADODataSet;
     dscForApproval: TDataSource;
@@ -35,8 +35,17 @@ type
     dstForApprovalis_paid: TWordField;
     dstForApprovalis_paid_f: TStringField;
     dstForApprovalleave_type: TStringField;
+    SyncConnection: TADOConnection;
+    dstLeavesPending: TADODataSet;
+    dscLeavesPending: TDataSource;
+    dstLeavesApproved: TADODataSet;
+    dscLeavesApproved: TDataSource;
     procedure UniGUIMainModuleDestroy(Sender: TObject);
     procedure MainConnectionBeforeConnect(Sender: TObject);
+    procedure SyncConnectionBeforeConnect(Sender: TObject);
+    procedure dstForApprovalBeforeOpen(DataSet: TDataSet);
+    procedure dstLeavesPendingBeforeOpen(DataSet: TDataSet);
+    procedure dstLeavesApprovedBeforeOpen(DataSet: TDataSet);
   private
     { Private declarations }
     FUser: TUser;
@@ -44,6 +53,9 @@ type
     { Public declarations }
     property User: TUser read FUser write FUser;
     procedure ExecuteQuery(const AQuery: string);
+
+    procedure ApproveLeave;
+    procedure DisapproveLeave;
   end;
 
 function UniMainModule: TUniMainModule;
@@ -53,11 +65,114 @@ implementation
 {$R *.dfm}
 
 uses
-  UniGUIVars, ServerModule, uniGUIApplication, ConnUtil;
+  UniGUIVars, ServerModule, uniGUIApplication, ConnUtil, AttendanceUtils, DateUtils;
 
 function UniMainModule: TUniMainModule;
 begin
   Result := TUniMainModule(UniApplication.UniMainModule);
+end;
+
+procedure TUniMainModule.ApproveLeave;
+var
+  sql: string;
+  leaveId: integer;
+  locationCode: string;
+  leaveDate: TDate;
+begin
+  with dstForApproval do
+  begin
+    leaveId := FieldByName('leave_id').AsInteger;
+    locationCode := FieldByName('location_code').AsString;
+    leaveDate := FieldByName('dt').AsDateTime;
+
+    sql := 'exec dtr_approve_leave ' +
+              IntToStr(leaveId) + ',' +
+              QuotedStr(locationCode) + ',' +
+              QuotedStr(FormatDateTime('yyyy/mm/dd',leaveDate)) + ',' +
+              QuotedStr(FUser.UserId);
+
+    ExecuteQuery(sql);
+
+    Close;
+    Open;
+  end;
+end;
+
+procedure TUniMainModule.SyncConnectionBeforeConnect(Sender: TObject);
+begin
+  {$ifdef DEBUG}
+  SyncConnection.ConnectionString := 'Provider=SQLOLEDB.1;Password=cnn;' +
+                'Persist Security Info=False;' +
+                'User ID=sa;Initial Catalog=HRISWeb' +
+                ';Data Source=BRYAN-LENOVO\DEV' +
+                ';Use Procedure for Prepare=1;' +
+                'Auto Translate=True;Packet Size=4096;' +
+                ';Use Encryption for Data=False;' +
+                'Tag with column collation when possible=False;' +
+                'MARS Connection=False;DataTypeCompatibility=0;' +
+                'Trust Server Certificate=False';
+
+  {$else}
+  SyncConnection.ConnectionString := 'Provider=SQLOLEDB.1;Password=Dijd5?78;' +
+                'Persist Security Info=False;' +
+                'User ID=hris;Initial Catalog=HRISWeb' +
+                ';Data Source=localhost' +
+                ';Use Procedure for Prepare=1;' +
+                'Auto Translate=True;Packet Size=4096;' +
+                ';Use Encryption for Data=False;' +
+                'Tag with column collation when possible=False;' +
+                'MARS Connection=False;DataTypeCompatibility=0;' +
+                'Trust Server Certificate=False';
+  {$endif}
+end;
+
+procedure TUniMainModule.DisapproveLeave;
+var
+  sql: string;
+  leaveId: integer;
+  locationCode: string;
+  leaveDate: TDate;
+begin
+  with dstForApproval do
+  begin
+    leaveId := FieldByName('leave_id').AsInteger;
+    locationCode := FieldByName('location_code').AsString;
+    leaveDate := FieldByName('dt').AsDateTime;
+
+    sql := 'exec dtr_disapprove_leave ' +
+              IntToStr(leaveId) + ',' +
+              QuotedStr(locationCode) + ',' +
+              QuotedStr(FormatDateTime('yyyy/mm/dd',leaveDate)) + ',' +
+              QuotedStr(FUser.UserId);
+
+    ExecuteQuery(sql);
+
+    Close;
+    Open;
+  end;
+end;
+
+procedure TUniMainModule.dstForApprovalBeforeOpen(DataSet: TDataSet);
+begin
+  (DataSet as TADODataSet).Parameters.ParamByName('@location_code').Value := User.LocationCode;
+end;
+
+procedure TUniMainModule.dstLeavesApprovedBeforeOpen(DataSet: TDataSet);
+var
+  fd,td: TDate;
+begin
+  with (DataSet as TADODataSet).Parameters do
+  begin
+    GetDateParamsYear(YearOf(Now),fd,td);
+    ParamByName('@id_num').Value := User.UserId;
+    ParamByName('@from_date').Value := fd;
+    ParamByName('@until_date').Value := td;
+  end;
+end;
+
+procedure TUniMainModule.dstLeavesPendingBeforeOpen(DataSet: TDataSet);
+begin
+  (DataSet as TADODataSet).Parameters.ParamByName('@id_num').Value := User.UserId;
 end;
 
 procedure TUniMainModule.ExecuteQuery(const AQuery: string);

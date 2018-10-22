@@ -63,7 +63,7 @@ end;
 
 function TLoginForm.UserIsValid: boolean;
 var
-  username, password: string;
+  username, password, right: string;
   LUser: TUser;
 begin
   Result := false;
@@ -89,6 +89,14 @@ begin
           LUser.UserId := FieldByName('id_num').AsString;
           LUser.FirstName := FieldByName('employee_firstname').AsString;
           LUser.LastName := FieldByName('employee_lastname').AsString;
+          LUser.LocationCode := FieldByName('location_code').AsString;
+
+          while not Eof do
+          begin
+            right := FieldbyName('privilege_code').AsString;
+            LUser.AddRight(right);
+            Next;
+          end;
 
           User := LUser;
         end;
