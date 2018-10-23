@@ -294,7 +294,7 @@ object LoginForm: TLoginForm
     Width = 99
     Height = 13
     Hint = ''
-    Caption = 'Web version 1.0.0.0'
+    Caption = 'Web version 1.0.0.1'
     ParentFont = False
     Font.Charset = ANSI_CHARSET
     Font.Color = 7237230

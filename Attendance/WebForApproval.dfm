@@ -1,22 +1,24 @@
 object ForApprovalFrame: TForApprovalFrame
   Left = 0
   Top = 0
-  Width = 1222
-  Height = 715
+  Width = 1407
+  Height = 689
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alClient
   Anchors = [akLeft, akTop, akRight, akBottom]
+  Font.Height = -12
   TabOrder = 0
+  ParentFont = False
   ExplicitWidth = 451
   ExplicitHeight = 305
   DesignSize = (
-    1222
-    715)
+    1407
+    689)
   object HeaderPanel: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 1222
+    Width = 1407
     Height = 89
     Hint = ''
     ParentColor = False
@@ -42,9 +44,9 @@ object ForApprovalFrame: TForApprovalFrame
   end
   object ListGrid: TUniDBGrid
     Left = 32
-    Top = 136
-    Width = 1149
-    Height = 506
+    Top = 176
+    Width = 1334
+    Height = 440
     Hint = ''
     ClientEvents.ExtEvents.Strings = (
       
@@ -170,7 +172,7 @@ object ForApprovalFrame: TForApprovalFrame
   end
   object ApproveButton: TUniButton
     Left = 32
-    Top = 661
+    Top = 635
     Width = 129
     Height = 30
     Hint = ''
@@ -192,7 +194,7 @@ object ForApprovalFrame: TForApprovalFrame
   end
   object DisapproveButton: TUniButton
     Left = 176
-    Top = 661
+    Top = 635
     Width = 129
     Height = 30
     Hint = ''
@@ -211,6 +213,44 @@ object ForApprovalFrame: TForApprovalFrame
     ScaleButton = False
     OnClick = DisapproveButtonClick
     ExplicitTop = 251
+  end
+  object UniLabel7: TUniLabel
+    Left = 32
+    Top = 142
+    Width = 72
+    Height = 14
+    Hint = ''
+    Caption = 'Payroll period'
+    TabOrder = 4
+  end
+  object PeriodCombo: TUniComboBox
+    Left = 120
+    Top = 136
+    Width = 217
+    Hint = ''
+    Text = 'PeriodCombo'
+    TabOrder = 5
+    ForceSelection = False
+  end
+  object UpdateButton: TUniButton
+    Left = 352
+    Top = 131
+    Width = 73
+    Height = 30
+    Hint = ''
+    Caption = 'Update'
+    ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    TabOrder = 6
+    Default = True
+    ClientEvents.ExtEvents.Strings = (
+      
+        'added=function added(sender, container, pos, eOpts)'#13#10'{'#13#10'  sender' +
+        '.addCls('#39'bntLogin'#39');'#13#10'}')
+    ScaleButton = False
+    OnClick = UpdateButtonClick
   end
   object LeaveActionList: TActionList
     Left = 1152

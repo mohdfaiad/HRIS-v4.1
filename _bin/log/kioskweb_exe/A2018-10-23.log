@@ -1,0 +1,181 @@
+KioskWeb.exe: 00003114: 19:30:47 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003114: 19:30:47 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003114: 19:30:47 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003114: 19:30:47 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+KioskWeb.exe: 00003114: 19:30:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003114: 19:30:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000108C: 19:31:05 [dstPayrollCodes: Parameter '@id_num' not found-127.0.0.1]:EDatabaseError : dstPayrollCodes: Parameter '@id_num' not found : Addr: $00634C4E
+KioskWeb.exe: 00003A64: 19:31:49 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003A64: 19:31:49 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003A64: 19:31:49 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003A64: 19:31:49 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+KioskWeb.exe: 00003A64: 19:31:49 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003A64: 19:31:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003214: 19:31:55 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A308F
+KioskWeb.exe: 00003650: 19:32:14 [dstForApproval: Parameter '@payroll_period' not found-127.0.0.1]:EDatabaseError : dstForApproval: Parameter '@payroll_period' not found : Addr: $00634C4E
+KioskWeb.exe: 00003FA8: 19:32:36 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003FA8: 19:32:36 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003FA8: 19:32:36 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003FA8: 19:32:36 [TUniServerModule]:Global Cache Folder Erased. <17> Files deleted.
+KioskWeb.exe: 00003FA8: 19:32:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003FA8: 19:32:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003CBC: 19:32:41 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A30B3
+KioskWeb.exe: 00002530: 19:34:47 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002530: 19:34:47 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002530: 19:34:47 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002530: 19:34:47 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 00002530: 19:34:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002530: 19:34:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000024B4: 19:35:04 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000024B4: 19:35:04 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000024B4: 19:35:04 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 000024B4: 19:35:04 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+KioskWeb.exe: 000024B4: 19:35:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000024B4: 19:35:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000035E4: 19:35:14 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002654: 19:36:42 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002654: 19:36:42 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002654: 19:36:42 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002654: 19:36:42 [TUniServerModule]:Global Cache Folder Erased. <16> Files deleted.
+KioskWeb.exe: 00002654: 19:36:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002654: 19:36:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002350: 19:36:46 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002554: 19:37:42 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002554: 19:37:42 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002554: 19:37:42 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002554: 19:37:42 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+KioskWeb.exe: 00002554: 19:37:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002554: 19:37:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00001C3C: 19:37:49 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 000028DC: 19:37:51 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00000924: 19:38:39 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00000924: 19:38:39 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00000924: 19:38:39 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00000924: 19:38:39 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+KioskWeb.exe: 00000924: 19:38:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00000924: 19:38:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002F6C: 19:38:45 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00003B24: 19:57:39 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003B24: 19:57:39 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003B24: 19:57:39 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003B24: 19:57:39 [TUniServerModule]:Global Cache Folder Erased. <7> Files deleted.
+KioskWeb.exe: 00003B24: 19:57:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003B24: 19:57:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00001BDC: 19:57:47 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 000044E0: 21:43:17 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000044E0: 21:43:17 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000044E0: 21:43:17 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 000044E0: 21:43:17 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000044E0: 21:43:17 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000044E0: 21:44:55 [TUniServerModule]:Shutting Down Server.
+KioskWeb.exe: 000044E0: 21:44:55 [TUniServerModule]:Stopping HTTP Server.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniServerModule]:HTTP Server Stopped.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniGUISessionManager]:Terminating Session manager.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniGUISessionManager]:Stopping Cache Eraser...
+KioskWeb.exe: 000044E0: 21:44:56 [TUniGUISessionManager]:Cache Eraser Stopped.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniGUISessionManager]:Destroying Worker Threads.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniGUISessionManager]:Session manager terminated.
+KioskWeb.exe: 000044E0: 21:44:56 [TUniServerModule]:Server Shutdown Completed.
+KioskWeb.exe: 000044E0: 21:44:56 []:<-------------------------------------------------------------->
+KioskWeb.exe: 000044E0: 21:44:56 [Terminated]:Exit Code: 0
+KioskWeb.exe: 00000254: 21:45:14 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00000254: 21:45:14 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00000254: 21:45:14 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00000254: 21:45:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00000254: 21:45:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003340: 21:45:57 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003340: 21:45:57 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003340: 21:45:57 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003340: 21:45:57 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+KioskWeb.exe: 00003340: 21:45:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003340: 21:45:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002FE0: 21:46:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A30DF
+KioskWeb.exe: 000046DC: 21:56:55 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000046DC: 21:56:55 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000046DC: 21:56:55 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 000046DC: 21:56:55 [TUniServerModule]:Global Cache Folder Erased. <17> Files deleted.
+KioskWeb.exe: 000046DC: 21:56:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000046DC: 21:56:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000043DC: 21:57:17 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $00881985
+KioskWeb.exe: 00003658: 21:57:26 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $00881985
+KioskWeb.exe: 00002300: 21:57:32 [Invalid class typecast-127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $0088176E
+KioskWeb.exe: 00002ACC: 21:58:44 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002ACC: 21:58:44 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002ACC: 21:58:44 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002ACC: 21:58:44 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+KioskWeb.exe: 00002ACC: 21:58:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002ACC: 21:58:44 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000020CC: 21:59:46 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $00885019
+KioskWeb.exe: 00001DA0: 22:00:51 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001DA0: 22:00:51 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001DA0: 22:00:51 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001DA0: 22:00:51 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+KioskWeb.exe: 00001DA0: 22:00:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001DA0: 22:00:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00001C74: 22:00:58 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 0000216C: 22:01:16 [127.0.0.1]:EInvalidCast : Invalid class typecast : Addr: $00885019
+KioskWeb.exe: 00002674: 22:02:48 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00002674: 22:02:48 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00002674: 22:02:48 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00002674: 22:02:48 [TUniServerModule]:Global Cache Folder Erased. <18> Files deleted.
+KioskWeb.exe: 00002674: 22:02:48 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00002674: 22:02:48 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00002078: 22:02:55 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00002674: 22:03:53 [TUniServerModule]:Shutting Down Server.
+KioskWeb.exe: 00002674: 22:03:54 [TUniServerModule]:Stopping HTTP Server.
+KioskWeb.exe: 00002674: 22:03:54 [TUniServerModule]:HTTP Server Stopped.
+KioskWeb.exe: 00002674: 22:03:54 [TUniGUISessionManager]:Terminating Session manager.
+KioskWeb.exe: 00002674: 22:03:54 [TUniGUISessionManager]:Stopping Cache Eraser...
+KioskWeb.exe: 00002674: 22:03:54 [TUniGUISessionManager]:Cache Eraser Stopped.
+KioskWeb.exe: 00002674: 22:03:54 [TUniGUISessionManager]:Destroying Worker Threads.
+KioskWeb.exe: 00002674: 22:03:54 [TUniGUISessionManager]:Session manager terminated.
+KioskWeb.exe: 00002674: 22:03:54 [TUniServerModule]:Server Shutdown Completed.
+KioskWeb.exe: 00002674: 22:03:54 []:<-------------------------------------------------------------->
+KioskWeb.exe: 00002674: 22:03:54 [Terminated]:Exit Code: 0
+KioskWeb.exe: 000024B8: 22:06:08 []:>--------------------------------------------------------------<
+KioskWeb.exe: 000024B8: 22:06:08 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 000024B8: 22:06:08 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 000024B8: 22:06:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 000024B8: 22:06:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 000032D4: 22:06:29 [Invalid pointer operation-127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $00409C61
+KioskWeb.exe: 00003118: 22:06:42 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00003118: 22:06:42 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00003118: 22:06:42 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00003118: 22:06:42 [TUniServerModule]:Global Cache Folder Erased. <23> Files deleted.
+KioskWeb.exe: 00003118: 22:06:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00003118: 22:06:43 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 0000120C: 22:07:05 []:>--------------------------------------------------------------<
+KioskWeb.exe: 0000120C: 22:07:05 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 0000120C: 22:07:05 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 0000120C: 22:07:05 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+KioskWeb.exe: 0000120C: 22:07:05 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 0000120C: 22:07:05 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00004210: 22:07:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 0000120C: 22:07:59 [TUniServerModule]:Shutting Down Server.
+KioskWeb.exe: 0000120C: 22:07:59 [TUniServerModule]:Stopping HTTP Server.
+KioskWeb.exe: 0000120C: 22:07:59 [TUniServerModule]:HTTP Server Stopped.
+KioskWeb.exe: 0000120C: 22:07:59 [TUniGUISessionManager]:Terminating Session manager.
+KioskWeb.exe: 0000120C: 22:07:59 [TUniGUISessionManager]:Stopping Cache Eraser...
+KioskWeb.exe: 0000120C: 22:08:00 [TUniGUISessionManager]:Cache Eraser Stopped.
+KioskWeb.exe: 0000120C: 22:08:00 [TUniGUISessionManager]:Destroying Worker Threads.
+KioskWeb.exe: 0000120C: 22:08:00 [TUniGUISessionManager]:Session manager terminated.
+KioskWeb.exe: 0000120C: 22:08:00 [TUniServerModule]:Server Shutdown Completed.
+KioskWeb.exe: 0000120C: 22:08:00 []:<-------------------------------------------------------------->
+KioskWeb.exe: 0000120C: 22:08:00 [Terminated]:Exit Code: 0
+KioskWeb.exe: 00001E40: 22:08:53 []:>--------------------------------------------------------------<
+KioskWeb.exe: 00001E40: 22:08:53 [TUniServerModule]:Server First Init.
+KioskWeb.exe: 00001E40: 22:08:53 [TUniServerModule]:Debug Mode = ON
+KioskWeb.exe: 00001E40: 22:08:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+KioskWeb.exe: 00001E40: 22:08:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+KioskWeb.exe: 00003C60: 22:08:57 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007A4D03
+KioskWeb.exe: 00001E40: 22:09:40 [TUniServerModule]:Shutting Down Server.
+KioskWeb.exe: 00001E40: 22:09:40 [TUniServerModule]:Stopping HTTP Server.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniServerModule]:HTTP Server Stopped.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniGUISessionManager]:Terminating Session manager.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniGUISessionManager]:Stopping Cache Eraser...
+KioskWeb.exe: 00001E40: 22:09:44 [TUniGUISessionManager]:Cache Eraser Stopped.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniGUISessionManager]:Destroying Worker Threads.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniGUISessionManager]:Session manager terminated.
+KioskWeb.exe: 00001E40: 22:09:44 [TUniServerModule]:Server Shutdown Completed.
+KioskWeb.exe: 00001E40: 22:09:44 []:<-------------------------------------------------------------->
+KioskWeb.exe: 00001E40: 22:09:44 [Terminated]:Exit Code: 0

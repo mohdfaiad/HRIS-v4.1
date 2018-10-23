@@ -3,7 +3,8 @@ unit MainModule;
 interface
 
 uses
-  uniGUIMainModule, SysUtils, Classes, User, Data.DB, Data.Win.ADODB, WebLeaveIntf;
+  uniGUIMainModule, SysUtils, Classes, User, Data.DB, Data.Win.ADODB, WebLeaveIntf,
+  PayrollCode, System.Generics.Collections;
 
 type
   TUniMainModule = class(TUniGUIMainModule,IWebLeave)
@@ -40,10 +41,13 @@ type
     dscLeavesPending: TDataSource;
     dstLeavesApproved: TADODataSet;
     dscLeavesApproved: TDataSource;
+    dstPayrollCodes: TADODataSet;
+    dstLeavesApprovedleavetype_name: TStringField;
+    dstLeavesApprovedpaid: TFMTBCDField;
+    dstLeavesApprovedunpaid: TFMTBCDField;
     procedure UniGUIMainModuleDestroy(Sender: TObject);
     procedure MainConnectionBeforeConnect(Sender: TObject);
     procedure SyncConnectionBeforeConnect(Sender: TObject);
-    procedure dstForApprovalBeforeOpen(DataSet: TDataSet);
     procedure dstLeavesPendingBeforeOpen(DataSet: TDataSet);
     procedure dstLeavesApprovedBeforeOpen(DataSet: TDataSet);
   private
@@ -56,6 +60,9 @@ type
 
     procedure ApproveLeave;
     procedure DisapproveLeave;
+    procedure RetrievePendingEntitlements(const APayrollCode: TPayrollCode);
+
+    function GetPayrollCodes: TObjectList<TPayrollCode>;
   end;
 
 function UniMainModule: TUniMainModule;
@@ -152,11 +159,6 @@ begin
   end;
 end;
 
-procedure TUniMainModule.dstForApprovalBeforeOpen(DataSet: TDataSet);
-begin
-  (DataSet as TADODataSet).Parameters.ParamByName('@location_code').Value := User.LocationCode;
-end;
-
 procedure TUniMainModule.dstLeavesApprovedBeforeOpen(DataSet: TDataSet);
 var
   fd,td: TDate;
@@ -180,9 +182,52 @@ begin
   MainConnection.Execute(AQuery);
 end;
 
+function TUniMainModule.GetPayrollCodes: TObjectList<TPayrollCode>;
+var
+  payrollCode: TPayrollCode;
+  codeList: TObjectList<TPayrollCode>;
+begin
+  codeList := TObjectList<TPayrollCode>.Create;
+  with dstPayrollCodes do
+  begin
+    try
+      Open;
+      while not Eof do
+      begin
+        payrollCode := TPayrollCode.Create;
+
+        payrollCode.Code := FieldByName('payroll_code').AsString;
+        payrollCode.Period := FieldByName('payroll_period').AsString;
+        payrollCode.DateFromStr := FieldByName('payroll_from').AsString;
+        payrollCode.DateUntilStr := FieldByName('payroll_until').AsString;
+
+        codeList.Add(payrollCode);
+
+        Next;
+      end;
+    finally
+      Close;
+    end;
+  end;
+
+  Result := codeList;
+end;
+
 procedure TUniMainModule.MainConnectionBeforeConnect(Sender: TObject);
 begin
   MainConnection.ConnectionString := GetConnection('','','');
+end;
+
+procedure TUniMainModule.RetrievePendingEntitlements(
+  const APayrollCode: TPayrollCode);
+begin
+  with dstForApproval do
+  begin
+    Close;
+    Parameters.ParamByName('@payroll_code').Value := APayrollCode.Code;
+    Parameters.ParamByName('@id_num').Value := User.UserId;
+    Open;
+  end;
 end;
 
 procedure TUniMainModule.UniGUIMainModuleDestroy(Sender: TObject);

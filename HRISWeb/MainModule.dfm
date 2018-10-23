@@ -6,11 +6,10 @@ object UniMainModule: TUniMainModule
   Height = 270
   Width = 580
   object MainConnection: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=SQLNCLI11.1;Integrated Security=SSPI;Persist Security I' +
       'nfo=False;User ID="";Initial Catalog=HRIS;Data Source=BRYAN-LENO' +
-      'VO\DEV;Initial File Name="";Server SPN=""'
+      'VO\DEV;Initial File Name="";Server SPN="";'
     LoginPrompt = False
     Provider = 'SQLNCLI11.1'
     BeforeConnect = MainConnectionBeforeConnect
@@ -50,7 +49,6 @@ object UniMainModule: TUniMainModule
     Connection = MainConnection
     CursorType = ctStatic
     LockType = ltReadOnly
-    BeforeOpen = dstForApprovalBeforeOpen
     CommandText = 'dtr_get_for_approval_web;1'
     CommandType = cmdStoredProc
     Parameters = <
@@ -61,10 +59,17 @@ object UniMainModule: TUniMainModule
         Precision = 10
       end
       item
-        Name = '@location_code'
+        Name = '@payroll_code'
         Attributes = [paNullable]
         DataType = ftString
-        Size = 3
+        Size = 15
+        Value = ''
+      end
+      item
+        Name = '@id_num'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 12
         Value = ''
       end>
     Left = 159
@@ -225,7 +230,7 @@ object UniMainModule: TUniMainModule
   object dstLeavesApproved: TADODataSet
     Connection = MainConnection
     CursorType = ctStatic
-    Filtered = True
+    LockType = ltReadOnly
     BeforeOpen = dstLeavesApprovedBeforeOpen
     CommandText = 'dtr_get_leaves_approved;1'
     CommandType = cmdStoredProc
@@ -258,10 +263,44 @@ object UniMainModule: TUniMainModule
       end>
     Left = 351
     Top = 32
+    object dstLeavesApprovedleavetype_name: TStringField
+      FieldName = 'leavetype_name'
+      Size = 25
+    end
+    object dstLeavesApprovedpaid: TFMTBCDField
+      FieldName = 'paid'
+      ReadOnly = True
+      DisplayFormat = '0.0000'
+      Precision = 38
+      Size = 4
+    end
+    object dstLeavesApprovedunpaid: TFMTBCDField
+      FieldName = 'unpaid'
+      ReadOnly = True
+      DisplayFormat = '0.0000'
+      Precision = 38
+      Size = 4
+    end
   end
   object dscLeavesApproved: TDataSource
     DataSet = dstLeavesApproved
     Left = 440
     Top = 32
+  end
+  object dstPayrollCodes: TADODataSet
+    Connection = MainConnection
+    CursorType = ctStatic
+    LockType = ltReadOnly
+    CommandText = 'dtr_dd_get_payroll_codes;1'
+    CommandType = cmdStoredProc
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+      end>
+    Left = 351
+    Top = 96
   end
 end

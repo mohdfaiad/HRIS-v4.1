@@ -1,8 +1,8 @@
 object DashboardFrame: TDashboardFrame
   Left = 0
   Top = 0
-  Width = 1344
-  Height = 561
+  Width = 1523
+  Height = 778
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alClient
@@ -11,12 +11,12 @@ object DashboardFrame: TDashboardFrame
   ExplicitWidth = 451
   ExplicitHeight = 305
   DesignSize = (
-    1344
-    561)
+    1523
+    778)
   object HeaderPanel: TUniSimplePanel
     Left = 0
     Top = 0
-    Width = 1344
+    Width = 1523
     Height = 89
     Hint = ''
     ParentColor = False
@@ -57,7 +57,7 @@ object DashboardFrame: TDashboardFrame
     Left = 56
     Top = 176
     Width = 953
-    Height = 329
+    Height = 546
     Hint = ''
     ClientEvents.ExtEvents.Strings = (
       
@@ -165,8 +165,8 @@ object DashboardFrame: TDashboardFrame
   object ApprovedListGrid: TUniDBGrid
     Left = 1048
     Top = 176
-    Width = 297
-    Height = 329
+    Width = 361
+    Height = 546
     Hint = ''
     ClientEvents.ExtEvents.Strings = (
       
@@ -176,6 +176,7 @@ object DashboardFrame: TDashboardFrame
       
         'store.afterCreate=function store.afterCreate(sender)'#13#10'{'#13#10'  sende' +
         'r.remoteSort=false;'#13#10'}')
+    TitleFont.Style = [fsBold]
     DataSource = UniMainModule.dscLeavesApproved
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
     ReadOnly = True
@@ -189,7 +190,6 @@ object DashboardFrame: TDashboardFrame
       item
         FieldName = 'leavetype_name'
         Title.Caption = 'Type'
-        Title.Font.Height = -12
         Title.Font.Style = [fsBold]
         Width = 200
         Font.Height = -12
@@ -199,15 +199,22 @@ object DashboardFrame: TDashboardFrame
         Menu.ColumnHideable = False
       end
       item
-        FieldName = 'times'
-        Title.Caption = 'Times'
-        Title.Font.Height = -12
+        FieldName = 'paid'
+        Title.Caption = 'Paid'
         Title.Font.Style = [fsBold]
-        Width = 50
+        Width = 60
         Font.Height = -12
+        ReadOnly = True
         Sortable = True
         Menu.MenuEnabled = False
         Menu.ColumnHideable = False
+      end
+      item
+        FieldName = 'unpaid'
+        Title.Caption = 'Unpaid'
+        Title.Font.Style = [fsBold]
+        Width = 60
+        ReadOnly = True
       end>
   end
 end

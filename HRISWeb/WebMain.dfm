@@ -327,7 +327,7 @@ object WebMainForm: TWebMainForm
     Cursor = crHandPoint
     Hint = ''
     Alignment = taRightJustify
-    Caption = 'Employee Kiosk Web version 1.0.0.0'
+    Caption = 'Employee Kiosk Web version 1.0.0.1'
     Anchors = [akLeft, akBottom]
     ParentFont = False
     Font.Charset = ANSI_CHARSET
