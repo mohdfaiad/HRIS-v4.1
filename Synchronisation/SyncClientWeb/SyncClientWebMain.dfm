@@ -45,7 +45,7 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   end
   object lblSyncServerUpdate: TLabel
     Left = 136
-    Top = 66
+    Top = 65
     Width = 3
     Height = 13
   end
@@ -62,9 +62,9 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Left = 0
     Top = 96
     Width = 933
-    Height = 379
+    Height = 359
     Anchors = [akLeft, akTop, akRight, akBottom]
-    DataSource = dscLeaves
+    DataSource = dscMessages
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -114,12 +114,11 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   end
   object edSQL: TEdit
     Left = 0
-    Top = 474
+    Top = 454
     Width = 933
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 2
-    ExplicitTop = 399
   end
   object btnSkipRecord: TButton
     Left = 840
@@ -132,12 +131,26 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
   end
   object SynchronizeToServer: TCheckBox
     Left = 8
-    Top = 62
+    Top = 64
     Width = 122
     Height = 17
     Caption = 'Sychronize to server'
     TabOrder = 4
     OnClick = SynchronizeToServerClick
+  end
+  object edSyncError: TEdit
+    Left = 0
+    Top = 474
+    Width = 933
+    Height = 21
+    Anchors = [akLeft, akBottom]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
   end
   object ConnectionMain: TADOConnection
     ConnectionString = 
@@ -150,12 +163,12 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Left = 832
     Top = 344
   end
-  object dscLeaves: TDataSource
-    DataSet = dstLeaves
+  object dscMessages: TDataSource
+    DataSet = dstMessages
     Left = 704
     Top = 344
   end
-  object dstLeaves: TADODataSet
+  object dstMessages: TADODataSet
     Connection = ConnectionMain
     CursorType = ctStatic
     CommandText = 'sync_get_message_web;1'
@@ -180,5 +193,12 @@ object frmSyncClientWebMain: TfrmSyncClientWebMain
     Parameters = <>
     Left = 632
     Top = 344
+  end
+  object dstMessage: TADODataSet
+    Connection = ConnectionMain
+    CursorType = ctStatic
+    Parameters = <>
+    Left = 768
+    Top = 232
   end
 end

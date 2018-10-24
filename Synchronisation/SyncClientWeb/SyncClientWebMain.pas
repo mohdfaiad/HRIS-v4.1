@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.ExtCtrls,
-  Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids;
+  Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, ISyncWebWSDL;
 
 type
   TfrmSyncClientWebMain = class(TForm)
@@ -13,8 +13,8 @@ type
     SychronizeToWeb: TCheckBox;
     Label1: TLabel;
     DBGrid1: TDBGrid;
-    dscLeaves: TDataSource;
-    dstLeaves: TADODataSet;
+    dscMessages: TDataSource;
+    dstMessages: TADODataSet;
     lblUpdate: TLabel;
     lblRecordsRemaining: TLabel;
     ConnectionHRIS: TADOConnection;
@@ -23,6 +23,8 @@ type
     btnSkipRecord: TButton;
     SynchronizeToServer: TCheckBox;
     lblSyncServerUpdate: TLabel;
+    dstMessage: TADODataSet;
+    edSyncError: TEdit;
     procedure ConnectionMainBeforeConnect(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -32,9 +34,10 @@ type
     procedure SynchronizeToServerClick(Sender: TObject);
   private
     { Private declarations }
-    procedure SyncLeave;
+    procedure SyncMessage;
     procedure MarkSkip;
-    procedure SendMessage;
+    procedure PostMessageToStaging(wsMessage: ISyncWebWSDL.TWSMessage);
+    procedure PostMessage;
   public
     { Public declarations }
   end;
@@ -45,7 +48,7 @@ var
 implementation
 
 uses
-  ConnUtil, System.Threading, ISyncWebWSDL;
+  ConnUtil, System.Threading;
 
 {$R *.dfm}
 
@@ -106,7 +109,7 @@ var
   eventObject,pkEventObject,sourceLocation, sql: string;
 begin
   try
-    with dstLeaves do
+    with dstMessages do
     begin
       if RecordCount = 0 then Exit;
 
@@ -126,13 +129,67 @@ begin
 
     ConnectionMain.Execute(sql);
 
-    dstLeaves.Requery;
+    dstMessages.Requery;
   except
     on E: Exception do MessageDlg(E.Message,mtError,[mbOK],0);
   end;
 end;
 
-procedure TfrmSyncClientWebMain.SendMessage;
+procedure TfrmSyncClientWebMain.PostMessageToStaging(wsMessage: ISyncWebWSDL.TWSMessage);
+var
+  sql: string;
+begin
+  try
+    try
+      sql := 'select * from wsmessage where ' +
+              ' source_location = ''' + wsMessage.SourceLocation + '''' +
+              ' and destination_location = ''' + wsMessage.DestinationLocation + '''' +
+              ' and event_object = ''' + wsMessage.EventObject + '''' +
+              ' and pk_event_object = ''' + (wsMessage.PkEventObject) + '''';
+
+      dstMessage.CommandText := sql;
+
+      dstMessage.Open;
+
+      // the SQL above simply checks if the record already exists
+      // append or edit accordingly
+
+      if dstMessage.RecordCount = 0 then
+        dstMessage.Append
+      else
+        dstMessage.Edit;
+
+      dstMessage.FieldByName('event_object').AsString :=
+        wsMessage.EventObject;
+      dstMessage.FieldByName('pk_event_object').AsString :=
+        wsMessage.PkEventObject;
+      dstMessage.FieldByName('ws_message').AsString :=
+        wsMessage.WSMessage;
+      dstMessage.FieldByName('ws_message_date').AsDateTime :=
+        wsMessage.WSMessageDate;
+      dstMessage.FieldByName('priority').AsInteger :=
+        wsMessage.Priority;
+      dstMessage.FieldByName('source_location').AsString :=
+        wsMessage.SourceLocation;
+      dstMessage.FieldByName('destination_location').AsString :=
+        wsMessage.DestinationLocation;
+      dstMessage.FieldByName('messagetype_code').AsString :=
+        wsMessage.MessageTypeCode;
+      dstMessage.FieldByName('messagestatus_code').AsString :=
+        wsMessage.MessageStatusCode;
+
+      dstMessage.Post;
+
+    except
+      on e: exception do
+        edSyncError.Text := e.Message;
+    end;
+  finally
+    dstMessage.Close;
+  end;
+end;
+
+procedure TfrmSyncClientWebMain.PostMessage;
 var
   sql, path, rtn: string;
   dstXML: TADODataSet;
@@ -147,12 +204,15 @@ begin
     try
       sql := 'exec dbo.sync_generate_xml';
 
-      dstXML.ConnectionString := ConnectionHRIS.ConnectionString;
+      dstXML.Connection := ConnectionHRIS;
       dstXML.CommandText := sql;
       dstXML.Open;
 
       qryWMMessage := TADOQuery.Create(nil);
-      qryWMMessage.ConnectionString := dstXML.ConnectionString;
+      qryWMMessage.Connection := ConnectionHRIS;
+
+      edSyncError.Text := 'Checking event object';
+      Application.ProcessMessages;
 
       if dstXML.FieldByName('event_object').AsString <> '' then
       begin
@@ -171,21 +231,24 @@ begin
         // iniFile.WriteString('SyncError','SyncMessage',wsMessage.WSMessage);
         // iniFile.WriteString('SyncError','Sync',GetISyncWeb.SendMessage(wsMessage));
 
-        rtn := GetISyncWeb.SendMessage(wsMessage);
+        edSyncError.Text := 'Posting to staging';
+        Application.ProcessMessages;
 
-        if  rtn = '' then
-        begin
-          qryWMMessage.SQL.Text := 'exec dbo.sync_set_wsmessageout_status ''' +
-            wsMessage.EventObject + ''',''' + wsMessage.PkEventObject +
-            ''',''' + wsMessage.DestinationLocation + ''',''SSV''';
-          qryWMMessage.ExecSQL;
-        end
+        PostMessageToStaging(wsMessage);
+
+        qryWMMessage.SQL.Text := 'exec dbo.sync_set_wsmessageout_status ''' +
+          wsMessage.EventObject + ''',''' + wsMessage.PkEventObject +
+          ''',''' + wsMessage.DestinationLocation + ''',''SSV''';
+
+
+        qryWMMessage.ExecSQL;
       end
       else
     except
-      on e : exception do
+      on e : Exception do
       begin
-
+        edSyncError.Text := e.Message;
+        Application.ProcessMessages;
       end;
     end;
   finally
@@ -199,21 +262,21 @@ begin
   TTask.Run(
       procedure
       begin
-        dstLeaves.Open;
+        dstMessages.Open;
         while (Sender as TCheckBox).Checked do
         begin
           Sleep(200);
 
-          SyncLeave;
+          SyncMessage;
           TThread.Synchronize(nil,
             procedure
             begin
               lblUpdate.Caption := 'Last update at ' + FormatDateTime('mmm dd yyyy hh:mm:ss',Now);
-              lblRecordsRemaining.Caption := 'Records remaining: ' + IntToStr(dstLeaves.RecordCount);
+              lblRecordsRemaining.Caption := 'Records remaining: ' + IntToStr(dstMessages.RecordCount);
             end
             );
 
-          dstLeaves.Requery;
+          dstMessages.Requery;
         end;
       end
     );
@@ -224,12 +287,12 @@ begin
   TTask.Run(
       procedure
       begin
-        dstLeaves.Open;
+        dstMessages.Open;
         while (Sender as TCheckBox).Checked do
         begin
           Sleep(300);
 
-          SendMessage;
+          PostMessage;
 
           TThread.Synchronize(nil,
             procedure
@@ -238,18 +301,18 @@ begin
             end
             );
 
-          dstLeaves.Requery;
+          dstMessages.Requery;
         end;
       end
     );
 end;
 
-procedure TfrmSyncClientWebMain.SyncLeave;
+procedure TfrmSyncClientWebMain.SyncMessage;
 var
   eventObject,pkEventObject,sourceLocation, sql: string;
 begin
   try
-    with dstLeaves do
+    with dstMessages do
     begin
       if RecordCount = 0 then Exit;
 
